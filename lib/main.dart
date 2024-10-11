@@ -1,8 +1,5 @@
 import 'package:figma_creation_task/ui/screens/screen2.dart';
-// import 'package:figma_creation_task/ui/screens/screen4.dart';
-// import 'package:figma_creation_task/ui/screens/screen2.dart';
-// import 'package:figma_creation_task/ui/screens/screen5.dart';
-// import 'package:figma_creation_task/ui/screens/screen_1.dart';
+import 'package:figma_creation_task/ui/screens/screen5.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: screen_2(),
+      home: screen_5(),
     );
   }
 }

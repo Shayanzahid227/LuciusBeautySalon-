@@ -79,7 +79,7 @@ class screen_2 extends StatelessWidget {
                                             backgroundColor: Color(0xfff9f00d6),
                                           ),
                                           Image.asset(
-                                            "$staticAssets/Fram.png",
+                                            "assets/images/Frame.png",
                                             fit: BoxFit.cover,
                                           ),
                                           const Align(),
