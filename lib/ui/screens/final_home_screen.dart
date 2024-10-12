@@ -37,7 +37,10 @@ class home_screen_task extends StatelessWidget {
               const Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
               TextField(
                 decoration: InputDecoration(
-                    prefixIcon: const Icon(Icons.search_rounded),
+                    prefixIcon: const Icon(
+                      Icons.search_rounded,
+                      size: 30,
+                    ),
                     hintText: " Search Categories ",
                     hintStyle:
                         const TextStyle(fontSize: 20, color: Colors.grey),
