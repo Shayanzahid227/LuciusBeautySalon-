@@ -1,4 +1,3 @@
-import 'package:figma_creation_task/ui/screens/screen2.dart';
 import 'package:figma_creation_task/ui/screens/screen5.dart';
 import 'package:flutter/material.dart';
 
