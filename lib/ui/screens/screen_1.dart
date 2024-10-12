@@ -52,16 +52,6 @@ class _screen_1State extends State<screen_1> {
                             borderRadius: BorderRadius.circular(20)),
                         hintStyle: const TextStyle(color: Colors.black)),
                   ),
-                  //   TextField(
-
-                  //   decoration: InputDecoration(
-                  //     hintText: " asdfhbjh",fillColor: const Color(0xffffff),
-                  //     prefix: const Icon(Icons.lock_outlined),
-                  //     border: OutlineInputBorder(
-                  //       borderRadius: BorderRadius.circular(20),
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               )
             ],
