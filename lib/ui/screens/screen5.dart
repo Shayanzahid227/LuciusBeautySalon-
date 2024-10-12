@@ -1,6 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:flutter/material.dart';
 
+// ignore: camel_case_types
 class screen_5 extends StatelessWidget {
   const screen_5({super.key});
 
@@ -33,7 +34,7 @@ class screen_5 extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
+              const Padding(padding: EdgeInsets.symmetric(horizontal: 20)),
               TextField(
                 decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.search_rounded),
@@ -62,17 +63,17 @@ class screen_5 extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: [
                       Container(
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         height: 139,
                         width: 106,
-                        padding: EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(8.0),
                         decoration: BoxDecoration(
-                            color: Color(0xffffbf1ff),
+                            color: const Color(0xffffbf1ff),
                             borderRadius: BorderRadius.circular(10)),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Padding(padding: EdgeInsets.only(top: 1)),
+                            const Padding(padding: EdgeInsets.only(top: 0)),
                             const Align(
                               alignment: Alignment.topRight,
                               child: CircleAvatar(
@@ -84,7 +85,10 @@ class screen_5 extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            Image.asset("assets/imagess/Fram.png"),
+                            Image.asset(
+                              "$staticAssets/Frame.png",
+                              scale: 4.0,
+                            ),
                             const Text(
                               "Food",
                               style: TextStyle(
