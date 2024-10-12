@@ -143,7 +143,7 @@ class home_screen_task extends StatelessWidget {
 //
 //
 
-//  CategoryContainer Widget to recal it and optimize our code
+//  CategoryContainer Widget to recall it and optimize our code
 class CategoryContainer extends StatelessWidget {
   final String title;
   final String imagePath;
