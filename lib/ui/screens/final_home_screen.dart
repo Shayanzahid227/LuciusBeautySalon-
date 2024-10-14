@@ -60,7 +60,7 @@ class home_screen_task extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                  height: 145,
+                  height: 150,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -93,46 +93,73 @@ class home_screen_task extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
-                  height: 145,
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: const [
-                      CategoryContainer(
-                          title: "Gym",
-                          imagePath: "$staticAssets/Frame4.png",
-                          count: "9"),
-                      CategoryContainer(
-                          title: "Electrician",
-                          imagePath: "$staticAssets/Frame5.png",
-                          count: "14"),
-                      CategoryContainer(
-                          title: "Hotels",
-                          imagePath: "$staticAssets/Frame6.png",
-                          count: "4"),
-                    ],
-                  )),
-              Container(
-                  height: 145,
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: const [
-                      CategoryContainer(
-                          title: "Car Services",
-                          imagePath: "$staticAssets/Frame7.png",
-                          count: "5"),
-                      CategoryContainer(
-                          title: "Beauty",
-                          imagePath: "$staticAssets/Frame8.png",
-                          count: "12"),
-                      CategoryContainer(
-                          title: "Clothings",
-                          imagePath: "$staticAssets/Frame9.png",
-                          count: "18"),
-                    ],
-                  ))
+              GridView(
+                shrinkWrap: true,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3),
+                children: const [
+                  CategoryContainer(
+                      title: "Car Services",
+                      imagePath: "$staticAssets/Frame7.png",
+                      count: "5"),
+                  CategoryContainer(
+                      title: "Beauty",
+                      imagePath: "$staticAssets/Frame8.png",
+                      count: "12"),
+                  CategoryContainer(
+                      title: "Clothings",
+                      imagePath: "$staticAssets/Frame9.png",
+                      count: "18"),
+                  CategoryContainer(
+                      title: "Car Services",
+                      imagePath: "$staticAssets/Frame7.png",
+                      count: "5"),
+                  CategoryContainer(
+                      title: "Beauty",
+                      imagePath: "$staticAssets/Frame8.png",
+                      count: "12"),
+                  CategoryContainer(
+                      title: "Clothings",
+                      imagePath: "$staticAssets/Frame9.png",
+                      count: "18"),
+                  CategoryContainer(
+                      title: "Car Services",
+                      imagePath: "$staticAssets/Frame7.png",
+                      count: "5"),
+                  CategoryContainer(
+                      title: "Beauty",
+                      imagePath: "$staticAssets/Frame8.png",
+                      count: "12"),
+                  CategoryContainer(
+                      title: "Clothings",
+                      imagePath: "$staticAssets/Frame9.png",
+                      count: "18"),
+                  CategoryContainer(
+                      title: "Car Services",
+                      imagePath: "$staticAssets/Frame7.png",
+                      count: "5"),
+                  CategoryContainer(
+                      title: "Beauty",
+                      imagePath: "$staticAssets/Frame8.png",
+                      count: "12"),
+                  CategoryContainer(
+                      title: "Clothings",
+                      imagePath: "$staticAssets/Frame9.png",
+                      count: "18"),
+                  CategoryContainer(
+                      title: "Car Services",
+                      imagePath: "$staticAssets/Frame7.png",
+                      count: "5"),
+                  CategoryContainer(
+                      title: "Beauty",
+                      imagePath: "$staticAssets/Frame8.png",
+                      count: "12"),
+                  CategoryContainer(
+                      title: "Clothings",
+                      imagePath: "$staticAssets/Frame9.png",
+                      count: "18"),
+                ],
+              ),
             ],
           ),
         ),
@@ -141,11 +168,7 @@ class home_screen_task extends StatelessWidget {
   }
 }
 
-//
-//
-//
-//
-
+////
 //  CategoryContainer Widget to recall it and optimize our code
 class CategoryContainer extends StatelessWidget {
   final String title;
@@ -163,8 +186,8 @@ class CategoryContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
-      height: 139,
-      width: 106,
+      height: 160,
+      width: 115,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: const Color(0xffffbf1ff),
@@ -192,7 +215,7 @@ class CategoryContainer extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-                fontSize: 11, fontWeight: FontWeight.w400, color: Colors.black),
+                fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
           ),
         ],
       ),
