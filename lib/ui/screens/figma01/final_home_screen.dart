@@ -81,7 +81,7 @@ class home_screen_task extends StatelessWidget {
                           count: "7"),
                     ],
                   )),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const Row(
                 children: [
                   Text(
@@ -176,11 +176,11 @@ class CategoryContainer extends StatelessWidget {
   final String count;
 
   const CategoryContainer({
-    Key? key,
+    super.key,
     required this.title,
     required this.imagePath,
     required this.count,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -196,12 +196,12 @@ class CategoryContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Padding(padding: EdgeInsets.only(top: 0)),
+          const Padding(padding: EdgeInsets.only(top: 0)),
           Align(
             alignment: Alignment.topRight,
             child: CircleAvatar(
               radius: 14,
-              backgroundColor: Color(0xfff9d00de),
+              backgroundColor: const Color(0xfff9d00de),
               child: Text(
                 count,
                 style: const TextStyle(color: Colors.white),
