@@ -55,7 +55,7 @@ class home_screen_02 extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 45),
+                      padding: const EdgeInsets.only(bottom: 45),
                       child: Container(
                         height: 28,
                         width: 96,
