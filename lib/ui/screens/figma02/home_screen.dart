@@ -28,7 +28,7 @@ class home_screen_02 extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 270,
+                  height: 250,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -41,20 +41,43 @@ class home_screen_02 extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10),
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 2),
                       child: Container(
                         height: 118,
                         width: 238,
                         color: Colors.black,
                         // when i add decoration box or child to load image it showing error in output but no error in code
-                        // child: const Image(
-                        //     image: AssetImage("$staticAssets/tittle.png")),
+                        child: const Image(
+                            image: AssetImage("$staticAssets/tittle.png")),
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(bottom: 45),
+                      child: Container(
+                        height: 28,
+                        width: 96,
+                        decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(42)),
+                        child: const Center(
+                          child: Text(
+                            "GET START",
+                            style: TextStyle(fontSize: 14, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                    IconButton(
+                        onPressed: () {},
+                        icon: const Text(
+                          "login",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ))
                   ],
                 )
               ],
