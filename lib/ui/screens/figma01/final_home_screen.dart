@@ -79,6 +79,14 @@ class home_screen_task extends StatelessWidget {
                           title: "Sports",
                           imagePath: "$staticAssets/Frame3.png",
                           count: "7"),
+                      CategoryContainer(
+                          title: "Food",
+                          imagePath: "$staticAssets/Frame.png",
+                          count: "10"),
+                      CategoryContainer(
+                          title: "Food",
+                          imagePath: "$staticAssets/Frame.png",
+                          count: "10"),
                     ],
                   )),
               const SizedBox(height: 20),

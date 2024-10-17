@@ -1,4 +1,6 @@
+import 'package:figma_creation_task/ui/screens/figma01/final_home_screen.dart';
 import 'package:figma_creation_task/ui/screens/figma02/home_screen.dart';
+import 'package:figma_creation_task/ui/screens/figma03/splash%20screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: home_screen_02(),
+      home: splash_screen_0(),
     );
   }
 }
