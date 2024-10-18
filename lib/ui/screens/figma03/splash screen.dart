@@ -1,8 +1,29 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
 import 'package:flutter/material.dart';
 
-class splash_screen_0 extends StatelessWidget {
+class splash_screen_0 extends StatefulWidget {
   const splash_screen_0({super.key});
+
+  @override
+  State<splash_screen_0> createState() => _splash_screen_0State();
+}
+
+class _splash_screen_0State extends State<splash_screen_0> {
+  init() async {
+    await Future.delayed(const Duration(seconds: 2), () {
+      // navigator and rout mean from one page to another
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => const login_screen_0(),
+      ));
+    });
+  }
+
+  @override
+  void initState() {
+    init();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

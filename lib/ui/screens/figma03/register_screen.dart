@@ -1,12 +1,10 @@
 import 'dart:ffi';
 
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
-import 'package:figma_creation_task/ui/screens/figma03/register_screen.dart';
 import 'package:flutter/material.dart';
 
-class login_screen_0 extends StatelessWidget {
-  const login_screen_0({super.key});
+class Register_screen_0 extends StatelessWidget {
+  const Register_screen_0({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -43,19 +41,59 @@ class login_screen_0 extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.only(left: 22.0),
                   child: Text(
-                    "Login",
+                    "Register",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
                   ),
                 ),
-                SizedBox(
-                  height: 20,
+                SizedBox(height: 40),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Name ",
+                        hintStyle: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w300),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(4.0))),
+                  ),
                 ),
-                CustomTextField(hintText: "Email"),
+                SizedBox(height: 40),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Email ",
+                        hintStyle: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w300),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(4.0))),
+                  ),
+                ),
+                const SizedBox(height: 40),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Email Address ",
+                        hintStyle: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w300),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(4.0))),
+                  ),
+                ),
+                const SizedBox(height: 25),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 22.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: "Password ",
+                        hintStyle: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.w300),
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(4.0))),
+                  ),
+                ),
                 const SizedBox(height: 30),
-                CustomTextField(hintText: "Password"),
-                const SizedBox(
-                  height: 30,
-                ),
                 Padding(
                   padding: const EdgeInsets.only(left: 25.0),
                   child: Row(
@@ -91,11 +129,7 @@ class login_screen_0 extends StatelessWidget {
                             fontSize: 20, fontWeight: FontWeight.w300),
                       ),
                       TextButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const Register_screen_0(),
-                            ));
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Register",
                             style: TextStyle(
