@@ -14,7 +14,7 @@ class splash_screen_0 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-                padding: EdgeInsets.only(top: 300),
+                padding: const EdgeInsets.only(top: 300),
                 child: SizedBox(
                   height: 170,
                   width: 140,
