@@ -1,7 +1,5 @@
-import 'package:figma_creation_task/ui/screens/figma03/Register_screen_0.dart';
-import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
-import 'package:figma_creation_task/ui/screens/figma03/register_screen.dart';
-import 'package:figma_creation_task/ui/screens/figma03/splash%20screen.dart';
+import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: splash_screen_0(),
+      home: home_screen_0(),
     );
   }
 }

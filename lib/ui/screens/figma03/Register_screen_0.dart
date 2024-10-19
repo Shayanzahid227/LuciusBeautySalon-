@@ -1,9 +1,11 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
+import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
 import 'package:flutter/material.dart';
 
-class Register_screen_0000 extends StatelessWidget {
-  const Register_screen_0000({super.key});
+// ignore: camel_case_types
+class Register_screen_0 extends StatelessWidget {
+  const Register_screen_0({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,24 +46,27 @@ class Register_screen_0000 extends StatelessWidget {
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
                   ),
                 ),
-                //  SizedBox(height: 5),
+                const SizedBox(height: 20),
                 const CustomTextField(
+                  obscureText: false,
                   hintText: "name",
                 ),
-                //SizedBox(height: 5),
+                const SizedBox(height: 30),
                 const CustomTextField(
+                  obscureText: false,
                   hintText: "Email",
                 ),
-                //SizedBox(height: 5),
+                const SizedBox(height: 30),
                 const CustomTextField(
+                  obscureText: false,
                   hintText: "Email Adress",
                 ),
-                //SizedBox(height: 5),
+                const SizedBox(height: 30),
                 const CustomTextField(
                   obscureText: true,
                   hintText: "Password",
                 ),
-                //SizedBox(height: 10),
+                const SizedBox(height: 30),
                 Padding(
                   padding: const EdgeInsets.only(left: 25.0),
                   child: Row(
@@ -70,13 +75,13 @@ class Register_screen_0000 extends StatelessWidget {
                         height: 50,
                         width: 360,
                         decoration: BoxDecoration(
-                            color: Color(0xfffE78377),
+                            color: const Color(0xfffe78377),
                             borderRadius: BorderRadius.circular(9)),
                         child: TextButton(
                             onPressed: () {},
                             child: const Center(
                                 child: Text(
-                              "Login",
+                              "Register",
                               style: TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w400,
@@ -86,20 +91,24 @@ class Register_screen_0000 extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        "New user ?",
+                        "Have Account ?",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w300),
                       ),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const login_screen_0(),
+                            ));
+                          },
                           child: const Text(
-                            "Register",
+                            "Login",
                             style: TextStyle(
                                 fontSize: 22,
                                 fontWeight: FontWeight.w400,

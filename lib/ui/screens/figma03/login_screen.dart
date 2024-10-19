@@ -2,12 +2,18 @@ import 'dart:ffi';
 
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
-import 'package:figma_creation_task/ui/screens/figma03/register_screen.dart';
+import 'package:figma_creation_task/ui/screens/figma03/Register_screen_0.dart';
+
 import 'package:flutter/material.dart';
 
-class login_screen_0 extends StatelessWidget {
+class login_screen_0 extends StatefulWidget {
   const login_screen_0({super.key});
 
+  @override
+  State<login_screen_0> createState() => _login_screen_0State();
+}
+
+class _login_screen_0State extends State<login_screen_0> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,12 +53,12 @@ class login_screen_0 extends StatelessWidget {
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                CustomTextField(hintText: "Email"),
+                const CustomTextField(obscureText: false, hintText: "Email"),
                 const SizedBox(height: 30),
-                CustomTextField(hintText: "Password"),
+                const CustomTextField(hintText: "Password"),
                 const SizedBox(
                   height: 30,
                 ),
@@ -64,7 +70,7 @@ class login_screen_0 extends StatelessWidget {
                         height: 50,
                         width: 360,
                         decoration: BoxDecoration(
-                            color: Color(0xfffE78377),
+                            color: const Color(0xfffe78377),
                             borderRadius: BorderRadius.circular(9)),
                         child: TextButton(
                             onPressed: () {},
@@ -80,7 +86,7 @@ class login_screen_0 extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,

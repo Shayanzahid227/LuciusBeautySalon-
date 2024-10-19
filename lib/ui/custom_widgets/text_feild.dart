@@ -7,11 +7,11 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
 
   const CustomTextField({
-    Key? key,
+    super.key,
     required this.hintText,
     // required this.controller,
     this.obscureText = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
