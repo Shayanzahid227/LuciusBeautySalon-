@@ -8,7 +8,7 @@ class home_screen_0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffff9f8f6),
+      backgroundColor: const Color(0xffff9f8f6),
       appBar: AppBar(
         actions: const [
           Icon(Icons.signal_cellular_alt),
@@ -38,28 +38,42 @@ class home_screen_0 extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Rayna Carder ",
-                        style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.black),
+                      Row(
+                        children: [
+                          Text(
+                            "Rayna Carder ",
+                            style: TextStyle(
+                                fontSize: 22,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.black),
+                          ),
+                          SizedBox(
+                            width: 170,
+                          ),
+                          CircleAvatar(
+                            backgroundColor: Colors.grey,
+                            child: Icon(
+                              Icons.shopping_cart,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ],
                       ),
                       SizedBox(height: 10),
-                      SizedBox(
-                        width: 180,
-                      ),
-                      CircleAvatar(
-                        backgroundColor: Colors.grey,
-                        child: Icon(
-                          Icons.shopping_cart,
-                          color: Colors.white,
-                        ),
-                      ),
+                      // SizedBox(
+                      //   width: 180,
+                      // ),
+                      // CircleAvatar(
+                      //   backgroundColor: Colors.grey,
+                      //   child: Icon(
+                      //     Icons.shopping_cart,
+                      //     color: Colors.white,
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 const Column(
                   children: [
                     Row(
@@ -76,23 +90,26 @@ class home_screen_0 extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Stack(
                   children: [
-                    Container(
-                      height: 155,
-                      width: 342,
-                      decoration: BoxDecoration(
-                          color: const Color(0xfffd7b99f),
-                          borderRadius: BorderRadius.circular(14)),
-                      child: const Padding(
-                        padding: EdgeInsets.only(left: 20.0, top: 10),
-                        child: Text(
-                          'Upto 50%,',
-                          style: TextStyle(
-                              color: Color(0xfffe78477),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w300),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: Container(
+                        height: 155,
+                        width: 400,
+                        decoration: BoxDecoration(
+                            color: const Color(0xfffd7b99f),
+                            borderRadius: BorderRadius.circular(14)),
+                        child: const Padding(
+                          padding: EdgeInsets.only(left: 20.0, top: 10),
+                          child: Text(
+                            'Upto 50%,',
+                            style: TextStyle(
+                                color: Color(0xfffe78477),
+                                fontSize: 20,
+                                fontWeight: FontWeight.w300),
+                          ),
                         ),
                       ),
                     ),
@@ -114,7 +131,7 @@ class home_screen_0 extends StatelessWidget {
                               width: 140,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
-                                color: Color(0xfffe78477),
+                                color: const Color(0xfffe78477),
                               ),
                               child: const Center(
                                 child: Text(
@@ -125,15 +142,19 @@ class home_screen_0 extends StatelessWidget {
                               ),
                             ))),
                     Padding(
-                      padding: const EdgeInsets.only(left: 223, top: 45),
+                      padding: const EdgeInsets.only(left: 270, top: 46),
                       child: Container(
                         height: 110,
                         width: 120,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadiusDirectional.circular(60),
+                          borderRadius: BorderRadiusDirectional.circular(50),
                           color: const Color(0xfffe78477),
                         ),
-                        child: Image.asset("$staticAssets/h2.png"),
+                        //
+                        //
+                        //child: Image.asset("$staticAssets/h2.png"),
+                        //
+                        //
                       ),
                     )
                   ],
@@ -181,7 +202,7 @@ class home_screen_0 extends StatelessWidget {
                         imagePath: "$staticAssets/flower6.png",
                       ),
                       CategoryContainer(
-                        title: "NUltraLucious\n7D hifu",
+                        title: "UltraLucious\n7Dhifu",
                         imagePath: "$staticAssets/face7.png",
                       ),
                       CategoryContainer(
