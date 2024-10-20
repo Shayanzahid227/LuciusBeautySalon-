@@ -114,7 +114,7 @@ class home_screen_0 extends StatelessWidget {
                       ),
                     ),
                     const Positioned(
-                      left: 20,
+                      left: 35,
                       top: 48,
                       child: Text(
                         "Look more beautiful and \n save more discount",
@@ -172,7 +172,7 @@ class home_screen_0 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 150,
+                  height: 160,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
@@ -206,10 +206,32 @@ class home_screen_0 extends StatelessWidget {
                         imagePath: "$staticAssets/face7.png",
                       ),
                       CategoryContainer(
-                        title: "Lucious slim RF\nCavitation",
+                        title: "Lucious \nslim RF\nCavitation",
                         imagePath: "$staticAssets/dry8.png",
                       ),
                     ],
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 16.0, top: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        "fatured Services",
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 87,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: [],
                   ),
                 )
               ],
@@ -236,7 +258,7 @@ class CategoryContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
-      height: 160,
+      height: 145,
       width: 115,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
@@ -254,10 +276,46 @@ class CategoryContainer extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-                fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black),
+                fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black),
           ),
         ],
       ),
+    );
+  }
+}
+
+// featured cstegory container
+class FeaturedCategoryContainer extends StatelessWidget {
+  final String tittle;
+  final String imagepath;
+  const FeaturedCategoryContainer({
+    super.key,
+    required this.tittle,
+    required this.imagepath,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          height: 88,
+          width: 267,
+          decoration: BoxDecoration(
+            color: Color(0xfffffffff),
+            borderRadius: BorderRadius.circular(9),
+          ),
+          child: Row(
+            children: [
+              Image.asset(
+                imagepath,
+                scale: 4.0,
+              ),
+              Text("classic Pedicure")
+            ],
+          ),
+        ),
+      ],
     );
   }
 }

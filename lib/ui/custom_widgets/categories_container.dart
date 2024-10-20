@@ -15,7 +15,7 @@ class CategoryContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
-      height: 170,
+      height: 160,
       width: 120,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
