@@ -10,10 +10,11 @@ class home_screen_0 extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xffff9f8f6),
       appBar: AppBar(
+        backgroundColor: Color(0xffff9f8f6),
         actions: const [
-          Icon(Icons.signal_cellular_alt),
-          Icon(Icons.wifi),
-          Icon(Icons.battery_3_bar),
+          // Icon(Icons.signal_cellular_alt),
+          // Icon(Icons.wifi),
+          // Icon(Icons.battery_3_bar),
           SizedBox(
             height: 40,
           )
@@ -60,16 +61,6 @@ class home_screen_0 extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 10),
-                      // SizedBox(
-                      //   width: 180,
-                      // ),
-                      // CircleAvatar(
-                      //   backgroundColor: Colors.grey,
-                      //   child: Icon(
-                      //     Icons.shopping_cart,
-                      //     color: Colors.white,
-                      //   ),
-                      // ),
                     ],
                   ),
                 ),
@@ -177,35 +168,35 @@ class home_screen_0 extends StatelessWidget {
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
                     children: const [
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Nails",
                         imagePath: "$staticAssets/nails1.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Hair",
                         imagePath: "$staticAssets/hairs2.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Facial",
                         imagePath: "$staticAssets/facial3.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Massage",
                         imagePath: "$staticAssets/stone4.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Waxing",
                         imagePath: "$staticAssets/leg5.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Threading",
                         imagePath: "$staticAssets/flower6.png",
                       ),
-                      CategoryContainer(
-                        title: "UltraLucious\n7Dhifu",
+                      ourservicessContainer(
+                        title: "UltraLucious\n7D hifu",
                         imagePath: "$staticAssets/face7.png",
                       ),
-                      CategoryContainer(
+                      ourservicessContainer(
                         title: "Lucious \nslim RF\nCavitation",
                         imagePath: "$staticAssets/dry8.png",
                       ),
@@ -227,11 +218,72 @@ class home_screen_0 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 87,
+                  height: 103,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
-                    children: [],
+                    children: const [
+                      FeaturedCategoryContainer(
+                        title: "Classic Pedicure",
+                        imagePath: "$staticAssets/featured.png",
+                        belowtitle: "45 mnt 59AED",
+                      ),
+                      FeaturedCategoryContainer(
+                          title: "Classic Pedicure",
+                          imagePath: "$staticAssets/featured.png",
+                          belowtitle: "45 mnt 59 AED"),
+                      FeaturedCategoryContainer(
+                        title: "Classic Pedicure",
+                        imagePath: "$staticAssets/featured.png",
+                        belowtitle: "45 mnt 59 AED",
+                      ),
+                      FeaturedCategoryContainer(
+                        title: "Classic Pedicure",
+                        imagePath: "$staticAssets/featured.png",
+                        belowtitle: "45 mnt 59 AED",
+                      ),
+                    ],
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 16.0, top: 10),
+                  child: Row(
+                    children: [
+                      Text(
+                        "Upcoming Bookings",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 110,
+                  child: ListView(
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      UpcomingBookingContainer(
+                          title: "Classic Manicure",
+                          imagePath: "$staticAssets/upcoming.png",
+                          meddletitle: "Home",
+                          belowtitle: "Sat 22 August 2024"),
+                      UpcomingBookingContainer(
+                          title: "Classic Manicure",
+                          imagePath: "$staticAssets/upcoming.png",
+                          meddletitle: "Home",
+                          belowtitle: "Sat 22 August 2024"),
+                      UpcomingBookingContainer(
+                          title: "Classic Manicure",
+                          imagePath: "$staticAssets/upcoming.png",
+                          meddletitle: "Home",
+                          belowtitle: "Sat 22 August 2024"),
+                      UpcomingBookingContainer(
+                          title: "Classic Manicure",
+                          imagePath: "$staticAssets/upcoming.png",
+                          meddletitle: "Home",
+                          belowtitle: "Sat 22 August 2024"),
+                    ],
                   ),
                 )
               ],
@@ -244,11 +296,12 @@ class home_screen_0 extends StatelessWidget {
 }
 
 //  CategoryContainer Widget to recall it and optimize our code
-class CategoryContainer extends StatelessWidget {
+// ignore: camel_case_types
+class ourservicessContainer extends StatelessWidget {
   final String title;
   final String imagePath;
 
-  const CategoryContainer({
+  const ourservicessContainer({
     super.key,
     required this.title,
     required this.imagePath,
@@ -271,7 +324,7 @@ class CategoryContainer extends StatelessWidget {
           const Padding(padding: EdgeInsets.only(top: 0)),
           Image.asset(
             imagePath,
-            scale: 4.0,
+            scale: 3.8,
           ),
           Text(
             title,
@@ -284,34 +337,133 @@ class CategoryContainer extends StatelessWidget {
   }
 }
 
-// featured cstegory container
+// featured services category continer
+//  CategoryContainer Widget to recall it and optimize our code
 class FeaturedCategoryContainer extends StatelessWidget {
-  final String tittle;
-  final String imagepath;
-  const FeaturedCategoryContainer({
-    super.key,
-    required this.tittle,
-    required this.imagepath,
-  });
+  final String title;
+  final String imagePath;
+  final String belowtitle;
+
+  const FeaturedCategoryContainer(
+      {super.key,
+      required this.title,
+      required this.imagePath,
+      required this.belowtitle});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         Container(
-          height: 88,
-          width: 267,
+          margin: const EdgeInsets.all(8),
+          height: 130,
+          width: 276,
+          padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
-            color: Color(0xfffffffff),
-            borderRadius: BorderRadius.circular(9),
+            color: const Color(0xfffffffff),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Image.asset(
-                imagepath,
-                scale: 4.0,
+              Row(
+                children: [
+                  Image.asset(
+                    imagePath,
+                    scale: 3.5,
+                  ),
+                ],
               ),
-              Text("classic Pedicure")
+              Column(
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xfffe78377)),
+                  ),
+                  SizedBox(height: 13),
+                  Text(
+                    belowtitle,
+                    style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xfff888888)),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+// upcoming bookings category container for reusaiblity
+class UpcomingBookingContainer extends StatelessWidget {
+  final String title;
+  final String imagePath;
+  final String meddletitle;
+  final String belowtitle;
+
+  const UpcomingBookingContainer(
+      {super.key,
+      required this.title,
+      required this.imagePath,
+      required this.meddletitle,
+      required this.belowtitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Container(
+          margin: const EdgeInsets.all(8),
+          height: 120,
+          width: 235,
+          padding: const EdgeInsets.all(8.0),
+          decoration: BoxDecoration(
+            color: const Color(0xfffffffff),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    imagePath,
+                    scale: 3.5,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xfffe78377)),
+                  ),
+                  Text(
+                    meddletitle,
+                    style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xfffe78477)),
+                  ),
+                  Text(
+                    belowtitle,
+                    style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xfff888888)),
+                  )
+                ],
+              ),
             ],
           ),
         ),
