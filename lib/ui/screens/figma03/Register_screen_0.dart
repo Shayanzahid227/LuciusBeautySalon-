@@ -1,5 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
+import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
 import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -78,7 +79,11 @@ class Register_screen_0 extends StatelessWidget {
                             color: const Color(0xfffe78377),
                             borderRadius: BorderRadius.circular(9)),
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const home_screen_0(),
+                              ));
+                            },
                             child: const Center(
                                 child: Text(
                               "Register",

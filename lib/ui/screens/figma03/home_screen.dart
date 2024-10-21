@@ -82,74 +82,74 @@ class home_screen_0 extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Stack(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                      child: Container(
-                        height: 155,
-                        width: 400,
-                        decoration: BoxDecoration(
-                            color: const Color(0xfffd7b99f),
-                            borderRadius: BorderRadius.circular(14)),
-                        child: const Padding(
-                          padding: EdgeInsets.only(left: 20.0, top: 10),
-                          child: Text(
-                            'Upto 50%,',
-                            style: TextStyle(
-                                color: Color(0xfffe78477),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w300),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Container(
+                    height: 155,
+                    width: 400,
+                    decoration: BoxDecoration(
+                        color: const Color(0xfffd7b99f),
+                        borderRadius: BorderRadius.circular(14)),
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 20.0, top: 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text(
+                                'Upto 50%,',
+                                style: TextStyle(
+                                    color: Color(0xfffe78477),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                              const Text(
+                                "Look more beautiful and \n save more discount",
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.white),
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Container(
+                                    height: 40,
+                                    width: 140,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: const Color(0xfffe78477),
+                                    ),
+                                    child: const Center(
+                                      child: Text(
+                                        "Get offer now!",
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 17),
+                                      ),
+                                    ),
+                                  ))
+                            ],
                           ),
-                        ),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Image.asset(
+                              "$staticAssets/offers.png",
+                              scale: 4,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const Positioned(
-                      left: 35,
-                      top: 48,
-                      child: Text(
-                        "Look more beautiful and \n save more discount",
-                        style: TextStyle(fontSize: 14, color: Colors.white),
-                      ),
-                    ),
-                    Positioned(
-                        left: 16,
-                        top: 95,
-                        child: TextButton(
-                            onPressed: () {},
-                            child: Container(
-                              height: 40,
-                              width: 140,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: const Color(0xfffe78477),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  "Get offer now!",
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 17),
-                                ),
-                              ),
-                            ))),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 270, top: 46),
-                      child: Container(
-                        height: 110,
-                        width: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadiusDirectional.circular(50),
-                          color: const Color(0xfffe78477),
-                        ),
-                        //
-                        //
-                        //child: Image.asset("$staticAssets/h2.png"),
-                        //
-                        //
-                      ),
-                    )
-                  ],
+                  ),
                 ),
+                // const Positioned(
+                //   left: 35,
+                //   top: 48,
+                //   child:
+                // ),
+                // Positioned(
+                //     left: 16,
+                //     top: 95,
+                //     child: ),
                 const Padding(
                   padding: EdgeInsets.only(left: 16.0, top: 25),
                   child: Row(
