@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/figma03/Register_screen_0.dart';
@@ -57,8 +55,29 @@ class _login_screen_0State extends State<login_screen_0> {
                 const SizedBox(
                   height: 20,
                 ),
+
+                ///
+                /// Email Address
+                ///
+
+                // TextFormField(
+                //   decoration: authFieldDecoration.copyWith(
+                //       fillColor: Colors.black,
+                //       hintText: 'User Name',
+                //       hintStyle: style16.copyWith(color: Colors.white),
+                //       enabledBorder: OutlineInputBorder(
+                //           borderSide: BorderSide(color: Colors.red, width: 2))),
+                // ),
+
+                ///
+                /// Email Address
+                ///
                 const CustomTextField(obscureText: false, hintText: "Email"),
                 const SizedBox(height: 30),
+
+                ///
+                /// Paasword
+                ///
                 const CustomTextField(hintText: "Password"),
                 const SizedBox(
                   height: 30,
@@ -76,7 +95,7 @@ class _login_screen_0State extends State<login_screen_0> {
                         child: TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => home_screen_0()));
+                                  builder: (context) => const home_screen_0()));
                             },
                             child: const Center(
                                 child: Text(

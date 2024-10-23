@@ -2,6 +2,8 @@ import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
+  const FeaturedCategoryContainer({super.key});
+
   // final String tittle;
   // final String imagepath;
   // const FeaturedCategoryContainer({
@@ -18,7 +20,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
           height: 88,
           width: 267,
           decoration: BoxDecoration(
-            color: Color(0xfffffffff),
+            color: const Color(0xfffffffff),
             borderRadius: BorderRadius.circular(9),
           ),
           child: const Row(
@@ -42,7 +44,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
           width: 67,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              image: DecorationImage(
+              image: const DecorationImage(
                   image: AssetImage("$staticAssets/face7.png"))),
         )
       ],
