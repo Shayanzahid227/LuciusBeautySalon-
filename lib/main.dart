@@ -1,7 +1,8 @@
 import 'package:figma_creation_task/ui/screens/figma03/all_servicess.dart';
-import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
+import 'package:figma_creation_task/ui/screens/shahab/login_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: all_servicess_0(),
+    return const ScreenUtilInit(
+      designSize: Size(393, 852),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child:
+          MaterialApp(debugShowCheckedModeBanner: false, home: Login_Screen()),
     );
+    // return const MaterialApp(
+    //   home:(),
+    // );
   }
 }
 

@@ -24,7 +24,7 @@ class _all_servicess_0State extends State<all_servicess_0> {
               Row(
                 children: [
                   CircleAvatar(
-                    backgroundColor: Color(0xfffeaeaea),
+                    backgroundColor: const Color(0xfffeaeaea),
                     child: TextButton(
                         onPressed: () {},
                         child: const Icon(Icons.arrow_back_sharp)),
@@ -145,7 +145,7 @@ class AllServicesscontainer extends StatelessWidget {
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,
-              color: const Color(0xfffe78477),
+              color: Color(0xfffe78477),
             ),
           ),
         ],
