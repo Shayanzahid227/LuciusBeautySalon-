@@ -12,9 +12,10 @@ class _all_servicess_0State extends State<all_servicess_0> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffff9f8f6),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(left: 16),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
               const SizedBox(
@@ -36,38 +37,68 @@ class _all_servicess_0State extends State<all_servicess_0> {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height: 51,
                   ),
                 ],
               ),
-              SizedBox(
-                height: 700,
-                child: GridView(
-                  shrinkWrap: true,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
-                  children: const [
-                    AllServicesscontainer(
-                        title: "Nails", imagePath: "staticAssets/nails1.png"),
-                    AllServicesscontainer(
-                        title: "Hairs", imagePath: "staticAssets/hairs2.png"),
-                    // AllServicesscontainer(
-                    //     title: "Facial", imagePath: "staticAssets/facial3.png"),
-                    // AllServicesscontainer(
-                    //     title: "Massage",
-                    //     imagePath: "staticAssets/massage4.png"),
-                    // AllServicesscontainer(
-                    //     title: "Waxing", imagePath: "staticAssets/waxing5.png"),
-                    // AllServicesscontainer(
-                    //     title: "Threading",
-                    //     imagePath: "staticAssets/threading6.png"),
-                    // AllServicesscontainer(
-                    //     title: "Ultralucious\n7d Hifu",
-                    //     imagePath: "staticAssets/nails1.png"),
-                    // AllServicesscontainer(
-                    //     title: "Lucious slim\n RF Cavitation",
-                    //     imagePath: "staticAssets/nails1.png"),
-                  ],
+              SafeArea(
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.9,
+                  child: GridView(
+                    shrinkWrap: true,
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
+                    children: const [
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Hairs",
+                          imagePath: "$staticAssets/hairs2.png"),
+                      AllServicesscontainer(
+                          title: "Facials",
+                          imagePath: "$staticAssets/facial3.png"),
+                      AllServicesscontainer(
+                          title: "Massage",
+                          imagePath: "$staticAssets/massage4.png"),
+                      AllServicesscontainer(
+                          title: "Waxing",
+                          imagePath: "$staticAssets/waxing5.png"),
+                      AllServicesscontainer(
+                          title: "Threading",
+                          imagePath: "$staticAssets/threading6.png"),
+                      AllServicesscontainer(
+                          title: "Ultralucious\n7D hifu",
+                          imagePath: "$staticAssets/face7.png"),
+                      AllServicesscontainer(
+                          title: "Lucios slim\nRF Cavitations",
+                          imagePath: "$staticAssets/dry8.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails",
+                          imagePath: "$staticAssets/nails1.png"),
+                      AllServicesscontainer(
+                          title: "Nails", imagePath: "$staticAssets/nails1.png")
+                    ],
+                  ),
                 ),
               )
             ],
@@ -99,7 +130,7 @@ class AllServicesscontainer extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: const Color(0xfffffffff),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -112,7 +143,10 @@ class AllServicesscontainer extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
-                fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black),
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              color: const Color(0xfffe78477),
+            ),
           ),
         ],
       ),
