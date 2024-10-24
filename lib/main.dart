@@ -1,7 +1,7 @@
+import 'package:figma_creation_task/ui/screens/figma03/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: home_screen_0(),
+      home: all_servicess_0(),
     );
   }
 }
