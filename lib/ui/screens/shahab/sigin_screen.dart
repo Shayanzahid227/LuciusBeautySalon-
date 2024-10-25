@@ -10,14 +10,14 @@ import 'package:google_fonts/google_fonts.dart';
 
 // after line 157 custom widget start
 
-class Login_Screen extends StatefulWidget {
-  const Login_Screen({super.key});
+class Signin_Screen extends StatefulWidget {
+  const Signin_Screen({super.key});
 
   @override
-  State<Login_Screen> createState() => _Login_ScreenState();
+  State<Signin_Screen> createState() => _Signin_ScreenState();
 }
 
-class _Login_ScreenState extends State<Login_Screen> {
+class _Signin_ScreenState extends State<Signin_Screen> {
   get imagePaths => null;
 
   @override
@@ -50,7 +50,7 @@ class _Login_ScreenState extends State<Login_Screen> {
             child: Row(
               children: [
                 Text(
-                  "Login in ",
+                  "Sign in ",
                   style: GoogleFonts.inter(
                       fontSize: 26.sp,
                       fontWeight: FontWeight.w700,

@@ -1,4 +1,4 @@
-import 'package:figma_creation_task/ui/screens/shahab/login_screen.dart';
+import 'package:figma_creation_task/ui/screens/shahab/sigin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,8 +22,7 @@ class GoogleIconButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white, // Background color of the container
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(
-            color: const Color(0xfff1e252d), width: 2), // Border color
+        border: Border.all(color: Colors.grey, width: 2), // Border color
       ),
       child: TextButton(
         onPressed: onPressed, // Call the provided callback on press
