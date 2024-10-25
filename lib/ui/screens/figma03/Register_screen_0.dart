@@ -51,21 +51,25 @@ class Register_screen_0 extends StatelessWidget {
                 const CustomTextField(
                   obscureText: false,
                   hintText: "name",
+                  showVisibilityToggle: false,
                 ),
                 const SizedBox(height: 30),
                 const CustomTextField(
                   obscureText: false,
                   hintText: "Email",
+                  showVisibilityToggle: false,
                 ),
                 const SizedBox(height: 30),
                 const CustomTextField(
                   obscureText: false,
                   hintText: "Email Adress",
+                  showVisibilityToggle: false,
                 ),
                 const SizedBox(height: 30),
                 const CustomTextField(
                   obscureText: true,
                   hintText: "Password",
+                  showVisibilityToggle: false,
                 ),
                 const SizedBox(height: 30),
                 Padding(

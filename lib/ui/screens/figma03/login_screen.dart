@@ -72,13 +72,20 @@ class _login_screen_0State extends State<login_screen_0> {
                 ///
                 /// Email Address
                 ///
-                const CustomTextField(obscureText: false, hintText: "Email"),
+                const CustomTextField(
+                  obscureText: false,
+                  hintText: "Email",
+                  showVisibilityToggle: false,
+                ),
                 const SizedBox(height: 30),
 
                 ///
                 /// Paasword
                 ///
-                const CustomTextField(hintText: "Password"),
+                const CustomTextField(
+                  hintText: "Password",
+                  showVisibilityToggle: true,
+                ),
                 const SizedBox(
                   height: 30,
                 ),

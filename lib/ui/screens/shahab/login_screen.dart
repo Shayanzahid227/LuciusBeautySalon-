@@ -1,5 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/button.dart';
+import 'package:figma_creation_task/ui/custom_widgets/switch_button.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -110,8 +112,40 @@ class _Login_ScreenState extends State<Login_Screen> {
             showVisibilityToggle: true,
           ),
           SizedBox(
-            height: screenHeight * 0.04,
+            height: screenHeight * 0.05,
           ),
+          Padding(
+            padding: EdgeInsets.only(left: 28.w),
+            child: Row(
+              children: [
+                Switch_on_off_Button(
+                  onChanged: (value) => value,
+                ),
+                SizedBox(width: screenWidth * 0.03),
+                Text(
+                  "Remember Me",
+                  style: GoogleFonts.poppins(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff1E252D)),
+                ),
+                Padding(
+                  padding: EdgeInsets.only(left: 18.0.w),
+                  child: TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "LOST YOUR PASSWORD?",
+                      style: GoogleFonts.poppins(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xfffdd854)),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          SizedBox(height: screenHeight * 0.06),
           categoryLoginButton(onPressed: () {})
         ],
       )),
@@ -119,7 +153,9 @@ class _Login_ScreenState extends State<Login_Screen> {
   }
 }
 
-// call it for text feild
+class W {}
+
+//////////////////////////
 class CustomTextField extends StatefulWidget {
   final String hintText;
   final bool obscureText;
@@ -168,7 +204,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             borderSide: BorderSide(color: const Color(0xff1e252d)),
           ),
           prefixIcon: widget.prefixIcon,
-          suffixIcon: widget.obscureText
+          suffixIcon: widget.showVisibilityToggle && widget.obscureText
               ? IconButton(
                   icon: Icon(
                     _obscureText ? Icons.visibility_off : Icons.visibility,
@@ -182,7 +218,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     );
   }
 }
-// button
+
+// sign in button
 
 class categoryLoginButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -199,14 +236,14 @@ class categoryLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 327.w,
-      height: 62.h,
+      width: 350.w,
+      height: 65.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           shape: RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.circular(11), //  rounded corners of container
+            borderRadius: BorderRadius.circular(11),
+            //  rounded corners of container
           ),
           backgroundColor: color,
           iconColor: Color(0xffFDD854), // Button color
@@ -215,7 +252,7 @@ class categoryLoginButton extends StatelessWidget {
           text,
           style: GoogleFonts.poppins(
             fontSize: 14.sp, // Set the font size
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: Colors.white, // Text color
           ),
         ),
