@@ -1,10 +1,14 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/button.dart';
+import 'package:figma_creation_task/ui/custom_widgets/continue_with_container.dart';
+import 'package:figma_creation_task/ui/custom_widgets/line_with_text.dart';
 import 'package:figma_creation_task/ui/custom_widgets/switch_button.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+// after line 157 custom widget start
 
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
@@ -14,6 +18,8 @@ class Login_Screen extends StatefulWidget {
 }
 
 class _Login_ScreenState extends State<Login_Screen> {
+  get imagePaths => null;
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -68,25 +74,25 @@ class _Login_ScreenState extends State<Login_Screen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(left: 24.0, top: 50.h),
+            padding: EdgeInsets.only(left: 24.0, top: 40.h),
             child: Row(
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 12.0.w),
                   child: Text(
-                    "Username or email  ",
+                    "Username or Email  ",
                     style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w500, fontSize: 16.sp),
+                        fontWeight: FontWeight.w600, fontSize: 16.sp),
                   ),
                 ),
               ],
             ),
           ),
           SizedBox(
-            height: screenHeight * 0.02,
+            height: screenHeight * 0.01,
           ),
           const CustomTextField(
-            prefixIcon: Icon(Icons.email),
+            prefixIcon: Icon(Icons.email_outlined),
             hintText: "type useremail, ",
             showVisibilityToggle: false,
           ),
@@ -100,19 +106,19 @@ class _Login_ScreenState extends State<Login_Screen> {
                 Text(
                   "Password",
                   style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w500, fontSize: 16.sp),
+                      fontWeight: FontWeight.w600, fontSize: 16.sp),
                 ),
               ],
             ),
           ),
-          SizedBox(height: screenHeight * 0.02),
+          SizedBox(height: screenHeight * 0.01),
           const CustomTextField(
             prefixIcon: Icon(Icons.lock_outline_rounded),
             hintText: "Password",
             showVisibilityToggle: true,
           ),
           SizedBox(
-            height: screenHeight * 0.05,
+            height: screenHeight * 0.03,
           ),
           Padding(
             padding: EdgeInsets.only(left: 28.w),
@@ -145,15 +151,62 @@ class _Login_ScreenState extends State<Login_Screen> {
               ],
             ),
           ),
-          SizedBox(height: screenHeight * 0.06),
-          categoryLoginButton(onPressed: () {})
+          SizedBox(height: screenHeight * 0.03),
+          categoryLoginButton(onPressed: () {}),
+          SizedBox(height: screenHeight * 0.03),
+          LineWithText(text: "or continue with"),
+
+          //here me
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+                  child: GoogleIconButton(
+                      onPressed: () {}, imagePath: "$staticAssets/Google.png"),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+                  child: GoogleIconButton(
+                      onPressed: () {}, imagePath: "$staticAssets/Google.png"),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+                  child: GoogleIconButton(
+                      onPressed: () {}, imagePath: "$staticAssets/Google.png"),
+                ),
+              ],
+            ),
+          ),
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: GoogleFonts.poppins(
+                    fontSize: 12.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "SIGN UP",
+                      style: GoogleFonts.poppins(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xffffdd854)),
+                    ))
+              ],
+            ),
+          )
         ],
       )),
     );
   }
 }
-
-class W {}
 
 //////////////////////////
 class CustomTextField extends StatefulWidget {
@@ -218,8 +271,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
     );
   }
 }
-
-// sign in button
+//  signbutton
 
 class categoryLoginButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -238,6 +290,18 @@ class categoryLoginButton extends StatelessWidget {
     return Container(
       width: 350.w,
       height: 65.h,
+      decoration: BoxDecoration(
+        color: Colors
+            .transparent, // Ensure the container's background is transparent
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2), // Shadow color
+            spreadRadius: 5, // Spread radius
+            blurRadius: 5, // Blur radius
+            offset: Offset(5, 8), // Shadow offset
+          ),
+        ],
+      ),
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
@@ -260,3 +324,4 @@ class categoryLoginButton extends StatelessWidget {
     );
   }
 }
+// linetext
