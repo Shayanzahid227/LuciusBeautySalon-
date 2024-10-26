@@ -47,7 +47,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w400),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(color: const Color(0xff1e252d)),
+            borderSide: const BorderSide(color: Color(0xff1e252d)),
           ),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.showVisibilityToggle && widget.obscureText

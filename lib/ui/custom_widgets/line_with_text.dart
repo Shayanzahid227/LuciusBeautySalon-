@@ -7,15 +7,16 @@ class LineWithText extends StatelessWidget {
   final double lineWidth; // New parameter to set line width
 
   const LineWithText({
-    Key? key,
+    super.key,
     required this.text,
     this.lineWidth = 50.0, // Default line width
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20.0), // Adjust padding as needed
+      padding: const EdgeInsets.symmetric(
+          vertical: 20.0), // Adjust padding as needed
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center, // Center the content
         children: [

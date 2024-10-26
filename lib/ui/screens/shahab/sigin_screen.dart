@@ -31,7 +31,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
           child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 48.h, left: 5.5.w),
+            padding: EdgeInsets.only(top: 47.h, left: 5.5.w),
             child: Row(
               children: [
                 TextButton(
@@ -54,7 +54,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                   style: GoogleFonts.inter(
                       fontSize: 26.sp,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xff20222C)),
+                      color: const Color(0xff20222C)),
                 ),
               ],
             ),
@@ -68,7 +68,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                   style: GoogleFonts.poppins(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff1e252d)),
+                      color: const Color(0xff1e252d)),
                 ),
               ],
             ),
@@ -133,7 +133,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                   style: GoogleFonts.poppins(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff1E252D)),
+                      color: const Color(0xff1E252D)),
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 18.0.w),
@@ -144,7 +144,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                       style: GoogleFonts.poppins(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xfffdd854)),
+                          color: const Color(0xfffdd854)),
                     ),
                   ),
                 )
@@ -154,7 +154,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
           SizedBox(height: screenHeight * 0.03),
           categoryLoginButton(onPressed: () {}),
           SizedBox(height: screenHeight * 0.03),
-          LineWithText(text: "or continue with"),
+          const LineWithText(text: "or continue with"),
 
           //here me
           Center(
@@ -197,7 +197,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                       style: GoogleFonts.poppins(
                           fontSize: 12.sp,
                           fontWeight: FontWeight.w500,
-                          color: Color(0xffffdd854)),
+                          color: const Color(0xffffdd854)),
                     ))
               ],
             ),
@@ -254,7 +254,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w400),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12),
-            borderSide: BorderSide(color: const Color(0xff1e252d)),
+            borderSide: const BorderSide(color: Color(0xff1e252d)),
           ),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.showVisibilityToggle && widget.obscureText
@@ -279,11 +279,10 @@ class categoryLoginButton extends StatelessWidget {
   final Color color;
 
   const categoryLoginButton(
-      {Key? key,
+      {super.key,
       required this.onPressed,
       this.text = "SIGN IN", //change it according to your use
-      this.color = const Color(0xfffdd854)})
-      : super(key: key);
+      this.color = const Color(0xfffdd854)});
 
   @override
   Widget build(BuildContext context) {
@@ -298,7 +297,7 @@ class categoryLoginButton extends StatelessWidget {
             color: Colors.black.withOpacity(0.2), // Shadow color
             spreadRadius: 5, // Spread radius
             blurRadius: 5, // Blur radius
-            offset: Offset(5, 8), // Shadow offset
+            offset: const Offset(5, 8), // Shadow offset
           ),
         ],
       ),
@@ -310,7 +309,7 @@ class categoryLoginButton extends StatelessWidget {
             //  rounded corners of container
           ),
           backgroundColor: color,
-          iconColor: Color(0xffFDD854), // Button color
+          iconColor: const Color(0xffFDD854), // Button color
         ),
         child: Text(
           text,

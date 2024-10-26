@@ -8,15 +8,14 @@ class categoryLoginButton extends StatelessWidget {
   final Color color;
 
   const categoryLoginButton(
-      {Key? key,
+      {super.key,
       required this.onPressed,
       this.text = "SIGN IN", //change it according to your use
-      this.color = const Color(0xfffdd854)})
-      : super(key: key);
+      this.color = const Color(0xfffdd854)});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 350.w,
       height: 65.h,
       child: ElevatedButton(
@@ -27,7 +26,7 @@ class categoryLoginButton extends StatelessWidget {
             //  rounded corners of container
           ),
           backgroundColor: color,
-          iconColor: Color(0xffFDD854), // Button color
+          iconColor: const Color(0xffFDD854), // Button color
         ),
         child: Text(
           text,

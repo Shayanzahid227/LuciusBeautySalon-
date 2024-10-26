@@ -8,14 +8,14 @@ class categoryLoginButton extends StatelessWidget {
   final String text;
 
   const categoryLoginButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     this.text = "SIGN IN", //change it according to your use
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 327.w,
       height: 56.h,
       child: ElevatedButton(

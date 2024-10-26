@@ -5,10 +5,10 @@ class Switch_on_off_Button extends StatefulWidget {
   final ValueChanged<bool> onChanged;
 
   const Switch_on_off_Button({
-    Key? key,
+    super.key,
     this.initialValue = false,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   _CustomToggleButtonState createState() => _CustomToggleButtonState();
@@ -38,7 +38,7 @@ class _CustomToggleButtonState extends State<Switch_on_off_Button> {
         width: 58,
         height: 27,
         decoration: BoxDecoration(
-          color: _isToggled ? Color(0xfffdd854) : Colors.grey,
+          color: _isToggled ? const Color(0xfffdd854) : Colors.grey,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Stack(

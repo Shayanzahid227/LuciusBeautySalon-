@@ -6,11 +6,11 @@ class GoogleIconButton extends StatelessWidget {
   final String imagePath; // Path to the icon asset
 
   const GoogleIconButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     this.size = 40.0, // Default size for the icon
     required this.imagePath, // Image path should be required
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
