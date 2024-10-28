@@ -4,6 +4,7 @@ import 'package:figma_creation_task/ui/screens/figma03/Register_screen_0.dart';
 import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class login_screen_0 extends StatefulWidget {
   const login_screen_0({super.key});
@@ -15,6 +16,9 @@ class login_screen_0 extends StatefulWidget {
 class _login_screen_0State extends State<login_screen_0> {
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -29,31 +33,32 @@ class _login_screen_0State extends State<login_screen_0> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 70),
+              padding: EdgeInsets.only(top: 70.h),
               child: Center(
                 child: SizedBox(
-                    height: 200,
-                    width: 180,
+                    height: 200.h,
+                    width: 180.w,
                     child: Image.asset(
                       "$staticAssets/loginlogo.png",
                       fit: BoxFit.cover,
                     )),
               ),
             ),
-            const SizedBox(height: 40),
+            SizedBox(height: 40.h),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 22.0),
+                Padding(
+                  padding: EdgeInsets.only(left: 22.0.w),
                   child: Text(
                     "Login",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
+                    style:
+                        TextStyle(fontSize: 22.sp, fontWeight: FontWeight.w700),
                   ),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 20.h,
                 ),
 
                 ///
@@ -77,7 +82,7 @@ class _login_screen_0State extends State<login_screen_0> {
                   hintText: "Email",
                   showVisibilityToggle: false,
                 ),
-                const SizedBox(height: 30),
+                SizedBox(height: 30.h),
 
                 ///
                 /// Paasword
@@ -86,29 +91,29 @@ class _login_screen_0State extends State<login_screen_0> {
                   hintText: "Password",
                   showVisibilityToggle: true,
                 ),
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 30.h,
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                  padding: EdgeInsets.only(left: 25.0.w),
                   child: Row(
                     children: [
                       Container(
-                        height: 50,
-                        width: 360,
+                        height: 50.h,
+                        width: 360.w,
                         decoration: BoxDecoration(
                             color: const Color(0xfffe78377),
-                            borderRadius: BorderRadius.circular(9)),
+                            borderRadius: BorderRadius.circular(9.r)),
                         child: TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
                                   builder: (context) => const home_screen_0()));
                             },
-                            child: const Center(
+                            child: Center(
                                 child: Text(
                               "Login",
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 16.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white),
                             ))),
@@ -116,15 +121,15 @@ class _login_screen_0State extends State<login_screen_0> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 40),
+                SizedBox(height: 40.h),
                 Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         "New user ?",
                         style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w300),
+                            fontSize: 20.sp, fontWeight: FontWeight.w300),
                       ),
                       TextButton(
                           onPressed: () {
@@ -132,10 +137,10 @@ class _login_screen_0State extends State<login_screen_0> {
                               builder: (context) => const Register_screen_0(),
                             ));
                           },
-                          child: const Text(
+                          child: Text(
                             "Register",
                             style: TextStyle(
-                                fontSize: 22,
+                                fontSize: 22.sp,
                                 fontWeight: FontWeight.w400,
                                 color: Color(0xfffef8377)),
                           ))

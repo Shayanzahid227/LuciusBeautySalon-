@@ -1,6 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/button.dart';
-import 'package:figma_creation_task/ui/custom_widgets/continue_with_container.dart';
+import 'package:figma_creation_task/ui/custom_widgets/social_button.dart';
 import 'package:figma_creation_task/ui/custom_widgets/line_with_text.dart';
 import 'package:figma_creation_task/ui/custom_widgets/switch_button.dart';
 
