@@ -131,35 +131,35 @@ class _home_screen_0State extends State<home_screen_0> {
                   ],
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  InkWell(
-                    onTap: () {
-                      onClick();
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                          color: isSelect ? Colors.red : Colors.green,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: const Text("Yes"),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      onClick();
-                    },
-                    child: Container(
-                      padding: const EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                          color: isSelect ? Colors.green : Colors.red,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: const Text("No"),
-                    ),
-                  ),
-                ],
-              ),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //   children: [
+              //     InkWell(
+              //       onTap: () {
+              //         onClick();
+              //       },
+              //       child: Container(
+              //         padding: const EdgeInsets.all(20),
+              //         decoration: BoxDecoration(
+              //             color: isSelect ? Colors.red : Colors.green,
+              //             borderRadius: BorderRadius.circular(20)),
+              //         child: const Text("Yes"),
+              //       ),
+              //     ),
+              //     GestureDetector(
+              //       onTap: () {
+              //         onClick();
+              //       },
+              //       child: Container(
+              //         padding: const EdgeInsets.all(20),
+              //         decoration: BoxDecoration(
+              //             color: isSelect ? Colors.green : Colors.red,
+              //             borderRadius: BorderRadius.circular(20)),
+              //         child: const Text("No"),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               const Text(
                 "Our services",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
@@ -384,7 +384,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Color(0xfff888888)),
-                  )
+                  ),
                 ],
               ),
             ],

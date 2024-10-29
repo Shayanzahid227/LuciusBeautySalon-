@@ -1,3 +1,5 @@
+import 'package:figma_creation_task/ui/screens/figma03/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
 import 'package:figma_creation_task/ui/screens/shahab/login_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -18,11 +20,8 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child:
-          MaterialApp(debugShowCheckedModeBanner: false, home: Login_Screen()),
+          MaterialApp(debugShowCheckedModeBanner: false, home: home_screen_0()),
     );
-    // return const MaterialApp(
-    //   home:(),
-    // );
   }
 }
 
