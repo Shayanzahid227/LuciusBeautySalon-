@@ -11,7 +11,7 @@ class splash_screen_0 extends StatefulWidget {
 
 class _splash_screen_0State extends State<splash_screen_0> {
   init() async {
-    await Future.delayed(const Duration(seconds: 2), () {
+    await Future.delayed(const Duration(seconds: 5), () {
       // navigator and rout mean from one page to another
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const login_screen_0(),
