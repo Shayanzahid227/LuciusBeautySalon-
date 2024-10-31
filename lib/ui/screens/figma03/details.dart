@@ -25,9 +25,9 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
               width: double.infinity.w,
               decoration: const BoxDecoration(
                 color: Colors.amber,
-                // image: DecorationImage(
-                //     image: AssetImage("s$staticAssets/details.png"),
-                //     fit: BoxFit.cover),
+                image: DecorationImage(
+                    image: AssetImage("s$staticAssets/details.png"),
+                    fit: BoxFit.cover),
               ),
               child: Image.asset("$staticAssets/details.pmg"),
             )
