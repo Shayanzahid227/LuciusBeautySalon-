@@ -1,4 +1,5 @@
 import 'package:figma_creation_task/ui/screens/figma03/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/figma03/details.dart';
 import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
 import 'package:figma_creation_task/ui/screens/shahab/login_screen.dart';
 
@@ -19,8 +20,8 @@ class MyApp extends StatelessWidget {
       designSize: Size(393, 852),
       minTextAdapt: true,
       splitScreenMode: true,
-      child:
-          MaterialApp(debugShowCheckedModeBanner: false, home: home_screen_0()),
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false, home: detaailScreen_0()),
     );
   }
 }
