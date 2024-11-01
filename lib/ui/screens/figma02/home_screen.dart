@@ -1,11 +1,15 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/ui/screens/figma03/details.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class home_screen_02 extends StatelessWidget {
   const home_screen_02({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
@@ -28,13 +32,13 @@ class home_screen_02 extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(
-                  height: 250,
+                  height: 250.h,
                   child: ListView(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
-                    children: const [
-                      Padding(padding: EdgeInsets.only(top: 10)),
-                      CategoryContainer(
+                    children: [
+                      Padding(padding: EdgeInsets.only(top: 10.h)),
+                      const CategoryContainer(
                           imagePath: "$staticAssets/Rectangle1.png"),
                       CategoryContainer(
                           imagePath: "$staticAssets/Rectangle2.png")
@@ -44,10 +48,10 @@ class home_screen_02 extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(left: 2),
+                      padding: EdgeInsets.only(left: 2),
                       child: Container(
-                        height: 118,
-                        width: 238,
+                        height: 118.h,
+                        width: 238.h,
                         color: Colors.black,
                         // when i add decoration box or child to load image it showing error in output but no error in code
                         child: const Image(
@@ -55,17 +59,18 @@ class home_screen_02 extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(bottom: 45),
+                      padding: EdgeInsets.only(bottom: 45.h),
                       child: Container(
-                        height: 28,
-                        width: 96,
+                        height: 28.h,
+                        width: 96.h,
                         decoration: BoxDecoration(
                             color: Colors.red,
                             borderRadius: BorderRadius.circular(42)),
-                        child: const Center(
+                        child: Center(
                           child: Text(
                             "GET START",
-                            style: TextStyle(fontSize: 14, color: Colors.white),
+                            style:
+                                TextStyle(fontSize: 14.sp, color: Colors.white),
                           ),
                         ),
                       ),
@@ -102,15 +107,17 @@ class CategoryContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
       child: Container(
         margin: const EdgeInsets.all(8),
-        height: 245,
-        width: 172,
+        height: 245.h,
+        width: 172.w,
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.black,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
