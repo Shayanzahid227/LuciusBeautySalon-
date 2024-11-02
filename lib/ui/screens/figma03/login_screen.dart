@@ -142,7 +142,7 @@ class _login_screen_0State extends State<login_screen_0> {
                             style: TextStyle(
                                 fontSize: 22.sp,
                                 fontWeight: FontWeight.w400,
-                                color: Color(0xfffef8377)),
+                                color: const Color(0xfffef8377)),
                           ))
                     ]),
               ],

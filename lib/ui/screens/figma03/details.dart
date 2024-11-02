@@ -1,5 +1,4 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

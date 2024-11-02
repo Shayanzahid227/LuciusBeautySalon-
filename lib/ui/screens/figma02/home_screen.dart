@@ -40,7 +40,7 @@ class home_screen_02 extends StatelessWidget {
                       Padding(padding: EdgeInsets.only(top: 10.h)),
                       const CategoryContainer(
                           imagePath: "$staticAssets/Rectangle1.png"),
-                      CategoryContainer(
+                      const CategoryContainer(
                           imagePath: "$staticAssets/Rectangle2.png")
                     ],
                   ),
@@ -48,7 +48,7 @@ class home_screen_02 extends StatelessWidget {
                 Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(left: 2),
+                      padding: const EdgeInsets.only(left: 2),
                       child: Container(
                         height: 118.h,
                         width: 238.h,
@@ -113,7 +113,7 @@ class CategoryContainer extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(8),
         height: 245.h,
-        width: 172.w,
+        width: 177.w,
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.black,

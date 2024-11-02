@@ -1,7 +1,4 @@
-import 'package:figma_creation_task/ui/screens/figma03/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/figma03/details.dart';
-import 'package:figma_creation_task/ui/screens/figma03/home_screen.dart';
-import 'package:figma_creation_task/ui/screens/shahab/login_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
