@@ -113,7 +113,7 @@ class CategoryContainer extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(8),
         height: 245.h,
-        width: 177.w,
+        width: 176.w,
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
           color: Colors.black,
