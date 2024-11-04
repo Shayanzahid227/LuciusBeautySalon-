@@ -112,7 +112,7 @@ class CategoryContainer extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         margin: const EdgeInsets.all(8),
-        height: 245.h,
+        height: 249.h,
         width: 176.w,
         padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
