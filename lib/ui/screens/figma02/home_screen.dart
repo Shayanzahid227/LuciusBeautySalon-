@@ -61,7 +61,7 @@ class home_screen_02 extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(bottom: 45.h),
                       child: Container(
-                        height: 28.h,
+                        height: 29.h,
                         width: 96.h,
                         decoration: BoxDecoration(
                             color: Colors.red,
