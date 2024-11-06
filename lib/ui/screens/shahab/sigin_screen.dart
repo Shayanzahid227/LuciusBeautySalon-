@@ -186,7 +186,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                 Text(
                   "Don't have an account?",
                   style: GoogleFonts.poppins(
-                    fontSize: 12.sp,
+                    fontSize: 13.sp,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
