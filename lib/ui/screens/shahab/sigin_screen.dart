@@ -167,7 +167,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                       onPressed: () {}, imagePath: "$staticAssets/FB.png"),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 14.0.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                   child: GoogleIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/Google.png"),
                 ),
