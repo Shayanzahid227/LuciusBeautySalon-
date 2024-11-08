@@ -1,5 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class all_servicess_0 extends StatefulWidget {
   const all_servicess_0({super.key});
@@ -19,7 +20,7 @@ class _all_servicess_0State extends State<all_servicess_0> {
           child: Column(
             children: [
               const SizedBox(
-                height: 51,
+                height: 53,
               ),
               Row(
                 children: [

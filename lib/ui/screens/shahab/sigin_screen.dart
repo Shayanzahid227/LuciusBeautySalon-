@@ -31,7 +31,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
           child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.only(top: 48.h, left: 5.5.w),
+            padding: EdgeInsets.only(top: 49.h, left: 5.5.w),
             child: Row(
               children: [
                 TextButton(
@@ -162,7 +162,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                   child: GoogleIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/FB.png"),
                 ),
@@ -172,7 +172,7 @@ class _Signin_ScreenState extends State<Signin_Screen> {
                       onPressed: () {}, imagePath: "$staticAssets/Google.png"),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15.0.w),
+                  padding: EdgeInsets.symmetric(horizontal: 16.0.w),
                   child: GoogleIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/Vector.png"),
                 ),

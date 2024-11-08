@@ -41,7 +41,7 @@ class Register_screen_0 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Padding(
-                  padding: EdgeInsets.only(left: 22.0),
+                  padding: EdgeInsets.only(left: 23.0),
                   child: Text(
                     "Register",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700),
