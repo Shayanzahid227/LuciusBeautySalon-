@@ -20,15 +20,14 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
         child: Column(
           children: [
             Container(
-              height: 504.h,
+              height: 505.h,
               width: double.infinity.w,
               decoration: const BoxDecoration(
                 color: Colors.amber,
                 image: DecorationImage(
-                    image: AssetImage("s$staticAssets/details.png"),
+                    image: AssetImage("$staticAssets/details.png"),
                     fit: BoxFit.cover),
               ),
-              child: Image.asset("$staticAssets/details.pmg"),
             )
           ],
         ),
