@@ -1,4 +1,5 @@
 import 'package:figma_creation_task/ui/screens/figma03/details.dart';
+import 'package:figma_creation_task/ui/screens/figma03/splash%20screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
-          debugShowCheckedModeBanner: false, home: detaailScreen_0()),
+          debugShowCheckedModeBanner: false, home: splash_screen_0()),
     );
   }
 }
