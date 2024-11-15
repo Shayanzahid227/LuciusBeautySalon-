@@ -24,9 +24,9 @@ class _login_screen_0State extends State<login_screen_0> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         actions: const [
-          Icon(Icons.signal_cellular_alt),
-          Icon(Icons.wifi),
-          Icon(Icons.battery_4_bar_rounded),
+          // Icon(Icons.signal_cellular_alt),
+          // Icon(Icons.wifi),
+          // Icon(Icons.battery_4_bar_rounded),
         ],
       ),
       body: SingleChildScrollView(
@@ -84,9 +84,8 @@ class _login_screen_0State extends State<login_screen_0> {
                 ),
                 SizedBox(height: 30.h),
 
-                ///
-                /// Paasword
-                ///
+                // Paasword
+
                 const CustomTextField(
                   hintText: "Password",
                   showVisibilityToggle: true,
