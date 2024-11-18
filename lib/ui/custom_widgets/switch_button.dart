@@ -9,7 +9,6 @@ class Switch_on_off_Button extends StatefulWidget {
     this.initialValue = false,
     required this.onChanged,
   });
-
   @override
   _CustomToggleButtonState createState() => _CustomToggleButtonState();
 }

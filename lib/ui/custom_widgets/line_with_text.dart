@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LineWithText extends StatelessWidget {
+class CustomLineWithText extends StatelessWidget {
   final String text;
   final double lineWidth; // New parameter to set line width
 
-  const LineWithText({
+  const CustomLineWithText({
     super.key,
     required this.text,
     this.lineWidth = 50.0, // Default line width

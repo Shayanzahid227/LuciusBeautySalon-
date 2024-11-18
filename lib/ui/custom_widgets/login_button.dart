@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class categoryLoginButton extends StatelessWidget {
+class CustomLoginButton extends StatelessWidget {
   final VoidCallback onPressed;
   final String text;
   final Color color;
 
-  const categoryLoginButton(
+  const CustomLoginButton(
       {super.key,
       required this.onPressed,
       this.text = "SIGN IN", //change it according to your use

@@ -154,7 +154,7 @@ class _Login_ScreenState extends State<Login_Screen> {
           SizedBox(height: screenHeight * 0.03),
           categoryLoginButton(onPressed: () {}),
           SizedBox(height: screenHeight * 0.03),
-          const LineWithText(text: "or continue with"),
+          const CustomLineWithText(text: "or continue with"),
 
           //here me
           Center(
@@ -163,17 +163,17 @@ class _Login_ScreenState extends State<Login_Screen> {
               children: [
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-                  child: GoogleIconButton(
+                  child: socialIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/FB.png"),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-                  child: GoogleIconButton(
+                  child: socialIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/Google.png"),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.0.w),
-                  child: GoogleIconButton(
+                  child: socialIconButton(
                       onPressed: () {}, imagePath: "$staticAssets/Vector.png"),
                 ),
               ],

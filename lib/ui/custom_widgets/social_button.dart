@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GoogleIconButton extends StatelessWidget {
+class socialIconButton extends StatelessWidget {
   final VoidCallback onPressed;
   final double size;
   final String imagePath;
 
-  const GoogleIconButton({
+  const socialIconButton({
     super.key,
     required this.onPressed,
     this.size = 52.0,
