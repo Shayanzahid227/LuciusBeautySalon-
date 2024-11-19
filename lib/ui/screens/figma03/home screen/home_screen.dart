@@ -1,4 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/models/HomeViewmodel.dart';
 import 'package:flutter/material.dart';
 
 class home_screen_0 extends StatefulWidget {
@@ -214,30 +215,41 @@ class _home_screen_0State extends State<home_screen_0> {
               ),
               SizedBox(
                 height: 103,
-                child: ListView(
+                child: ListView.builder(
                   shrinkWrap: true,
+                  itemCount: model.listFeature.length,
                   scrollDirection: Axis.horizontal,
-                  children: const [
-                    FeaturedCategoryContainer(
-                      title: "Classic Pedicure",
-                      imagePath: "$staticAssets/featured.png",
-                      belowtitle: "45 mnt 59AED",
-                    ),
-                    FeaturedCategoryContainer(
-                        title: "Classic Pedicure",
-                        imagePath: "$staticAssets/featured.png",
-                        belowtitle: "45 mnt 59 AED"),
-                    FeaturedCategoryContainer(
-                      title: "Classic Pedicure",
-                      imagePath: "$staticAssets/featured.png",
-                      belowtitle: "45 mnt 59 AED",
-                    ),
-                    FeaturedCategoryContainer(
-                      title: "Classic Pedicure",
-                      imagePath: "$staticAssets/featured.png",
-                      belowtitle: "45 mnt 59 AED",
-                    ),
-                  ],
+                  itemBuilder: (BuildContext context, int index) {
+                    return FeaturedCategoryContainer(
+                        featuresServices: model.listFeature[index]);
+                  },
+                  // ask sir
+                  // children: const [
+                  //   //
+                  //   // *****************  ask from sir    *****************
+                  //   //
+                  //   //
+                  //   FeaturedCategoryContainer(featureServices: featureServices)
+                  //   FeaturedCategoryContainer(
+                  //     title: "Classic Pedicure",
+                  //     imagePath: "$staticAssets/featured.png",
+                  //     belowtitle: "45 mnt 59AED",
+                  //   ),
+                  //   FeaturedCategoryContainer(
+                  //       title: "Classic Pedicure",
+                  //       imagePath: "$staticAssets/featured.png",
+                  //       belowtitle: "45 mnt 59 AED"),
+                  //   FeaturedCategoryContainer(
+                  //     title: "Classic Pedicure",
+                  //     imagePath: "$staticAssets/featured.png",
+                  //     belowtitle: "45 mnt 59 AED",
+                  //   ),
+                  //   FeaturedCategoryContainer(
+                  //     title: "Classic Pedicure",
+                  //     imagePath: "$staticAssets/featured.png",
+                  //     belowtitle: "45 mnt 59 AED",
+                  //   ),
+                  // ],
                 ),
               ),
               const Padding(
@@ -334,15 +346,18 @@ class ourservicessContainer extends StatelessWidget {
 // featured services category continer
 //  CategoryContainer Widget to recall it and optimize our code
 class FeaturedCategoryContainer extends StatelessWidget {
-  final String title;
-  final String imagePath;
-  final String belowtitle;
+////// model of feature services called
+  FeatureServices featureServices = FeatureServices();
+  // final String title;
+  // final String imagePath;
+  // final String belowtitle;
 
-  const FeaturedCategoryContainer(
-      {super.key,
-      required this.title,
-      required this.imagePath,
-      required this.belowtitle});
+  FeaturedCategoryContainer({required this.featureServices
+      //   super.key,
+      // required this.title,
+      // required this.imagePath,
+      // required this.belowtitle
+      });
 
   @override
   Widget build(BuildContext context) {
