@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/HomeViewmodel.dart';
+import 'package:figma_creation_task/core/models/home_eature.dart';
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
 import 'package:figma_creation_task/ui/custom_widgets/UpComingBooking.dart';
 import 'package:figma_creation_task/ui/screens/figma03/home%20screen/featureMVVM.dart';
@@ -179,17 +179,17 @@ class _home_screen_0State extends State<home_screen_0> {
                                 fontSize: 16, fontWeight: FontWeight.w500),
                           ),
                           SizedBox(
-                            height: 160,
-                            child: ListView.builder(
-                              shrinkWrap: true,
-                               itemCount: model.listFeature.length,                          
-                              scrollDirection: Axis.horizontal,
-                               itemBuilder: (BuildContext context, int index) {
-                                return OurServicessContainer(
-                                  ourservices: model.[index]);
-                            
-                                
-                            },)),
+                              height: 160,
+                              child: ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: model.listou.length,
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return OurServicessContainer(
+                                      Object_ourservices:
+                                          model.listourservices[index]);
+                                },
+                              )),
                           //     children: const [
                           //       ourservicessContainer(
                           //         title: "Nails",
@@ -226,7 +226,7 @@ class _home_screen_0State extends State<home_screen_0> {
                           //     ],
                           //   ),
                           // ),
-                          const  Text(
+                          const Text(
                             "fatured Services",
                             style: TextStyle(
                               fontSize: 16,
@@ -241,7 +241,7 @@ class _home_screen_0State extends State<home_screen_0> {
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (BuildContext context, int index) {
                                 return FeaturedCategoryContainer(
-                                  // this below feature is object 
+                                    // this below feature is object
                                     featureServices: model.listFeature[index]);
                               },
                               // ask sir
@@ -256,7 +256,6 @@ class _home_screen_0State extends State<home_screen_0> {
                               //     imagePath: "$staticAssets/featured.png",
                               //     belowtitle: "45 mnt 59AED",
                               //   ),
-                             
                             ),
                           ),
                           const Padding(
@@ -309,8 +308,6 @@ class _home_screen_0State extends State<home_screen_0> {
   }
 }
 
-
-
 // featured services category continer
 //  CategoryContainer Widget to recall it and optimize our code
 class FeaturedCategoryContainer extends StatelessWidget {
@@ -320,8 +317,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
   // final String imagePath;
   // final String belowtitle;
 
-  FeaturedCategoryContainer({
-     required this.featureServices
+  FeaturedCategoryContainer({required this.featureServices
       //   super.key,
       // required this.title,
       // required this.imagePath,
@@ -378,4 +374,3 @@ class FeaturedCategoryContainer extends StatelessWidget {
     );
   }
 }
-

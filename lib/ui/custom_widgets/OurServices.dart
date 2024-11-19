@@ -1,14 +1,16 @@
 //  CategoryContainer Widget to recall it and optimize our code
-// ignore: camel_case_types
-import 'package:figma_creation_task/core/models/HomeViewmodel.dart';
+
+import 'package:figma_creation_task/core/models/home_ourServices.dart';
 import 'package:flutter/material.dart';
 
 class OurServicessContainer extends StatelessWidget {
-  OurServices ourservices = OurServices();
+  // last name after = is class name present in modle folder
+  OurServices Object_ourservices = OurServices();
+
   // final String title;
   // final String imagePath;
 
-  OurServicessContainer({required this.ourservices
+  OurServicessContainer({required this.Object_ourservices
       // super.key,
       // required this.title,
       // required this.imagePath,
@@ -30,11 +32,11 @@ class OurServicessContainer extends StatelessWidget {
         children: [
           const Padding(padding: EdgeInsets.only(top: 0)),
           Image.asset(
-            "${ourservices.ImgUrl}",
+            "${Object_ourservices.ImgUrl}",
             scale: 3.8,
           ),
           Text(
-            "${ourservices.tittle}",
+            "${Object_ourservices.tittle}",
             style: const TextStyle(
                 fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black),
           ),

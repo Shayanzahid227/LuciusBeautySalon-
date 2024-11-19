@@ -1,5 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/HomeViewmodel.dart';
+
+import 'package:figma_creation_task/core/models/home_ourServices.dart';
 import 'package:figma_creation_task/core/other/view_model.dart';
 
 class Homemvvm extends BaseViewModel {
