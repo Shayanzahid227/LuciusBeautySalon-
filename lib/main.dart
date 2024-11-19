@@ -1,3 +1,4 @@
+import 'package:figma_creation_task/ui/screens/figma03/SpecificSservices.dart';
 import 'package:figma_creation_task/ui/screens/test/ScreenOverOther.dart';
 
 import 'package:flutter/material.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
       designSize: Size(394, 852),
       minTextAdapt: true,
       splitScreenMode: true,
-      child: MaterialApp(debugShowCheckedModeBanner: false, home: test1()),
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false, home: SpecificsServices()),
     );
   }
 }
