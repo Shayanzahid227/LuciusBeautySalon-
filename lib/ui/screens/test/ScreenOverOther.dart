@@ -10,7 +10,7 @@ class test1 extends StatefulWidget {
 class _test1State extends State<test1> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Colors.greenAccent,
       body: SingleChildScrollView(),
     );

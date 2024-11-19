@@ -7,12 +7,12 @@ class CircularButton extends StatelessWidget {
   final double radius;
 
   const CircularButton({
-    Key? key,
+    super.key,
     required this.onPressed,
     required this.icon,
     this.backgroundColor = const Color(0xfffeaeaea),
     this.radius = 18.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

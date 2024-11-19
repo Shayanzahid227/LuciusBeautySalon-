@@ -20,7 +20,7 @@ class _pra_loginState extends State<pra_login> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 200),
+            const SizedBox(height: 200),
             Padding(
               padding: const EdgeInsets.only(left: 22),
               child: Row(
@@ -30,7 +30,7 @@ class _pra_loginState extends State<pra_login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextField(
                 obscureText: false,
                 decoration: InputDecoration(
@@ -39,13 +39,13 @@ class _pra_loginState extends State<pra_login> {
                     //   color: Colors.black,
                     // ),
                     hintText: 'Your email ',
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.black))),
+                        borderSide: const BorderSide(color: Colors.black))),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.only(left: 22),
               child: Row(
@@ -55,15 +55,15 @@ class _pra_loginState extends State<pra_login> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                     hintText: 'Your Password ',
-                    hintStyle: TextStyle(),
+                    hintStyle: const TextStyle(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: Colors.black))),
+                        borderSide: const BorderSide(color: Colors.black))),
               ),
             ),
             const SizedBox(
@@ -82,7 +82,7 @@ class _pra_loginState extends State<pra_login> {
                     onPressed: () {},
                     child: TextButton(
                         onPressed: () {},
-                        child: Text(
+                        child: const Text(
                           "login",
                           style: TextStyle(color: Colors.black, fontSize: 20),
                         ))),
@@ -90,13 +90,13 @@ class _pra_loginState extends State<pra_login> {
             ),
             CustomLoginButton(onPressed: () {}),
             Row(children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 117.0),
-                child: const Text("new user signup?"),
+              const Padding(
+                padding: EdgeInsets.only(left: 117.0),
+                child: Text("new user signup?"),
               ),
-              TextButton(onPressed: () {}, child: Text("SignUp"))
+              TextButton(onPressed: () {}, child: const Text("SignUp"))
             ]),
-            CustomLineWithText(text: "continue with"),
+            const CustomLineWithText(text: "continue with"),
             Center(
               child: Row(
                 children: [

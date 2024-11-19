@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/figma03/login_screen.dart';
+import 'package:figma_creation_task/ui/screens/figma03/auth%20screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class splash_screen_0 extends StatefulWidget {

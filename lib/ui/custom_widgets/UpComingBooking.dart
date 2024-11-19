@@ -1,23 +1,18 @@
-// featured services category continer
-//  CategoryContainer Widget to recall it and optimize our code
-// ignore_for_file: must_be_immutable
-
-import 'package:figma_creation_task/core/models/HomeViewmodel.dart';
+// upcoming bookings category container for reusaiblity
 import 'package:flutter/material.dart';
 
-class FeaturedCategoryContainer extends StatelessWidget {
-  FeatureServices featureServices = FeatureServices();
-  // final String title;
-  // final String imagePath;
-  // final String belowtitle;
+class UpcomingBookingContainer extends StatelessWidget {
+  final String title;
+  final String imagePath;
+  final String meddletitle;
+  final String belowtitle;
 
-  FeaturedCategoryContainer({super.key, required this.featureServices}
-      //{
-      //   super.key,
-      // required this.title,
-      // required this.imagePath,
-      // required this.belowtitle}
-      );
+  const UpcomingBookingContainer(
+      {super.key,
+      required this.title,
+      required this.imagePath,
+      required this.meddletitle,
+      required this.belowtitle});
 
   @override
   Widget build(BuildContext context) {
@@ -25,8 +20,8 @@ class FeaturedCategoryContainer extends StatelessWidget {
       children: [
         Container(
           margin: const EdgeInsets.all(8),
-          height: 130,
-          width: 276,
+          height: 120,
+          width: 235,
           padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             color: const Color(0xfffffffff),
@@ -38,7 +33,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    "${featureServices.imgUrl}",
+                    imagePath,
                     scale: 3.5,
                   ),
                 ],
@@ -46,20 +41,26 @@ class FeaturedCategoryContainer extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    "${featureServices.tittle}",
+                    title,
                     style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Color(0xfffe78377)),
                   ),
-                  const SizedBox(height: 13),
                   Text(
-                    "  ${featureServices.timePrice}",
+                    meddletitle,
+                    style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                        color: Color(0xfffe78477)),
+                  ),
+                  Text(
+                    belowtitle,
                     style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Color(0xfff888888)),
-                  ),
+                  )
                 ],
               ),
             ],

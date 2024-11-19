@@ -53,7 +53,7 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
-                children: [],
+                children: const [],
               ),
             ))
           ],
