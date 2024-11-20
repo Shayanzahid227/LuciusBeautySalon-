@@ -6,12 +6,12 @@ import 'package:figma_creation_task/core/models/home_eature.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
-  FeatureServices featureServices = FeatureServices();
+  FeatureServices object_featureServices = FeatureServices();
   // final String title;
   // final String imagePath;
   // final String belowtitle;
 
-  FeaturedCategoryContainer({super.key, required this.featureServices}
+  FeaturedCategoryContainer({super.key, required this.object_featureServices}
       //{
       //   super.key,
       // required this.title,
@@ -38,7 +38,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
               Row(
                 children: [
                   Image.asset(
-                    "${featureServices.imgUrl}",
+                    "${object_featureServices.imgUrl}",
                     scale: 3.5,
                   ),
                 ],
@@ -46,7 +46,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    "${featureServices.tittle}",
+                    "${object_featureServices.tittle}",
                     style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
@@ -54,7 +54,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
                   ),
                   const SizedBox(height: 13),
                   Text(
-                    "  ${featureServices.timePrice}",
+                    "  ${object_featureServices.timePrice}",
                     style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,

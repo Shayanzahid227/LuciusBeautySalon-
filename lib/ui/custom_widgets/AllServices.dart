@@ -1,16 +1,14 @@
 //  CategoryContainer Widget to recall it and optimize our code
 // ignore: camel_case_types
+import 'package:figma_creation_task/core/models/all_services.dart';
 import 'package:flutter/material.dart';
 
 class AllServicesscontainer extends StatelessWidget {
-  final String title;
-  final String imagePath;
+  // final String title;
+  // final String imagePath;
+  AllServiceModel allServiceModel = AllServiceModel();
 
-  const AllServicesscontainer({
-    super.key,
-    required this.title,
-    required this.imagePath,
-  });
+  AllServicesscontainer({required this.allServiceModel});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +26,11 @@ class AllServicesscontainer extends StatelessWidget {
         children: [
           const Padding(padding: EdgeInsets.only(top: 0)),
           Image.asset(
-            imagePath,
+            "${allServiceModel.imgUrl}",
             scale: 3.8,
           ),
           Text(
-            title,
+            "${allServiceModel.tittle}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,

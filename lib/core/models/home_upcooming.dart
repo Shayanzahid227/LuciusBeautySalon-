@@ -4,6 +4,5 @@ class Upcommingservices {
   String? tittle;
   String? pageRoute;
   String? timePrice;
-  Upcommingservices(
-      {required this.imgUrl, this.pageRoute, this.timePrice, this.tittle});
+  Upcommingservices({this.imgUrl, this.pageRoute, this.timePrice, this.tittle});
 }

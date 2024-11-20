@@ -1,8 +1,10 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/models/home_eature.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
-  const FeaturedCategoryContainer({super.key});
+  const FeaturedCategoryContainer(
+      {super.key, required FeatureServices featureServices});
 
   // final String tittle;
   // final String imagepath;

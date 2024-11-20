@@ -1,4 +1,4 @@
-import 'package:figma_creation_task/ui/custom_widgets/all_servicess.dart';
+import 'package:figma_creation_task/ui/all_services/all_servicess.dart';
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
