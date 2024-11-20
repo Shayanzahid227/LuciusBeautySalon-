@@ -9,7 +9,7 @@ class AllServicesscontainer extends StatelessWidget {
   // final String imagePath;
   AllServiceModel allServiceModel = AllServiceModel();
 
-  AllServicesscontainer({required this.allServiceModel});
+  AllServicesscontainer({super.key, required this.allServiceModel});
 
   @override
   Widget build(BuildContext context) {

@@ -19,7 +19,7 @@ class _SpecificsServicesState extends State<SpecificsServices> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: Color(0xffff9f8f6),
+      backgroundColor: const Color(0xffff9f8f6),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -49,7 +49,6 @@ class _SpecificsServicesState extends State<SpecificsServices> {
             ),
             SafeArea(
                 child: SizedBox(
-              
               height: MediaQuery.of(context).size.height * 0.9,
               child: GridView(
                 shrinkWrap: true,
@@ -58,10 +57,12 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                 children: [
                   Container(
                     height: 300.h,
-                    width: 157.w,
+                    width: 120.w,
                     decoration: BoxDecoration(
                       //color: Colors.pink,
-                      color: Color(0xffffffffff),
+
+                      color: Colors.yellow,
+                      //color: const Color(0xffffffffff),
                       borderRadius: BorderRadiusDirectional.circular(9),
                     ),
                     child: Column(
@@ -70,7 +71,7 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                       children: [
                         Container(
                           margin: const EdgeInsets.all(
-                              9), // Space around the inner container
+                              7), // Space around the inner container
                           height: 140.h,
                           width: 190.w,
                           decoration: const BoxDecoration(
@@ -83,15 +84,27 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                             fit: BoxFit.cover,
                           ),
                         ),
-                        TextButton(
-                            onPressed: () {},
-                            child: Text("Classic Manicure")),
-                            Row(
-                              children: [
-                                Text("45mnt 39AED"),
-                                IconButton(onPressed: (){}, icon:Icon(Icons.arrow_back_sharp))
-                              ],
-                            )
+                        Row(
+                          children: [
+                            TextButton(
+                                onPressed: () {},
+                                child: const Text("Classic Manicure")),
+                          ],
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: 13),
+                          child: Row(
+                            children: [
+                              const Text("45mnt 39AED"),
+                              SizedBox(
+                                width: 50.w,
+                              ),
+                              IconButton(
+                                  onPressed: () {},
+                                  icon: const Icon(Icons.arrow_back_sharp))
+                            ],
+                          ),
+                        )
                       ],
                     ),
                   )
@@ -101,6 +114,6 @@ class _SpecificsServicesState extends State<SpecificsServices> {
           ],
         ),
       ),
-    );s
+    );
   }
 }

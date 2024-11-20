@@ -83,7 +83,7 @@ class _SpecificsServicesState extends State<SpecificsServices_q> {
                             onPressed: () {
                               // Action for TextButton
                             },
-                            child: Text(
+                            child: const Text(
                               'Classic Manicure',
                               style: TextStyle(color: Colors.white),
                             ),
