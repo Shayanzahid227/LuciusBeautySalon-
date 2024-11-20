@@ -3,7 +3,9 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:figma_creation_task/core/models/home_eature.dart';
+import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/SpecificSservices.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
   FeatureServices object_featureServices = FeatureServices();
@@ -35,6 +37,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
+              SizedBox(width: 10.w),
               Row(
                 children: [
                   Image.asset(

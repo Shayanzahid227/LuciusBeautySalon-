@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/figma03/auth%20screen/login_screen.dart';
+import 'package:figma_creation_task/ui/screens/figma03/authentication%20screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class splash_screen_0 extends StatefulWidget {
@@ -11,7 +11,7 @@ class splash_screen_0 extends StatefulWidget {
 
 class _splash_screen_0State extends State<splash_screen_0> {
   init() async {
-    await Future.delayed(const Duration(seconds: 5), () {
+    await Future.delayed(const Duration(seconds: 2), () {
       // navigator and rout mean from one page to another
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => const login_screen_0(),

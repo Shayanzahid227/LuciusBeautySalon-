@@ -1,10 +1,10 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
-import 'package:figma_creation_task/ui/all_services/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/figma03/all_services/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/figma03/details.dart';
 
-import 'package:figma_creation_task/ui/screens/figma03/home%20screen/featureMVVM.dart';
+import 'package:figma_creation_task/ui/screens/figma03/home%20screen/Home_MVVM.dart';
 
 import 'package:figma_creation_task/ui/screens/figma03/test.dart';
 import 'package:flutter/material.dart';

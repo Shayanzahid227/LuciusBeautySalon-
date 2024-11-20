@@ -3,6 +3,7 @@
 import 'package:figma_creation_task/core/models/all_services.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class AllServicesscontainer extends StatelessWidget {
   // final String title;
   // final String imagePath;

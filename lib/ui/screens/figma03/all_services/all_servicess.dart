@@ -1,7 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/all_services/all_services_view_model.dart';
+import 'package:figma_creation_task/ui/screens/figma03/all_services/all_services_MVVM.dart';
 import 'package:figma_creation_task/ui/custom_widgets/AllServices.dart';
-import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/all_services_view_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -55,13 +55,13 @@ class _all_servicess_0State extends State<all_servicess_0> {
                       height: MediaQuery.of(context).size.height * 0.9,
                       child: GridView.builder(
                         shrinkWrap: true,
-                        itemCount: model.allServicesList.length,
+                        itemCount: model.listallServices.length,
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2),
                         itemBuilder: (BuildContext context, int index) {
                           return AllServicesscontainer(
-                              allServiceModel: model.allServicesList[index]);
+                              allServiceModel: model.listallServices[index]);
                         },
 
                         // children: const [
