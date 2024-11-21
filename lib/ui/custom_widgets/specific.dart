@@ -1,19 +1,21 @@
+import 'package:figma_creation_task/core/models/specifivServices.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SpecificServicesCustomWidget extends StatelessWidget {
-  final String image;
-  final String title;
-  final String price;
-  final String duration;
+  SpecificServices object_specificServices = SpecificServices();
+  // final String image;
+  // final String title;
+  // final String price;
+  // final String duration;
 
-  const SpecificServicesCustomWidget({
-    Key? key,
-    required this.image,
-    required this.title,
-    required this.price,
-    required this.duration,
-  }) : super(key: key);
+  SpecificServicesCustomWidget({required this.object_specificServices
+
+      // required this.image,
+      // required this.title,
+      // required this.price,
+      // required this.duration,
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Image.asset(
-              image,
+              "${object_specificServices.imgUrl}",
               fit: BoxFit.cover,
             ),
           ),
@@ -37,7 +39,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
               TextButton(
                 onPressed: () {},
                 child: Text(
-                  title,
+                  "${object_specificServices.tittle}",
                   style: GoogleFonts.urbanist(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
@@ -52,7 +54,15 @@ class SpecificServicesCustomWidget extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  '$duration $price',
+                  '${object_specificServices.time}',
+                  style: GoogleFonts.urbanist(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xfff888888),
+                  ),
+                ),
+                Text(
+                  '${object_specificServices.price}',
                   style: GoogleFonts.urbanist(
                     fontSize: 14,
                     fontWeight: FontWeight.w400,

@@ -1,4 +1,5 @@
-import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/SpecificServices.dart';
+import 'package:figma_creation_task/ui/screens/figma03/specificScreen.dart/SpecificMVVM.dart';
+import 'package:figma_creation_task/ui/screens/figma03/specificScreen.dart/SpecificServices.dart';
 //import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/4specific.dart';
 //import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/SpecificSservices.dart';
 import 'package:figma_creation_task/ui/screens/figma03/home%20screen/Home_MVVM.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => Homeviewmodel()),
+        ChangeNotifierProvider(
+            create: (context) => SpecificServicesviewmodel()),
       ],
       child: const ScreenUtilInit(
         designSize: Size(394, 852),
