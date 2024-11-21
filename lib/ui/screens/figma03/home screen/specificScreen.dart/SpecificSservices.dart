@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/figma03/all_services/all_servicess.dart';
+
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -56,8 +56,8 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                     crossAxisCount: 2),
                 children: [
                   Container(
-                    height: 300.h,
-                    width: 120.w,
+                    // height: 300.h,
+                    //width: 120.w,
                     decoration: BoxDecoration(
                       //color: Colors.pink,
 
@@ -72,8 +72,8 @@ class _SpecificsServicesState extends State<SpecificsServices> {
                         Container(
                           margin: const EdgeInsets.all(
                               7), // Space around the inner container
-                          height: 140.h,
-                          width: 190.w,
+                          // height: 140.h,
+                          //width: 190.w,
                           decoration: const BoxDecoration(
                             color: Colors.amber,
                             borderRadius:

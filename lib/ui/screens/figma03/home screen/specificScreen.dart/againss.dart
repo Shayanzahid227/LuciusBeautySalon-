@@ -45,73 +45,28 @@ class _SpecificsServicesState extends State<SpecificsServices_q> {
             ),
             SafeArea(
               child: SizedBox(
-                height: MediaQuery.of(context).size.height * 0.9,
+                height: screenHeight * 0.9, // Controls the overall grid height
                 child: GridView(
                   shrinkWrap: true,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
+                    crossAxisCount: 2, // Number of columns
+                    crossAxisSpacing: 10, // Space between columns
+                    mainAxisSpacing: 10, // Space between rows
+                    childAspectRatio:
+                        0.75, // Adjust this to control the size of the grid cells
                   ),
                   children: [
                     Container(
-                      height: 300.h, // Increased height of outer container
-                      width: 157.w,
-                      decoration: BoxDecoration(
-                        color: Colors.pink,
-                        borderRadius: BorderRadiusDirectional.circular(9),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            margin: const EdgeInsets.all(
-                                9), // Margin around inner container
-                            height: 140.h,
-                            width: 190.w,
-                            decoration: const BoxDecoration(
-                              color: Colors.amber,
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(8)),
-                            ),
-                            child: Image.asset(
-                              "$staticAssets/details.png", // Replace with your image asset path
-                              fit: BoxFit.cover, // Cover the inner container
-                            ),
+                      decoration: BoxDecoration(color: Colors.yellow),
+                      child: Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Padding(
+                          padding: EdgeInsets.only(bottom: 90),
+                          child: Image.asset(
+                            "$staticAssets/details.png",
+                            fit: BoxFit.cover,
                           ),
-                          // TextButton below the inner container
-                          TextButton(
-                            onPressed: () {
-                              // Action for TextButton
-                            },
-                            child: const Text(
-                              'Classic Manicure',
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                          // Row with Text and IconButton
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Learn More',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                              ),
-                              IconButton(
-                                onPressed: () {
-                                  // Action for IconButton
-                                },
-                                icon: const Icon(
-                                  Icons.arrow_forward,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ],
