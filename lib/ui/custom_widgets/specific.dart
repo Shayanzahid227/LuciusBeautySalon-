@@ -1,46 +1,73 @@
-//  CategoryContainer Widget to recall it and optimize our code
-// ignore: camel_case_types
-import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/all_services.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// ignore: must_be_immutable
-class SpecifServicesscontainer extends StatelessWidget {
+class SpecificServicesCustomWidget extends StatelessWidget {
+  final String image;
   final String title;
-  final String imagePath;
-  //AllServiceModel allServiceModel = AllServiceModel();
+  final String price;
+  final String duration;
 
-  SpecifServicesscontainer(
-      {super.key,
-      //required this.allServiceModel
-      required this.imagePath,
-      required this.title});
+  const SpecificServicesCustomWidget({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.price,
+    required this.duration,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(8),
-      height: 160,
-      width: 173,
-      padding: const EdgeInsets.all(8.0),
+      height: 202,
+      width: 155,
       decoration: BoxDecoration(
-        color: const Color(0xfffffffff),
-        borderRadius: BorderRadius.circular(12),
+        color: Color(0xffffffff),
+        borderRadius: BorderRadius.circular(9),
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          const Padding(padding: EdgeInsets.only(top: 0)),
-          Image.asset(
-            imagePath,
-            scale: 3.8,
+          Expanded(
+            child: Image.asset(
+              image,
+              fit: BoxFit.cover,
+            ),
           ),
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              color: Color(0xfffe78477),
+          Row(
+            children: [
+              TextButton(
+                onPressed: () {},
+                child: Text(
+                  title,
+                  style: GoogleFonts.urbanist(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xfffe7837),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10.0),
+            child: Row(
+              children: [
+                Text(
+                  '$duration $price',
+                  style: GoogleFonts.urbanist(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xfff888888),
+                  ),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                const Icon(
+                  Icons.arrow_forward,
+                  size: 22,
+                  color: Color(0xfffe7837),
+                ),
+              ],
             ),
           ),
         ],

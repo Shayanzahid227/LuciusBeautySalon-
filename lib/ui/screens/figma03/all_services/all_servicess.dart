@@ -61,7 +61,8 @@ class _all_servicess_0State extends State<all_servicess_0> {
                                 crossAxisCount: 2),
                         itemBuilder: (BuildContext context, int index) {
                           return AllServicesscontainer(
-                              allServiceModel: model.listallServices[index]);
+                              object_allServiceModel:
+                                  model.listallServices[index]);
                         },
 
                         // children: const [

@@ -7,9 +7,10 @@ import 'package:flutter/material.dart';
 class AllServicesscontainer extends StatelessWidget {
   // final String title;
   // final String imagePath;
-  AllServiceModel allServiceModel = AllServiceModel();
+  AllServiceModel object_allServiceModel =
+      AllServiceModel(); // call the model here
 
-  AllServicesscontainer({super.key, required this.allServiceModel});
+  AllServicesscontainer({super.key, required this.object_allServiceModel});
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +28,11 @@ class AllServicesscontainer extends StatelessWidget {
         children: [
           const Padding(padding: EdgeInsets.only(top: 0)),
           Image.asset(
-            "${allServiceModel.imgUrl}",
+            "${object_allServiceModel.imgUrl}",
             scale: 3.8,
           ),
           Text(
-            "${allServiceModel.tittle}",
+            "${object_allServiceModel.tittle}",
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w600,

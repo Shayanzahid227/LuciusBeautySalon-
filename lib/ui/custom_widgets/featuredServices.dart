@@ -3,7 +3,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:figma_creation_task/core/models/home_eature.dart';
-import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/SpecificSservices.dart';
+//import 'package:figma_creation_task/ui/screens/figma03/home%20screen/specificScreen.dart/SpecificSservices.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -57,7 +57,7 @@ class FeaturedCategoryContainer extends StatelessWidget {
                   ),
                   const SizedBox(height: 13),
                   Text(
-                    "  ${object_featureServices.timePrice}",
+                    "${object_featureServices.timePrice}",
                     style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
