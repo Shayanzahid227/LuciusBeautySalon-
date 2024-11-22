@@ -23,14 +23,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => Homeviewmodel()),
+        ChangeNotifierProvider(
+            create: (context) => SpecificServicesviewmodel()),
       ],
       child: const ScreenUtilInit(
         designSize: Size(394, 852),
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
-            debugShowCheckedModeBanner: false, home: home_screen_0()),
+            debugShowCheckedModeBanner: false,
+            home: SpecificServicesScreen_0()),
       ),
     );
   }

@@ -55,7 +55,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                     CircularButton(onPressed: () {}, icon: Icons.search)
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 17,
                 ),
                 SafeArea(
@@ -69,7 +69,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                         crossAxisCount: 2, // Number of items per row
                         crossAxisSpacing:
                             30.0, // Horizontal spacing between itemss
-                        mainAxisSpacing: 20.0, // Vertical spacing between items
+                        mainAxisSpacing: 73.0, // Vertical spacing between items
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return GestureDetector(

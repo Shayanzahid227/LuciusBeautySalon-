@@ -22,10 +22,10 @@ class SpecificServicesCustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 202.h,
+      // height: 250.h,
       height: MediaQuery.of(context).size.height * 0.9,
       width: MediaQuery.of(context).size.width * 0.45,
-      // width: 160.w,
+      //width: 160.w,
       decoration: BoxDecoration(
         color: Color(0xffffffff),
         borderRadius: BorderRadius.circular(9),
@@ -38,9 +38,11 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                 //  left: 4,
                 //right: 4,
                 ),
-            child: Image.asset(
-              "${object_specificServices.imgUrl}",
-              fit: BoxFit.cover,
+            child: Expanded(
+              child: Image.asset(
+                "${object_specificServices.imgUrl}",
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           Row(
@@ -59,7 +61,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 10.0),
+            padding: const EdgeInsets.only(left: 13.0),
             child: Row(
               children: [
                 Text(
