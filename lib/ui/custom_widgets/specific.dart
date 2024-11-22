@@ -31,18 +31,13 @@ class SpecificServicesCustomWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(9),
       ),
       child: Column(
+        //mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(
-            //padding: EdgeInsets.all(0),
-            padding: const EdgeInsets.all(15
-                //  left: 4,
-                //right: 4,
-                ),
-            child: Expanded(
-              child: Image.asset(
-                "${object_specificServices.imgUrl}",
-                fit: BoxFit.cover,
-              ),
+          Expanded(
+            child: Image.asset(
+              "${object_specificServices.imgUrl}",
+              scale: 0.1,
+              // fit: BoxFit.cover,
             ),
           ),
           Row(
