@@ -1,20 +1,21 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:figma_creation_task/ui/custom_widgets/specific.dart';
-import 'package:figma_creation_task/ui/screens/figma03/home%20screen/Home_MVVM.dart';
-import 'package:figma_creation_task/ui/screens/figma03/specificScreen.dart/SpecificMVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class SpecificServicesScreen extends StatefulWidget {
-  const SpecificServicesScreen({super.key});
+class SpecificServicesScreen_0 extends StatefulWidget {
+  const SpecificServicesScreen_0({super.key});
 
   @override
-  State<SpecificServicesScreen> createState() => _SpecificServicesScreenState();
+  State<SpecificServicesScreen_0> createState() =>
+      _SpecificServicesScreen_0State();
 }
 
-class _SpecificServicesScreenState extends State<SpecificServicesScreen> {
+class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
   bool isSelect = false;
 
   @override
@@ -31,6 +32,7 @@ class _SpecificServicesScreenState extends State<SpecificServicesScreen> {
   Widget build(BuildContext context) {
     return Consumer<SpecificServicesviewmodel>(
       builder: (context, model, child) => Scaffold(
+        backgroundColor: Color(0xfff9f8f6),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 20, top: 51),
@@ -64,11 +66,24 @@ class _SpecificServicesScreenState extends State<SpecificServicesScreen> {
                       itemCount: model.listspecific?.length,
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2),
+                        crossAxisCount: 2, // Number of items per row
+                        crossAxisSpacing:
+                            30.0, // Horizontal spacing between itemss
+                        mainAxisSpacing: 20.0, // Vertical spacing between items
+                      ),
                       itemBuilder: (BuildContext context, int index) {
-                        return SpecificServicesCustomWidget(
-                            object_specificServices:
-                                model.listspecific![index]);
+                        return GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const SpecificServicesScreen_0()));
+                          },
+                          child: SpecificServicesCustomWidget(
+                              object_specificServices:
+                                  model.listspecific![index]),
+                        );
                       },
                     ),
                   ),

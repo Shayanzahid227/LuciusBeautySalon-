@@ -1,5 +1,7 @@
 import 'package:figma_creation_task/core/models/specifivServices.dart';
+import 'package:figma_creation_task/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SpecificServicesCustomWidget extends StatelessWidget {
@@ -20,15 +22,22 @@ class SpecificServicesCustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 202,
-      width: 155,
+      // height: 202.h,
+      height: MediaQuery.of(context).size.height * 0.9,
+      width: MediaQuery.of(context).size.width * 0.45,
+      // width: 160.w,
       decoration: BoxDecoration(
         color: Color(0xffffffff),
         borderRadius: BorderRadius.circular(9),
       ),
       child: Column(
         children: [
-          Expanded(
+          Padding(
+            //padding: EdgeInsets.all(0),
+            padding: const EdgeInsets.all(15
+                //  left: 4,
+                //right: 4,
+                ),
             child: Image.asset(
               "${object_specificServices.imgUrl}",
               fit: BoxFit.cover,
@@ -41,7 +50,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                 child: Text(
                   "${object_specificServices.tittle}",
                   style: GoogleFonts.urbanist(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
                     color: Color(0xfffe7837),
                   ),
@@ -56,7 +65,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                 Text(
                   '${object_specificServices.time}',
                   style: GoogleFonts.urbanist(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
                     color: Color(0xfff888888),
                   ),
@@ -64,7 +73,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                 Text(
                   '${object_specificServices.price}',
                   style: GoogleFonts.urbanist(
-                    fontSize: 14,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
                     color: Color(0xfff888888),
                   ),

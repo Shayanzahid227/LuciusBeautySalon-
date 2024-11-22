@@ -7,6 +7,36 @@ class SpecificServicesviewmodel extends BaseViewModel {
   List<SpecificServices>? listspecific = [
     // call model name here
     SpecificServices(
+      imgUrl: "$staticAssets/details2.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
+    SpecificServices(
+      imgUrl: "$staticAssets/details.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
+    SpecificServices(
+      imgUrl: "$staticAssets/details.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
+    SpecificServices(
+      imgUrl: "$staticAssets/details.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
+    SpecificServices(
+      imgUrl: "$staticAssets/details.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
+    SpecificServices(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
@@ -41,6 +71,12 @@ class SpecificServicesviewmodel extends BaseViewModel {
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
-    )
+    ),
+    SpecificServices(
+      imgUrl: "$staticAssets/details.png",
+      tittle: "Clasic Manicure",
+      time: "45 min",
+      price: "59 AED",
+    ),
   ];
 }

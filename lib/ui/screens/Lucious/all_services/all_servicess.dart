@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/figma03/all_services/all_services_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_services_MVVM.dart';
 import 'package:figma_creation_task/ui/custom_widgets/AllServices.dart';
 
 import 'package:flutter/material.dart';

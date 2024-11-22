@@ -1,7 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
-import 'package:figma_creation_task/ui/screens/figma03/authentication%20screen/Register_screen_0.dart';
-import 'package:figma_creation_task/ui/screens/figma03/home%20screen/1home_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
