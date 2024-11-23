@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
-  FeatureServices object_featureServices = FeatureServices();
+  FeatureServicesModel object_featureServices = FeatureServicesModel();
   // final String title;
   // final String imagePath;
   // final String belowtitle;

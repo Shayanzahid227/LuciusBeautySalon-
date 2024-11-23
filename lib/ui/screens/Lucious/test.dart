@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
   const FeaturedCategoryContainer(
-      {super.key, required FeatureServices featureServices});
+      {super.key, required FeatureServicesModel featureServices});
 
   // final String tittle;
   // final String imagepath;

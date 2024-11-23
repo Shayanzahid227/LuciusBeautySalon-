@@ -2,7 +2,7 @@ import 'package:figma_creation_task/core/constant/string.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 

@@ -1,11 +1,11 @@
 //************** feature services ******************/
-class FeatureServices {
+class FeatureServicesModel {
   String? imgUrl;
   String? tittle;
   String? timePrice;
-  List<FeatureServices>? listFeatures;
+  List<FeatureServicesModel>? listFeatures;
 
-  FeatureServices(
+  FeatureServicesModel(
       {this.imgUrl, this.timePrice, this.tittle, this.listFeatures});
 }
 

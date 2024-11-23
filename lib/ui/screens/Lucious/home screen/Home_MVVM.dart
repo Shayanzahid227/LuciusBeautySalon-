@@ -12,8 +12,8 @@ class Homeviewmodel extends BaseViewModel {
   // }
 
 // *************  feature services *****************/
-  List<FeatureServices> listFeature = [
-    FeatureServices(
+  List<FeatureServicesModel> listFeature = [
+    FeatureServicesModel(
       tittle: "Classic Predicure",
       timePrice: "45 mnt 39 AED",
       imgUrl: "$staticAssets/details.png",
