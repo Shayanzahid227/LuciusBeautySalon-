@@ -1,7 +1,10 @@
+import 'package:figma_creation_task/core/models/all_services.dart';
 import 'package:figma_creation_task/core/models/home_upcooming.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/NewUpComingBooking.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 import 'package:figma_creation_task/ui/screens/code_with_asiftaj/stackConcept/StackConcept.dart';
 
@@ -23,11 +26,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-            create: (context) => SpecificServicesviewmodel()),
+        ChangeNotifierProvider(create: (context) => Homeviewmodel()),
+        //ChangeNotifierProvider(create: (context) => AllServiceModel()),
       ],
-      child: const ScreenUtilInit(
-        designSize: Size(394, 852),
+      child: ScreenUtilInit(
+        designSize: const Size(394, 852),
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(

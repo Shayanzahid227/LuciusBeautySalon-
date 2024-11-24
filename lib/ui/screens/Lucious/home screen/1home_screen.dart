@@ -248,9 +248,9 @@ class _home_screen_0State extends State<home_screen_0> {
                           itemCount: model.listFeature.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (BuildContext context, int index) {
-                            return FeaturedCategoryContainer(
+                            return fe(
                                 // this below feature is object
-                                featureServices: model.listFeature[index]);
+                                );
                           },
                           // ask sir
                           // children: const [

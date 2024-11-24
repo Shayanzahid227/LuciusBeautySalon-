@@ -1,5 +1,7 @@
+import 'dart:core';
+
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/home_eature.dart';
+import 'package:figma_creation_task/core/models/home_feature.dart';
 import 'package:figma_creation_task/core/models/home_ourServices.dart';
 import 'package:figma_creation_task/core/models/home_upcooming.dart';
 import 'package:figma_creation_task/core/other/view_model.dart';
@@ -12,12 +14,13 @@ class Homeviewmodel extends BaseViewModel {
   // }
 
 // *************  feature services *****************/
-  List<FeatureServicesModel> listFeature = [
-    FeatureServicesModel(
-      tittle: "Classic Predicure",
-      timePrice: "45 mnt 39 AED",
-      imgUrl: "$staticAssets/details.png",
-    ),
+  List<FeatureServicesModel_2> listfeatur_2 = [
+    FeatureServicesModel_2
+    // FeatureServicesModel(
+    //   tittle: "Classic Predicure",
+    //   timePrice: "45 mnt 39 AED",
+    //   imgUrl: "$staticAssets/details.png",
+    // ),
     // FeatureServices(
     //     tittle: "asjndjenf",
     //     imgUrl: "$staticAssets/details.png",

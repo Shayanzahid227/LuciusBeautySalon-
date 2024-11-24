@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/home_eature.dart';
+import 'package:figma_creation_task/core/models/home_feature.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedCategoryContainer extends StatelessWidget {
