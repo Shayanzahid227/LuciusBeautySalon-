@@ -75,14 +75,16 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                       color: Color(0xfffe78377)),
                                 )),
                             SizedBox(
-                              width: screenWidth * 0.35,
+                              width: screenWidth * 0.3,
                             ),
-                            const Image(
-                              image: AssetImage("$iconsAssets/heart.png"),
-                              fit: BoxFit.contain,
-                              height: 22,
-                              width: 22,
-                            )
+                            TextButton(
+                                onPressed: () {},
+                                child: const Image(
+                                  image: AssetImage("$iconsAssets/heart.png"),
+                                  fit: BoxFit.contain,
+                                  height: 22,
+                                  width: 22,
+                                ))
                           ],
                         ),
                       ),
@@ -101,7 +103,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                         ),
                       ),
                       SizedBox(
-                        height: screenHeight * 0.02,
+                        height: screenHeight * 0.02.h,
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 30.0),
@@ -156,13 +158,15 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                   border: Border.all(color: Color(0xfffe78377)),
                                   borderRadius: BorderRadius.circular(10)),
                               child: Center(
-                                  child: Text(
-                                "Add to carts",
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w400,
-                                    color: Color(0xfffe78377)),
-                              )),
+                                  child: TextButton(
+                                      onPressed: () {},
+                                      child: Text(
+                                        "Add to carts",
+                                        style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400,
+                                            color: Color(0xfffe78377)),
+                                      ))),
                             ),
                           ],
                         ),
