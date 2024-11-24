@@ -10,7 +10,7 @@ class CustomListTile extends StatelessWidget {
   // final String subtitle;
   // final String trailingText;
 
-  CustomListTile({required this.object_listtilemodel
+  CustomListTile({super.key, required this.object_listtilemodel
 
       // required this.imagePath,
       // required this.title,
@@ -24,7 +24,7 @@ class CustomListTile extends StatelessWidget {
     return ListTile(
       leading: CircleAvatar(
           radius: 20,
-          backgroundColor: Color.fromARGB(255, 9, 8, 5),
+          backgroundColor: const Color.fromARGB(255, 9, 8, 5),
           child: Image.asset("${object_listtilemodel.imgUrl}")),
       title: Text("${object_listtilemodel.tittle}"),
       subtitle: Text("${object_listtilemodel.subTittle}"),

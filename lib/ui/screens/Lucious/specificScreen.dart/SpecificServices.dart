@@ -1,11 +1,11 @@
-import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:figma_creation_task/ui/custom_widgets/specific.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 
 class SpecificServicesScreen_0 extends StatefulWidget {
   const SpecificServicesScreen_0({super.key});
@@ -32,7 +32,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
   Widget build(BuildContext context) {
     return Consumer<SpecificServicesviewmodel>(
       builder: (context, model, child) => Scaffold(
-        backgroundColor: Color(0xfff9f8f6),
+        backgroundColor: const Color(0xfff9f8f6),
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.only(left: 20, top: 51),

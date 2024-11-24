@@ -1,7 +1,4 @@
-import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
-import 'package:figma_creation_task/ui/screens/code_with_asiftaj/stackConcept/StackConcept.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
 

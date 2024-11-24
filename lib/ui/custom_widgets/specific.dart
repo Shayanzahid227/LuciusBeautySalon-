@@ -11,7 +11,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
   // final String price;
   // final String duration;
 
-  SpecificServicesCustomWidget({required this.object_specificServices
+  SpecificServicesCustomWidget({super.key, required this.object_specificServices
 
       // required this.image,
       // required this.title,
@@ -27,7 +27,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.45,
       //width: 160.w,
       decoration: BoxDecoration(
-        color: Color(0xffffffff),
+        color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(9),
       ),
       child: Column(
@@ -49,7 +49,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                   style: GoogleFonts.urbanist(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
-                    color: Color(0xfffe7837),
+                    color: const Color(0xfffe7837),
                   ),
                 ),
               ),
@@ -64,7 +64,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                   style: GoogleFonts.urbanist(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xfff888888),
+                    color: const Color(0xfff888888),
                   ),
                 ),
                 Text(
@@ -72,7 +72,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                   style: GoogleFonts.urbanist(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w400,
-                    color: Color(0xfff888888),
+                    color: const Color(0xfff888888),
                   ),
                 ),
                 const SizedBox(
