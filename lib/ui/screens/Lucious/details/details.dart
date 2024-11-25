@@ -24,12 +24,14 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
     double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      bottomNavigationBar:
-          BottomNavigationBar(backgroundColor: Colors.white, items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
-        BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
-      ]),
+      // bottomNavigationBar:
+      //     BottomNavigationBar(backgroundColor: Colors.white, items: [
+      //   BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      //   BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
+      //   BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+      // ]
+
+      // ),
       body: Column(
         children: [
           Stack(

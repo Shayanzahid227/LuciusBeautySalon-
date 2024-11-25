@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/other/view_model.dart';
+import 'package:figma_creation_task/core/other/Base_view_model.dart';
 import 'package:figma_creation_task/ui/screens/code_with_asiftaj/customWidgets.dart/listtileModel.dart';
 //import 'package:figma_creation_task/ui/screens/code_with_asiftaj/customWidgets.dart/listtileModel.dart';
 

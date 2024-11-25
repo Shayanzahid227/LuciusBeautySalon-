@@ -1,6 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/core/models/specifivServices.dart';
-import 'package:figma_creation_task/core/other/view_model.dart';
+import 'package:figma_creation_task/core/other/Base_view_model.dart';
 
 //import 'package:figma_creation_task/ui/custom_widgets/specific.dart';
 class SpecificServicesviewmodel extends BaseViewModel {

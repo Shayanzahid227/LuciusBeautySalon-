@@ -1,10 +1,11 @@
 import 'dart:core';
 
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/models/2home_fetuerdServices.dart';
 import 'package:figma_creation_task/core/models/home_feature.dart';
 import 'package:figma_creation_task/core/models/home_ourServices.dart';
 import 'package:figma_creation_task/core/models/home_upcooming.dart';
-import 'package:figma_creation_task/core/other/view_model.dart';
+import 'package:figma_creation_task/core/other/Base_view_model.dart';
 
 class Homeviewmodel extends BaseViewModel {
   // bool isSelect = false;
@@ -14,8 +15,15 @@ class Homeviewmodel extends BaseViewModel {
   // }
 
 // *************  feature services *****************/
-  List<FeatureServicesModel_2> listfeatur_2 = [
-    FeatureServicesModel_2
+  List<featurservicesmodel_2> listfeatur_2 = [
+    featurservicesmodel_2(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Classic Manicure",
+        timeandprice: "56 min 73 AED"),
+    featurservicesmodel_2(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "ClassicManicure",
+        timeandprice: "56 min 67 AED")
     // FeatureServicesModel(
     //   tittle: "Classic Predicure",
     //   timePrice: "45 mnt 39 AED",

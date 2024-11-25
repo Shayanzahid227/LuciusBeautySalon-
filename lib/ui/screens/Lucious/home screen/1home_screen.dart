@@ -1,4 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/models/2home_fetuerdServices.dart';
+import 'package:figma_creation_task/ui/custom_widgets/2featurservices.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
@@ -245,12 +247,21 @@ class _home_screen_0State extends State<home_screen_0> {
                         height: 103,
                         child: ListView.builder(
                           shrinkWrap: true,
-                          itemCount: model.listFeature.length,
+
+                          itemCount: model.listfeatur_2.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (BuildContext context, int index) {
-                            return fe(
-                                // this below feature is object
-                                );
+                            return GestureDetector(
+                                onTap: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              const all_servicess_0()));
+                                },
+                                child: FeatureServiceCustomWidget_2(
+                                    object_feturservices_2:
+                                        model.listfeatur_2[index]));
                           },
                           // ask sir
                           // children: const [

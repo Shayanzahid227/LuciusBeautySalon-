@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/enums/view_state.dart';
-import 'package:figma_creation_task/core/other/view_model.dart';
+import 'package:figma_creation_task/core/other/Base_view_model.dart';
 import 'package:flutter/material.dart';
 
 class RootViewModel extends BaseViewModel {

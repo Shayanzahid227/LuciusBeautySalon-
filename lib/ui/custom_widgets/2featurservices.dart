@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // The Custom Widget that can be reused with different data
 class FeatureServiceCustomWidget_2 extends StatelessWidget {
-  FeturServicesModel_2 object_feturservices_2 = FeturServicesModel_2();
+  featurservicesmodel_2 object_feturservices_2 = featurservicesmodel_2();
   // final String title;
   // final String durationAndPrice;
   // final String imageAsset;
@@ -31,9 +31,9 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
       child: Row(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 2.0),
+            padding: EdgeInsets.only(left: 10.0),
             child: Image(
-              height: screeheight * 0.09,
+              height: screeheight * 0.089,
               width: screenwidth * 0.2,
               image: AssetImage(
                 "${object_feturservices_2.imgUrl}",
@@ -42,14 +42,17 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
             ),
           ),
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "${object_feturservices_2.tittle}",
-                style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xfffe78377),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Text(
+                  "${object_feturservices_2.tittle}",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    color: Color(0xfffe78377),
+                  ),
                 ),
               ),
               Padding(

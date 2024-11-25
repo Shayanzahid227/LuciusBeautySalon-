@@ -6,6 +6,7 @@ import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
+import 'package:figma_creation_task/ui/screens/code_with_asiftaj/button_color_changing.dart';
 import 'package:figma_creation_task/ui/screens/code_with_asiftaj/stackConcept/StackConcept.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => Homeviewmodel()),
+        ChangeNotifierProvider(
+          create: (context) => Homeviewmodel(),
+        ),
         //ChangeNotifierProvider(create: (context) => AllServiceModel()),
       ],
       child: ScreenUtilInit(
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
-            debugShowCheckedModeBanner: false, home: home_screen_0()),
+            debugShowCheckedModeBanner: false, home: statfulButton()),
       ),
     );
   }
