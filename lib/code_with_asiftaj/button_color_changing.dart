@@ -9,7 +9,7 @@ class statfulButton extends StatefulWidget {
 }
 
 class _statfulButtonState extends State<statfulButton> {
-  bool isSelected = true;
+  bool isSelected = false;
   @override
   void initState() {
     // TODO: implement initState
