@@ -10,6 +10,7 @@ class againCalander extends StatefulWidget {
 
 class _againCalanderState extends State<againCalander> {
   DateTime today = DateTime.now();
+  //void onDaySelected(DateTime currentDay, DateTime focusday) {
   void _onDaySelected(DateTime currentDay, DateTime focusday) {
     setState(() {
       today = currentDay;
@@ -30,6 +31,7 @@ class _againCalanderState extends State<againCalander> {
             headerStyle:
                 HeaderStyle(formatButtonVisible: false, titleCentered: true),
             selectedDayPredicate: (currentDay) => isSameDay(currentDay, today),
+            // onDaySelected: onDaySelected,
             onDaySelected: _onDaySelected,
           ))
         ],
