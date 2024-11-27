@@ -1,9 +1,16 @@
 import 'package:figma_creation_task/core/enums/view_state.dart';
 import 'package:figma_creation_task/core/other/Base_view_model.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:flutter/material.dart';
 
 class RootViewModel extends BaseViewModel {
-  final PageController pageController = PageController(initialPage: 0);
+  // final PageController pageController = PageController(initialPage: 0);
+
+  int selectedScreen = 0;
+
+  List<Widget> allScreen = [Home_Screen_0(), bookings_0(), All_Servicess_0()];
 
   ///
   /// Constructor
@@ -12,21 +19,13 @@ class RootViewModel extends BaseViewModel {
     updatedScreen(val);
     notifyListeners();
   }
-  int selectedScreen = 0;
-  // int selectIndex = 0;
 
-  List<Widget> allScreen = [
-    // HomeScreen(),
-    // ShopScreen(),
-    // VolunteerScreen(),
-    // ChatScreen(),
-  ];
+  // int selectIndex = 0;
 
   updatedScreen(int index) {
     setState(ViewState.busy);
     selectedScreen = index;
     setState(ViewState.idle);
-    // selectIndex = index;
     notifyListeners();
   }
 

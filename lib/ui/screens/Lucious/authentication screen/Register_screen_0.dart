@@ -85,7 +85,7 @@ class Register_screen_0 extends StatelessWidget {
                         child: TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const home_screen_0(),
+                                builder: (context) => const Home_Screen_0(),
                               ));
                             },
                             child: const Center(

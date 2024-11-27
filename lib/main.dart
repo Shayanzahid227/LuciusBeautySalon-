@@ -14,6 +14,7 @@ import 'package:figma_creation_task/code_with_asiftaj/button_color_changing.dart
 import 'package:figma_creation_task/code_with_asiftaj/stackConcept/StackConcept.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
+import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
+      // if multiple screen have common view model then we use veiw model in main .dart
       providers: [
         ChangeNotifierProvider(
           create: (context) => Homeviewmodel(),
@@ -41,7 +43,9 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
-            debugShowCheckedModeBanner: false, home: buttonColorChanging_2()),
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(scaffoldBackgroundColor: Color(0xffFAF8F6)),
+            home: RootScreen()),
       ),
     );
   }

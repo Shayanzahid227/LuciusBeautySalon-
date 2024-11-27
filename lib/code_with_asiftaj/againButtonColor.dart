@@ -25,21 +25,52 @@ class _buttonColorChanging_2State extends State<buttonColorChanging_2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              onClick();
-            },
-            child: Container(
-              height: 70,
-              width: 120,
-              decoration:
-                  BoxDecoration(color: isSelected ? Colors.red : Colors.blue),
-              child: TextButton(onPressed: () {}, child: Text("yes ")),
-            ),
-          )
-        ],
+      body: Center(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                InkWell(
+                  splashColor: Colors.black,
+                  onTap: () {
+                    // onClick();
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        color: isSelected ? Colors.red : Colors.blue),
+                    child: Center(
+                      child: Text(
+                        "yes ",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ),
+                ),
+                GestureDetector(
+                  onTap: () {
+                    // onClick();
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        color: isSelected ? Colors.blue : Colors.red),
+                    child: Center(
+                      child: Text(
+                        "No",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

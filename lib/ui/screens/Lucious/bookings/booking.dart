@@ -45,7 +45,8 @@ class _bookings_0State extends State<bookings_0> {
             ),
             SizedBox(height: screenheight * 0.025),
             Container(
-              height: screenheight * 0.099,
+              height: 120,
+              // height: screenheight * 0.099,
               width: screenwidth * 0.96,
               decoration: BoxDecoration(
                 color: Color(0xfffffffff),
@@ -53,24 +54,19 @@ class _bookings_0State extends State<bookings_0> {
               ),
               child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(4.0),
-                    child: Image.asset(
-                      // height: screenheight * 0.8,
-                      // width: screenwidth * 0.2,
-                      "$staticAssets/details.png",
-                    ),
+                  Image.asset(
+                    // height: screenheight * 0.8,
+                    // width: screenwidth * 0.2,
+                    "$staticAssets/details.png",
                   ),
-                  SizedBox(width: screenwidth * 0.03),
-                  Column(
+                  //SizedBox(width: screenwidth * 0.03),
+                  const Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          Text('Classic Manicure'),
-                        ],
-                      ),
-                      TextButton(onPressed: () {}, child: Text("Salon")),
+                      Text('Classic Manicure'),
+                      Text('salon'),
+                      // TextButton(onPressed: () {}, child: Text("Salon")),
                       Text("sat, 22 aug 2022"),
                     ],
                   )

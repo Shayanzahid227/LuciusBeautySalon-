@@ -1,23 +1,18 @@
-import 'package:figma_creation_task/core/constant/string.dart';
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_services_MVVM.dart';
 import 'package:figma_creation_task/ui/custom_widgets/AllServices.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-class all_servicess_0 extends StatefulWidget {
-  const all_servicess_0({super.key});
-
-  @override
-  State<all_servicess_0> createState() => _all_servicess_0State();
-}
-
-class _all_servicess_0State extends State<all_servicess_0> {
+// ignore: camel_case_types
+class All_Servicess_0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
+      // call here View Model here
       create: (context) => AllServicesViewModel(),
+      // consumer to pitch the data from Model
       child: Consumer<AllServicesViewModel>(
         builder: (context, model, child) => Scaffold(
           backgroundColor: const Color(0xffff9f8f6),
