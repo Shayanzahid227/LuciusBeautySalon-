@@ -1,21 +1,6 @@
-import 'package:figma_creation_task/code_with_asiftaj/againButtonColor.dart';
-import 'package:figma_creation_task/code_with_asiftaj/againCalander.dart';
 import 'package:figma_creation_task/code_with_asiftaj/calander.dart';
-import 'package:figma_creation_task/core/models/all_services.dart';
-import 'package:figma_creation_task/core/models/home_upcooming.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/NewUpComingBooking.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
-import 'package:figma_creation_task/code_with_asiftaj/button_color_changing.dart';
-import 'package:figma_creation_task/code_with_asiftaj/stackConcept/StackConcept.dart';
-
-import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

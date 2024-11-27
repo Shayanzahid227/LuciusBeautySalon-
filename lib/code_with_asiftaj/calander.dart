@@ -35,21 +35,29 @@ class _CalanderState extends State<Calander> {
             ),
           ),
           //  Text("selected date = " + today.toString().split("")[0]),
-          Container(
-              //child: Text("Selected date = " + today.toString().split(" ")[0]),
+          SafeArea(
+            child: Container(
+                //child: Text("Selected date = " + today.toString().split(" ")[0]),
 
-              // focus day mean as u open calander it showing current day
-              child: TableCalendar(
-            focusedDay: today,
-            firstDay: DateTime.utc(2010, 10, 16),
-            lastDay: DateTime.utc(2030, 3, 14),
-            // for changes in calander
-            headerStyle:
-                HeaderStyle(formatButtonVisible: false, titleCentered: true),
-            availableGestures: AvailableGestures.all,
-            selectedDayPredicate: (currentday) => isSameDay(currentday, today),
-            onDaySelected: _onDaySelected,
-          ))
+                // focus day mean as u open calander it showing current day
+                decoration: const BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(100),
+                        bottomRight: Radius.circular(120))),
+                child: TableCalendar(
+                  focusedDay: today,
+                  firstDay: DateTime.utc(2010, 10, 16),
+                  lastDay: DateTime.utc(2030, 3, 14),
+                  // for changes in calander
+                  headerStyle: HeaderStyle(
+                      formatButtonVisible: false, titleCentered: true),
+                  availableGestures: AvailableGestures.all,
+                  selectedDayPredicate: (currentday) =>
+                      isSameDay(currentday, today),
+                  onDaySelected: _onDaySelected,
+                )),
+          )
         ],
       ),
     );

@@ -60,6 +60,7 @@ class RootScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(13.r)),
                     child: Image.asset(
                       '$staticAssets/home1.png',
+                      // 0 mean index 0
                       color: model.selectedScreen == 0
                           ? Colors.white
                           : Colors.grey,
