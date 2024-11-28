@@ -3,11 +3,14 @@ import 'package:figma_creation_task/core/models/2home_fetuerdServices.dart';
 import 'package:figma_creation_task/ui/custom_widgets/2featurservices.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
+import 'package:figma_creation_task/ui/custom_widgets/UpComingBooking.dart';
 import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/naviagator_bar.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/test.dart';
 import 'package:figma_creation_task/ui/screens/test/qqqq.dart';
@@ -146,6 +149,9 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 22.h,
+                ),
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceAround,
                 //   children: [
@@ -180,6 +186,9 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
                 SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
                     height: 160,
                     child: ListView.builder(
                       shrinkWrap: true,
@@ -198,6 +207,9 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                         );
                       },
                     )),
+                SizedBox(
+                  height: 10,
+                ),
                 //     children: const [
                 //       ourservicessContainer(
                 //         title: "Nails",
@@ -242,6 +254,9 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                   ),
                 ),
                 SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
                   height: 103,
                   child: ListView.builder(
                     shrinkWrap: true,
@@ -257,7 +272,8 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => All_Servicess_0()));
+                                      builder: (context) =>
+                                          SpecificServicesScreen_0()));
                             },
                             child: FeatureServiceCustomWidget_2(
                                 object_feturservices_2:
@@ -278,6 +294,9 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                     //   ),
                   ),
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 const Padding(
                   padding: EdgeInsets.only(left: 16.0, top: 10),
                   child: Row(
@@ -291,10 +310,31 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                   ),
                 ),
                 SizedBox(
+                  height: 10,
+                ),
+                SizedBox(
                   height: 110,
-                  child: ListView(
+                  child: ListView.builder(
                     shrinkWrap: true,
                     scrollDirection: Axis.horizontal,
+                    itemCount: model.listupcoming.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 18.0),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => bookings_0()));
+                          },
+                          child: UpComingBookingCustomContainer(
+                              object_upcomingservices:
+                                  model.listupcoming[index]),
+                        ),
+                      );
+                    },
+
                     // children: const [
                     //   UpcomingBookingContainer(
                     //       title: "Classic Manicure",

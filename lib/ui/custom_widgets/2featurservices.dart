@@ -22,7 +22,7 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
     double screenwidth = MediaQuery.of(context).size.width;
     double screeheight = MediaQuery.of(context).size.height;
     return Container(
-      height: 90.h,
+      height: 87.h,
       width: 267.w,
       decoration: BoxDecoration(
         color: Color(0xfffffffff),
@@ -33,7 +33,7 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(left: 10.0),
             child: Image(
-              height: screeheight * 0.089,
+              height: screeheight * 0.09,
               width: screenwidth * 0.2,
               image: AssetImage(
                 "${object_feturservices_2.imgUrl}",

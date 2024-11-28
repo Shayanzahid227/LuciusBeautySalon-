@@ -1,8 +1,9 @@
 //************ upcooming services  *********
-class Upcommingservices {
+class UpcommingservicesModel {
   String? imgUrl;
   String? tittle;
   String? pageRoute;
   String? timePrice;
-  Upcommingservices({this.imgUrl, this.pageRoute, this.timePrice, this.tittle});
+  UpcommingservicesModel(
+      {this.imgUrl, this.pageRoute, this.timePrice, this.tittle});
 }

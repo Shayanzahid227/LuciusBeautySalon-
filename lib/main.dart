@@ -5,6 +5,7 @@ import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/profileScreen/ProfileScreen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/splash%20screen.dart';
 import 'package:figma_creation_task/ui/screens/figma02/home_screen.dart';
 import 'package:figma_creation_task/ui/screens/root/AgainRootScreen.dart';
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: Color(0xffFAF8F6)),
-            home: RootScreenAgain_00()),
+            home: SpecificServicesScreen_0()),
       ),
     );
   }

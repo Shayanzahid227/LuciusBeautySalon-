@@ -47,27 +47,52 @@ class Homeviewmodel extends BaseViewModel {
     //     tittle: "shfb", imgUrl: "$staticAssets/details.png", timePrice: "hbd"),
   ];
 //*****************    our services   *****************/
-  List<OurServices> listOurServices = [
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
-    OurServices(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+  List<OurServicesModel> listOurServices = [
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
+    OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
   ];
   //*****************  upcooming services  *****************/
-  List<Upcommingservices> listupcoming = [
-    Upcommingservices(
+  List<UpcommingservicesModel> listupcoming = [
+    UpcommingservicesModel(
         imgUrl: "$staticAssets/details.png",
-        tittle: "hds",
-        pageRoute: "eedfe",
-        timePrice: "eeee")
+        tittle: "Clasic Manicure",
+        pageRoute: "Home",
+        timePrice: "sat 22 aug 2024"),
+    UpcommingservicesModel(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Classic Padicure",
+        pageRoute: "salon",
+        timePrice: "sun 23 aug 2024"),
+    UpcommingservicesModel(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Clasic Manicure",
+        pageRoute: "Home",
+        timePrice: "sat 22 aug 2024"),
+    UpcommingservicesModel(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Classic Padicure",
+        pageRoute: "salon",
+        timePrice: "sun 23 aug 2024"),
+    UpcommingservicesModel(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Clasic Manicure",
+        pageRoute: "Home",
+        timePrice: "sat 22 aug 2024"),
+    UpcommingservicesModel(
+        imgUrl: "$staticAssets/details.png",
+        tittle: "Classic Padicure",
+        pageRoute: "salon",
+        timePrice: "sun 23 aug 2024")
   ];
 }

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 // ignore: must_be_immutable
 class OurServicessContainer extends StatelessWidget {
   // last name after = is class name present in modle folder
-  OurServices Object_ourservices = OurServices();
+  OurServicesModel Object_ourservices = OurServicesModel();
 
   // final String title;
   // final String imagePath;

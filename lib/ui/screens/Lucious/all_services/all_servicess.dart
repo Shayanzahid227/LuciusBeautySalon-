@@ -2,6 +2,7 @@
 
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_services_MVVM.dart';
 import 'package:figma_creation_task/ui/custom_widgets/AllServices.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -29,7 +30,12 @@ class All_Servicess_0 extends StatelessWidget {
                       CircleAvatar(
                         backgroundColor: const Color(0xfffeaeaea),
                         child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home_Screen_0()));
+                            },
                             child: const Icon(Icons.arrow_back_sharp)),
                       ),
                       const SizedBox(

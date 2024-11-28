@@ -1,5 +1,6 @@
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:figma_creation_task/ui/custom_widgets/specific.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificMVVM.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        const SpecificServicesScreen_0()));
+                                        const detaailScreen_0()));
                           },
                           child: SpecificServicesCustomWidget(
                               object_specificServices:
