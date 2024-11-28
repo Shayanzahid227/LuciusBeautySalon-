@@ -42,21 +42,25 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
             ),
           ),
           Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Text(
-                  "${object_feturservices_2.tittle}",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                    color: Color(0xfffe78377),
-                  ),
+                padding: const EdgeInsets.only(top: 10, left: 10.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "${object_feturservices_2.tittle}",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: Color(0xfffe78377),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(left: 19.0, top: 19),
+                padding: const EdgeInsets.only(left: 10, top: 7),
                 child: Row(
                   children: [
                     Text(

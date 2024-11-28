@@ -25,9 +25,11 @@ class _againCalanderState extends State<againCalander> {
           Text("selected Day" + toString().split("")[0]),
           Container(
               child: TableCalendar(
+            calendarFormat: CalendarFormat.week,
             focusedDay: today,
             firstDay: DateTime.utc(2010, 1, 1),
             lastDay: DateTime.utc(2030, 12, 30),
+
             headerStyle:
                 HeaderStyle(formatButtonVisible: false, titleCentered: true),
             selectedDayPredicate: (currentDay) => isSameDay(currentDay, today),

@@ -2,6 +2,7 @@ import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
+import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -106,7 +107,7 @@ class _login_screen_0State extends State<login_screen_0> {
                         child: TextButton(
                             onPressed: () {
                               Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) => const Home_Screen_0()));
+                                  builder: (context) => RootScreen()));
                             },
                             child: Center(
                                 child: Text(

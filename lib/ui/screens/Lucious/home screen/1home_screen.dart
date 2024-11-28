@@ -248,17 +248,21 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
 
                     itemCount: model.listfeatur_2.length,
                     scrollDirection: Axis.horizontal,
+
                     itemBuilder: (BuildContext context, int index) {
-                      return GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => All_Servicess_0()));
-                          },
-                          child: FeatureServiceCustomWidget_2(
-                              object_feturservices_2:
-                                  model.listfeatur_2[index]));
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 18.0),
+                        child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => All_Servicess_0()));
+                            },
+                            child: FeatureServiceCustomWidget_2(
+                                object_feturservices_2:
+                                    model.listfeatur_2[index])),
+                      );
                     },
                     // ask sir
                     // children: const [

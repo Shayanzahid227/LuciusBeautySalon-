@@ -4,75 +4,75 @@ import 'package:figma_creation_task/core/other/Base_view_model.dart';
 
 //import 'package:figma_creation_task/ui/custom_widgets/specific.dart';
 class SpecificServicesviewmodel extends BaseViewModel {
-  List<SpecificServices>? listspecific = [
+  List<SpecificServicesModel>? listspecific = [
     // call model name here
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details2.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",
       price: "59 AED",
     ),
-    SpecificServices(
+    SpecificServicesModel(
       imgUrl: "$staticAssets/details.png",
       tittle: "Clasic Manicure",
       time: "45 min",

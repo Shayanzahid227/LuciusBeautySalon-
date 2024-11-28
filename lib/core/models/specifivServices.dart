@@ -1,11 +1,11 @@
 //************** feature services ******************/
-class SpecificServices {
+class SpecificServicesModel {
   String? imgUrl;
   String? tittle;
   String? time;
   String? price;
 
-  SpecificServices({
+  SpecificServicesModel({
     this.imgUrl,
     this.time,
     this.price,

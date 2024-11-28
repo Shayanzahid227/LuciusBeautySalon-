@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SpecificServicesCustomWidget extends StatelessWidget {
-  SpecificServices object_specificServices = SpecificServices();
+  SpecificServicesModel object_specificServices = SpecificServicesModel();
   // final String image;
   // final String title;
   // final String price;

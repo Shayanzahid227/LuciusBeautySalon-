@@ -44,35 +44,13 @@ class _bookings_0State extends State<bookings_0> {
               ),
             ),
             SizedBox(height: screenheight * 0.025),
-            Container(
-              height: 120,
-              // height: screenheight * 0.099,
-              width: screenwidth * 0.96,
-              decoration: BoxDecoration(
-                color: Color(0xfffffffff),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                children: [
-                  Image.asset(
-                    // height: screenheight * 0.8,
-                    // width: screenwidth * 0.2,
-                    "$staticAssets/details.png",
-                  ),
-                  //SizedBox(width: screenwidth * 0.03),
-                  const Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Classic Manicure'),
-                      Text('salon'),
-                      // TextButton(onPressed: () {}, child: Text("Salon")),
-                      Text("sat, 22 aug 2022"),
-                    ],
-                  )
-                ],
-              ),
-            ),
+            // CustomBookingContainer(
+            //   screenwidth: screenwidth,
+            //   imagePath: null,
+            //   Tittle: null,
+            //   Type: null,
+            //   Date: null,
+            // ),
           ],
         ),
       ),

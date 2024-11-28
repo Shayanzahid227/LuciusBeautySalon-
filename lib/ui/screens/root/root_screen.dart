@@ -104,34 +104,35 @@ class RootScreen extends StatelessWidget {
       ),
     );
   }
-
-  Widget bottomBar(RootViewModel model) {
-    return BottomAppBar(
-      color: Colors.green,
-      elevation: 0.0,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          CustomBottomNavigator(
-            currentIndex: model.selectedScreen,
-            indexNumber: 1,
-            text: 'Shop',
-            image: model.selectedScreen == 0 ? "" : "AppAssets.shop",
-            onPressed: () {
-              model.updatedScreen(0);
-            },
-          ),
-          CustomBottomNavigator(
-            currentIndex: model.selectedScreen,
-            indexNumber: 1,
-            text: 'Shop',
-            image: model.selectedScreen == 1 ? "" : "AppAssets.shop",
-            onPressed: () {
-              model.updatedScreen(1);
-            },
-          ),
-        ],
-      ),
-    );
-  }
 }
+
+//   Widget bottomBar(RootViewModel model) {
+//     return BottomAppBar(
+//       color: Colors.green,
+//       elevation: 0.0,
+//       child: Row(
+//         mainAxisAlignment: MainAxisAlignment.spaceAround,
+//         children: [
+//           CustomBottomNavigator(
+//             currentIndex: model.selectedScreen,
+//             indexNumber: 1,
+//             text: 'Shop',
+//             image: model.selectedScreen == 0 ? "" : "AppAssets.shop",
+//             onPressed: () {
+//               model.updatedScreen(0);
+//             },
+//           ),
+//           CustomBottomNavigator(
+//             currentIndex: model.selectedScreen,
+//             indexNumber: 1,
+//             text: 'Shop',
+//             image: model.selectedScreen == 1 ? "" : "AppAssets.shop",
+//             onPressed: () {
+//               model.updatedScreen(1);
+//             },
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
