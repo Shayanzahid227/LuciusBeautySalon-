@@ -29,6 +29,7 @@ class Home_Screen_0 extends StatefulWidget {
 
 class _Home_Screen_0State extends State<Home_Screen_0> {
   bool isSelect = false;
+  //final index = 0;
 
   @override
   void initState() {

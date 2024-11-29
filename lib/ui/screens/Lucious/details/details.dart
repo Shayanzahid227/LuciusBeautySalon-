@@ -69,7 +69,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(40),
+                        topLeft: Radius.circular(50),
                         topRight: Radius.circular(50)),
                     color: Color(0xfffffffff),
                   ),

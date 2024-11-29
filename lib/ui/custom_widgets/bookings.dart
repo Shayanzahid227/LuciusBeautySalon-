@@ -13,27 +13,27 @@ class CustomBookingContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 71,
+      height: 85,
       // height: screenheight * 0.099,
       // width: object_bookings.screenwidth * 0.96,
-      width: 150.w,
+      width: 350.w,
       decoration: BoxDecoration(
         color: Color(0xfffffffff),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         children: [
-          Image.asset(
-            height: 20,
-            width: 2,
-            "${object_bookings.ImgUrl}",
-            fit: BoxFit.contain,
-          ),
           // Image.asset(
-          //   // height: screenheight * 0.8,
-          //   // width: screenwidth * 0.2,
-          //   "${object_bookings.ImgUrl}", scale: 8,
+          //   height: 20,
+          //   width: 2,
+          //   "${object_bookings.ImgUrl}",
+          //   fit: BoxFit.contain,
           // ),
+          Image.asset(
+            // height: screenheight * 0.8,
+            // width: screenwidth * 0.2,
+            "${object_bookings.ImgUrl}", scale: 5,
+          ),
           //SizedBox(width: screenwidth * 0.03),
           Padding(
             padding: EdgeInsets.only(top: 10, left: 17.0),
@@ -77,7 +77,7 @@ class CustomBookingContainer extends StatelessWidget {
                           fontWeight: FontWeight.w400),
                     ),
                     SizedBox(
-                      width: 120,
+                      width: 65.0.w,
                     ),
                     Text(
                       "${object_bookings.TimeAndPrice}",

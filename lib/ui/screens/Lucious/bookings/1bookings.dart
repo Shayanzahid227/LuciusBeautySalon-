@@ -13,6 +13,8 @@ class BookingScreen_ok extends StatefulWidget {
 }
 
 class _BookingScreen_okState extends State<BookingScreen_ok> {
+  var index = 0;
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -55,9 +57,17 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                         child: Column(
                           children: [
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                // for (int x = 0;
+                                //     x <= model.listbookings.length;
+                                //     x++) {
+                                //   index == model.listbookings.length;
+                                // }
+                                index == model.listbookings.length;
+                                setState(() {});
+                              },
                               child: CustomBookingContainer(
-                                  object_bookings: model.listbookings[]),
+                                  object_bookings: model.listbookings[index]),
                             )
                           ],
                         ),
