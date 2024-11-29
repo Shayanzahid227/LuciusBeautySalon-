@@ -6,7 +6,9 @@ import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
 import 'package:figma_creation_task/ui/custom_widgets/UpComingBooking.dart';
 import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/naviagator_bar.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
@@ -326,7 +328,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => bookings_0()));
+                                    builder: (context) => BookingScreen_ok()));
                           },
                           child: UpComingBookingCustomContainer(
                               object_upcomingservices:

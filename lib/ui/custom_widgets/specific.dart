@@ -22,10 +22,10 @@ class SpecificServicesCustomWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // height: 250.h,
-      height: MediaQuery.of(context).size.height * 0.9,
-      width: MediaQuery.of(context).size.width * 0.45,
-      //width: 160.w,
+      //height: 200.h,
+      height: MediaQuery.of(context).size.height * 1,
+      width: MediaQuery.of(context).size.width * 0.5,
+      // width: 147.w,
       decoration: BoxDecoration(
         color: const Color(0xffffffff),
         borderRadius: BorderRadius.circular(9),
@@ -34,29 +34,34 @@ class SpecificServicesCustomWidget extends StatelessWidget {
         //mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Expanded(
-            child: Image.asset(
-              "${object_specificServices.imgUrl}",
-              scale: 0.1,
-              // fit: BoxFit.cover,
+            child: Padding(
+              padding: EdgeInsets.all(5),
+              //padding: const EdgeInsets.only(left: 3.0, top: 6, right: 3),
+              child: Image.asset(
+                // width: 300.w,
+                "${object_specificServices.imgUrl}",
+                fit: BoxFit.cover,
+                // fit: BoxFit.cover,
+              ),
             ),
           ),
           Row(
             children: [
-              TextButton(
-                onPressed: () {},
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
                 child: Text(
-                  "${object_specificServices.tittle}",
+                  "Classic MAnicure",
                   style: GoogleFonts.urbanist(
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
                     color: const Color(0xfffe7837),
                   ),
                 ),
-              ),
+              )
             ],
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 13.0),
+            padding: const EdgeInsets.only(left: 20.0),
             child: Row(
               children: [
                 Text(
@@ -76,7 +81,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  width: 10,
+                  width: 16,
                 ),
                 const Icon(
                   Icons.arrow_forward,

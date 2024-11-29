@@ -3,7 +3,9 @@ import 'package:figma_creation_task/code_with_asiftaj/calander.dart';
 import 'package:figma_creation_task/core/enums/view_state.dart';
 import 'package:figma_creation_task/core/other/Base_view_model.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/profileScreen/ProfileScreen.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,7 @@ class RootViewModel extends BaseViewModel {
 
   List<Widget> allScreen = [
     Home_Screen_0(),
-    againCalander(),
+    BookingScreen_ok(),
     ProfileScreen_0()
   ];
 

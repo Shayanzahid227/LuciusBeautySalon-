@@ -1,5 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/bottom_navigator_bar.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,6 +20,18 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
   //   const Icon(Icons.chat_rounded),
   //   const Icon(Icons.person)
   //];
+  bool isSelected = true;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  void onClick() {
+    isSelected = !isSelected;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -51,7 +65,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 413.5),
+                padding: const EdgeInsets.only(top: 460.5),
                 child: Container(
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(
@@ -77,7 +91,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                       color: Color(0xfffe78377)),
                                 )),
                             SizedBox(
-                              width: screenWidth * 0.3,
+                              width: screenWidth * 0.25,
                             ),
                             TextButton(
                                 onPressed: () {},
@@ -133,42 +147,67 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                         padding: const EdgeInsets.only(left: 30.0),
                         child: Row(
                           children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                color: Color(0xfffe78377),
-                                borderRadius: BorderRadius.circular(10),
+                            GestureDetector(
+                              onTap: () {
+                                onClick();
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: isSelected
+                                      ? Color(0xfffe78377)
+                                      : Colors.transparent,
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                height: 60,
+                                width: 174,
+                                child: TextButton(
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                BookingScreen_ok(),
+                                          ));
+                                    },
+                                    child: Text(
+                                      "Book Now",
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w400,
+                                          color: isSelected
+                                              ? Colors.white
+                                              : Color(0xfffe78377)),
+                                    )),
                               ),
-                              child: TextButton(
-                                  onPressed: () {},
-                                  child: const Text(
-                                    "Book Now",
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.white),
-                                  )),
-                              height: 60,
-                              width: 174,
                             ),
                             SizedBox(
                               width: screenWidth * 0.099,
                             ),
-                            Container(
-                              height: 60,
-                              width: 130,
-                              decoration: BoxDecoration(
-                                  border: Border.all(color: Color(0xfffe78377)),
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: Center(
-                                  child: TextButton(
-                                      onPressed: () {},
-                                      child: Text(
-                                        "Add to carts",
-                                        style: TextStyle(
-                                            fontSize: 18,
-                                            fontWeight: FontWeight.w400,
-                                            color: Color(0xfffe78377)),
-                                      ))),
+                            GestureDetector(
+                              onTap: () {
+                                onClick();
+                              },
+                              child: Container(
+                                height: 60,
+                                width: 130,
+                                decoration: BoxDecoration(
+                                    color: isSelected
+                                        ? Colors.transparent
+                                        : Color(0xfffe78377),
+                                    border:
+                                        Border.all(color: Color(0xfffe78377)),
+                                    borderRadius: BorderRadius.circular(10)),
+                                child: Center(
+                                    child: TextButton(
+                                        onPressed: () {},
+                                        child: Text(
+                                          "Add to carts",
+                                          style: TextStyle(
+                                              fontSize: 17,
+                                              fontWeight: FontWeight.w400,
+                                              color: Color(0xfffe78377)),
+                                        ))),
+                              ),
                             ),
                           ],
                         ),

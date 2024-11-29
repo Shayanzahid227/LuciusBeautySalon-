@@ -1,3 +1,4 @@
+import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/core/models/bookings.dart';
 
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class CustomBookingContainer extends StatelessWidget {
       height: 71,
       // height: screenheight * 0.099,
       // width: object_bookings.screenwidth * 0.96,
-      width: 250.w,
+      width: 150.w,
       decoration: BoxDecoration(
         color: Color(0xfffffffff),
         borderRadius: BorderRadius.circular(10),
@@ -23,13 +24,19 @@ class CustomBookingContainer extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            // height: screenheight * 0.8,
-            // width: screenwidth * 0.2,
-            "${object_bookings.ImgUrl}", scale: 4,
+            height: 20,
+            width: 2,
+            "${object_bookings.ImgUrl}",
+            fit: BoxFit.contain,
           ),
+          // Image.asset(
+          //   // height: screenheight * 0.8,
+          //   // width: screenwidth * 0.2,
+          //   "${object_bookings.ImgUrl}", scale: 8,
+          // ),
           //SizedBox(width: screenwidth * 0.03),
           Padding(
-            padding: EdgeInsets.only(top: 6, left: 17.0),
+            padding: EdgeInsets.only(top: 10, left: 17.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
