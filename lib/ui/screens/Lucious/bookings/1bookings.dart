@@ -52,22 +52,34 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                       SizedBox(height: screenHeight * 0.025),
                       SizedBox(
                         height: screenHeight * 0.9,
-                        child: GridView.builder(
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                                  // crossAxisCount: model.listbookings.length,
-                                  crossAxisCount: 1,
-                                  crossAxisSpacing: 30,
-                                  mainAxisSpacing: 30),
-                          itemBuilder: (BuildContext context, int index) {
-                            return GestureDetector(
+                        child: Column(
+                          children: [
+                            GestureDetector(
                               onTap: () {},
                               child: CustomBookingContainer(
-                                  object_bookings: model.listbookings[index]),
-                            );
-                          },
+                                  object_bookings: model.listbookings[]),
+                            )
+                          ],
                         ),
                       )
+                      // SizedBox(
+                      //   height: screenHeight * 0.9,
+                      //   child: GridView.builder(
+                      //     gridDelegate:
+                      //         SliverGridDelegateWithFixedCrossAxisCount(
+                      //             // crossAxisCount: model.listbookings.length,
+                      //             crossAxisCount: 1,
+                      //             crossAxisSpacing: 30,
+                      //             mainAxisSpacing: 30),
+                      //     itemBuilder: (BuildContext context, int index) {
+                      //       return GestureDetector(
+                      //         onTap: () {},
+                      //         child: CustomBookingContainer(
+                      //             object_bookings: model.listbookings[index]),
+                      //       );
+                      //     },
+                      //   ),
+                      // )
                     ],
                   ),
                 ),
