@@ -105,8 +105,8 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                         ),
                       ),
                       const Padding(
-                        padding: const EdgeInsets.only(left: 33.0),
-                        child: const Row(
+                        padding: EdgeInsets.only(left: 33.0),
+                        child: Row(
                           children: [
                             Text(
                               "45 min 56AED",
@@ -154,7 +154,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                               child: Container(
                                 decoration: BoxDecoration(
                                   color: isSelected
-                                      ? Color(0xfffe78377)
+                                      ? const Color(0xfffe78377)
                                       : Colors.transparent,
                                   borderRadius: BorderRadius.circular(10),
                                 ),
@@ -166,7 +166,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                BookingScreen_ok(),
+                                                const BookingScreen_ok(),
                                           ));
                                     },
                                     child: Text(
@@ -176,7 +176,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                           fontWeight: FontWeight.w400,
                                           color: isSelected
                                               ? Colors.white
-                                              : Color(0xfffe78377)),
+                                              : const Color(0xfffe78377)),
                                     )),
                               ),
                             ),
@@ -193,14 +193,14 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                 decoration: BoxDecoration(
                                     color: isSelected
                                         ? Colors.transparent
-                                        : Color(0xfffe78377),
-                                    border:
-                                        Border.all(color: Color(0xfffe78377)),
+                                        : const Color(0xfffe78377),
+                                    border: Border.all(
+                                        color: const Color(0xfffe78377)),
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Center(
                                     child: TextButton(
                                         onPressed: () {},
-                                        child: Text(
+                                        child: const Text(
                                           "Add to carts",
                                           style: TextStyle(
                                               fontSize: 17,

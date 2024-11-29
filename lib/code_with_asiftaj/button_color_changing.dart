@@ -45,13 +45,13 @@ class _statfulButtonState extends State<statfulButton> {
                           color: isSelected ? Colors.red : Colors.blue),
                       child: TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "Yes",
                             style: TextStyle(fontSize: 30),
                           )),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   GestureDetector(
@@ -66,7 +66,7 @@ class _statfulButtonState extends State<statfulButton> {
                           color: isSelected ? Colors.blue : Colors.red),
                       child: TextButton(
                           onPressed: () {},
-                          child: Text(
+                          child: const Text(
                             "No",
                             style: TextStyle(fontSize: 30),
                           )),

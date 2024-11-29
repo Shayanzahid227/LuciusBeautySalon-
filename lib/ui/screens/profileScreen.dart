@@ -17,7 +17,7 @@ class _ProfileScreen_0State extends State<ProfileScreen_0> {
     return ChangeNotifierProvider(
       create: (context) => Homeviewmodel(),
       child: Consumer<RootViewModel>(
-          builder: (context, model, child) => Scaffold(
+          builder: (context, model, child) => const Scaffold(
                 body: Column(
                   children: [Text("Profile"), Text("kkk")],
                 ),

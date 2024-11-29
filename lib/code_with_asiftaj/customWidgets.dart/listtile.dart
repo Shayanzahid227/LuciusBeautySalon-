@@ -1,4 +1,3 @@
-import 'package:figma_creation_task/core/constant/colors.dart';
 import 'package:figma_creation_task/code_with_asiftaj/customWidgets.dart/listtileModel.dart';
 import 'package:flutter/material.dart';
 

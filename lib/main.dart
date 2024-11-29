@@ -42,8 +42,8 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(scaffoldBackgroundColor: Color(0xffFAF8F6)),
-            home: ProfileSCreen_00()),
+            theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
+            home: RootScreen()),
       ),
     );
   }

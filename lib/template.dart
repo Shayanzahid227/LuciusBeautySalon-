@@ -16,7 +16,7 @@ class _hmmmState extends State<hmmm> {
     return ChangeNotifierProvider(
       create: (context) => Homeviewmodel(),
       child: Consumer<RootViewModel>(
-          builder: (context, model, child) => Scaffold()),
+          builder: (context, model, child) => const Scaffold()),
     );
   }
 }

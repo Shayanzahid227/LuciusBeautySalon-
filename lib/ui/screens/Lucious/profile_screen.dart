@@ -19,9 +19,9 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Row(
+            const Row(
               children: [
-                const Text(
+                Text(
                   "Profile",
                   style: TextStyle(
                       fontSize: 22,
@@ -30,7 +30,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
@@ -38,7 +38,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 width: 154,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    border: Border.all(color: Color(0xfffe38577)),
+                    border: Border.all(color: const Color(0xfffe38577)),
                     color: Colors.transparent),
                 child: CircleAvatar(
                   //radius: 77,
@@ -48,27 +48,27 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                     fit: BoxFit.cover,
                   ),
                 )),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
-            Text(
+            const Text(
               "Shayan zahid",
               style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.w700,
                   color: Colors.black),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Text(
+            const Text(
               "shayanzahid227@gmai.com",
               style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Colors.grey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
@@ -76,9 +76,9 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
               width: 133,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(9),
-                color: Color(0xfffe38577),
+                color: const Color(0xfffe38577),
               ),
-              child: Center(
+              child: const Center(
                 child: Text(
                   "Edit Profile",
                   style: TextStyle(
@@ -88,12 +88,125 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 ),
               ),
             ),
-            Row(
+            SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.only(right: 26.0),
+              child: Divider(
+                color: Colors.grey,
+                thickness: 0.8,
+              ),
+            ),
+            SizedBox(height: 10),
+            Column(
               children: [
-                Divider(
-                  color: Colors.grey,
-                  thickness: 1,
+                Row(
+                  children: [
+                    Text(
+                      "About Us",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black),
+                    ),
+                    SizedBox(width: 220),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_forward,
+                          color: Colors.grey,
+                        )),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 26.0),
+                      child: Divider(
+                        color: Colors.grey,
+                        thickness: 0.4,
+                      ),
+                    ),
+                  ],
                 ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 26.0),
+                  child: Divider(
+                    color: Colors.grey,
+                    thickness: 0.4,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "Career",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black),
+                    ),
+                    SizedBox(width: 240),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_forward,
+                          color: Colors.grey,
+                        )),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 26.0),
+                      child: Divider(
+                        color: Colors.grey,
+                        thickness: 0.4,
+                      ),
+                    ),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 26.0),
+                  child: Divider(
+                    color: Colors.grey,
+                    thickness: 0.4,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "Price and Plaining",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black),
+                    ),
+                    SizedBox(width: 140),
+                    IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          Icons.arrow_forward,
+                          color: Colors.grey,
+                        )),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 26.0),
+                      child: Divider(
+                        color: Colors.grey,
+                        thickness: 0.4,
+                      ),
+                    ),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 26.0),
+                  child: Divider(
+                    color: Colors.grey,
+                    thickness: 0.4,
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Logout",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Color(0xfffe38577)),
+                    ))
               ],
             )
           ],

@@ -10,7 +10,7 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
   // final String durationAndPrice;
   // final String imageAsset;
 
-  FeatureServiceCustomWidget_2({required this.object_feturservices_2
+  FeatureServiceCustomWidget_2({super.key, required this.object_feturservices_2
       // Key? key,
       // required this.title,
       // required this.durationAndPrice,
@@ -25,13 +25,13 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
       height: 87.h,
       width: 267.w,
       decoration: BoxDecoration(
-        color: Color(0xfffffffff),
+        color: const Color(0xfffffffff),
         borderRadius: BorderRadius.circular(7),
       ),
       child: Row(
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 10.0),
+            padding: const EdgeInsets.only(left: 10.0),
             child: Image(
               height: screeheight * 0.09,
               width: screenwidth * 0.2,
@@ -50,7 +50,7 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
                   children: [
                     Text(
                       "${object_feturservices_2.tittle}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: Color(0xfffe78377),
@@ -65,7 +65,7 @@ class FeatureServiceCustomWidget_2 extends StatelessWidget {
                   children: [
                     Text(
                       "${object_feturservices_2.timeandprice}",
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: Colors.grey,

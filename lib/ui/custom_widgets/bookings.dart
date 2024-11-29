@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomBookingContainer extends StatelessWidget {
   BookingsModel object_bookings = BookingsModel();
 
-  CustomBookingContainer({required this.object_bookings});
+  CustomBookingContainer({super.key, required this.object_bookings});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CustomBookingContainer extends StatelessWidget {
       // width: object_bookings.screenwidth * 0.96,
       width: 350.w,
       decoration: BoxDecoration(
-        color: Color(0xfffffffff),
+        color: const Color(0xfffffffff),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -36,7 +36,7 @@ class CustomBookingContainer extends StatelessWidget {
           ),
           //SizedBox(width: screenwidth * 0.03),
           Padding(
-            padding: EdgeInsets.only(top: 10, left: 17.0),
+            padding: const EdgeInsets.only(top: 10, left: 17.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,24 +46,24 @@ class CustomBookingContainer extends StatelessWidget {
                     Text(
                       // ignore: unnecessary_brace_in_string_interps
                       "${object_bookings.Title}",
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Color(0xfff000000),
                           fontSize: 14,
                           fontWeight: FontWeight.w500),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 1,
                 ),
                 Text(
                   "${object_bookings.Type}",
-                  style: TextStyle(
+                  style: const TextStyle(
                       color: Color(0xfffe78377),
                       fontSize: 12,
                       fontWeight: FontWeight.w400),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 1,
                 ),
                 // TextButton(onPressed: () {}, child: Text("Salon")),
@@ -71,7 +71,7 @@ class CustomBookingContainer extends StatelessWidget {
                   children: [
                     Text(
                       "${object_bookings.Date}",
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Color(0xfff888888),
                           fontSize: 12,
                           fontWeight: FontWeight.w400),
@@ -81,7 +81,7 @@ class CustomBookingContainer extends StatelessWidget {
                     ),
                     Text(
                       "${object_bookings.TimeAndPrice}",
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Color(0xfffe75388),
                           fontSize: 12,
                           fontWeight: FontWeight.w400),

@@ -42,7 +42,7 @@ class _buttonColorChanging_2State extends State<buttonColorChanging_2> {
                     width: 120,
                     decoration: BoxDecoration(
                         color: isSelected ? Colors.red : Colors.blue),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "yes ",
                         style: TextStyle(fontSize: 20),
@@ -59,7 +59,7 @@ class _buttonColorChanging_2State extends State<buttonColorChanging_2> {
                     width: 120,
                     decoration: BoxDecoration(
                         color: isSelected ? Colors.blue : Colors.red),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "No",
                         style: TextStyle(fontSize: 20),

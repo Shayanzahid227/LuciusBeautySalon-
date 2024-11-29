@@ -35,7 +35,7 @@ class SpecificServicesCustomWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Padding(
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               //padding: const EdgeInsets.only(left: 3.0, top: 6, right: 3),
               child: Image.asset(
                 // width: 300.w,

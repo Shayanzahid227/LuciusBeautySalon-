@@ -46,7 +46,7 @@ class _CancelBookingScreen_0State extends State<CancelBookingScreen_0> {
                   // height: screenheight * 3.3,
                   height: screenheight * 0.35,
                   width: double.infinity,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xfffffffff),
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(50),
@@ -56,8 +56,8 @@ class _CancelBookingScreen_0State extends State<CancelBookingScreen_0> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 31.0, top: 31),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 31.0, top: 31),
                         child: Text(
                           "Classic Manicure",
                           style: TextStyle(
@@ -69,8 +69,8 @@ class _CancelBookingScreen_0State extends State<CancelBookingScreen_0> {
                       SizedBox(
                         height: screenheight * 0.01,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 31.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 31.0),
                         child: Text(
                           "45 min 56AED",
                           style: TextStyle(
@@ -80,8 +80,8 @@ class _CancelBookingScreen_0State extends State<CancelBookingScreen_0> {
                         ),
                       ),
                       SizedBox(height: screenheight * 0.02),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 31.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 31.0),
                         child: Text(
                           "sun 22 aug 2024 ",
                           style: TextStyle(
@@ -98,10 +98,11 @@ class _CancelBookingScreen_0State extends State<CancelBookingScreen_0> {
                           height: screenheight * 0.08,
                           width: screenwidth * 0.6,
                           decoration: BoxDecoration(
-                              border: Border.all(color: Color(0xfffe78377)),
+                              border:
+                                  Border.all(color: const Color(0xfffe78377)),
                               borderRadius: BorderRadius.circular(9.0)),
-                          child: Center(
-                            child: const Text(
+                          child: const Center(
+                            child: Text(
                               "Cancel Booking",
                               style: TextStyle(
                                   fontSize: 16,

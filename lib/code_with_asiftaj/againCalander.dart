@@ -22,7 +22,7 @@ class _againCalanderState extends State<againCalander> {
     return Scaffold(
       body: Column(
         children: [
-          Text("selected Day" + toString().split("")[0]),
+          Text("selected Day${toString().split("")[0]}"),
           Container(
               child: TableCalendar(
             calendarFormat: CalendarFormat.week,
@@ -30,8 +30,8 @@ class _againCalanderState extends State<againCalander> {
             firstDay: DateTime.utc(2010, 1, 1),
             lastDay: DateTime.utc(2030, 12, 30),
 
-            headerStyle:
-                HeaderStyle(formatButtonVisible: false, titleCentered: true),
+            headerStyle: const HeaderStyle(
+                formatButtonVisible: false, titleCentered: true),
             selectedDayPredicate: (currentDay) => isSameDay(currentDay, today),
             // onDaySelected: onDaySelected,
             onDaySelected: _onDaySelected,

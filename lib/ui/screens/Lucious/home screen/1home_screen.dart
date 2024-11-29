@@ -188,7 +188,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                   "Our services",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
@@ -210,7 +210,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                         );
                       },
                     )),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 //     children: const [
@@ -256,7 +256,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
@@ -276,7 +276,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          SpecificServicesScreen_0()));
+                                          const SpecificServicesScreen_0()));
                             },
                             child: FeatureServiceCustomWidget_2(
                                 object_feturservices_2:
@@ -297,7 +297,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                     //   ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 const Padding(
@@ -312,7 +312,7 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 SizedBox(
@@ -329,7 +329,8 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => BookingScreen_ok()));
+                                    builder: (context) =>
+                                        const BookingScreen_ok()));
                           },
                           child: UpComingBookingCustomContainer(
                               object_upcomingservices:

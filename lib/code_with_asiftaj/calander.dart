@@ -31,7 +31,7 @@ class _CalanderState extends State<Calander> {
                   color: Colors.purple[100]),
               child: Center(
                   child:
-                      Text("Selected Date = " + today.toString().split("")[0])),
+                      Text("Selected Date = ${today.toString().split("")[0]}")),
             ),
           ),
           //  Text("selected date = " + today.toString().split("")[0]),
@@ -50,7 +50,7 @@ class _CalanderState extends State<Calander> {
                   firstDay: DateTime.utc(2010, 10, 16),
                   lastDay: DateTime.utc(2030, 3, 14),
                   // for changes in calander
-                  headerStyle: HeaderStyle(
+                  headerStyle: const HeaderStyle(
                       formatButtonVisible: false, titleCentered: true),
                   availableGestures: AvailableGestures.all,
                   selectedDayPredicate: (currentday) =>

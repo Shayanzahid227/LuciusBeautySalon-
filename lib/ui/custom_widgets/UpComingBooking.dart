@@ -30,7 +30,7 @@ class UpComingBookingCustomContainer extends StatelessWidget {
           margin: const EdgeInsets.only(left: 4),
           height: 74.h,
           width: 225.w,
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(

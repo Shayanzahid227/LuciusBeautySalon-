@@ -52,10 +52,10 @@ class RootScreen extends StatelessWidget {
                   },
                   child: Container(
                     // alignment: Alignment.center,
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         color: model.selectedScreen == 0
-                            ? Color(0xffE78377)
+                            ? const Color(0xffE78377)
                             : Colors.transparent,
                         borderRadius: BorderRadius.circular(13.r)),
                     child: Image.asset(
@@ -77,7 +77,7 @@ class RootScreen extends StatelessWidget {
                   iconColor:
                       model.selectedScreen == 1 ? Colors.white : Colors.grey,
                   boxColor: model.selectedScreen == 1
-                      ? Color(0xffE78377)
+                      ? const Color(0xffE78377)
                       : Colors.transparent,
                 ),
 
@@ -89,7 +89,7 @@ class RootScreen extends StatelessWidget {
                   iconColor:
                       model.selectedScreen == 2 ? Colors.white : Colors.grey,
                   boxColor: model.selectedScreen == 2
-                      ? Color(0xffE78377)
+                      ? const Color(0xffE78377)
                       : Colors.transparent,
                 ),
               ],

@@ -9,7 +9,8 @@ class BottomNavigatorBar extends StatelessWidget {
   Color? boxColor;
   Color? iconColor;
   BottomNavigatorBar(
-      {required this.image,
+      {super.key,
+      required this.image,
       required this.onTap,
       required this.boxColor,
       required this.iconColor});
@@ -20,7 +21,7 @@ class BottomNavigatorBar extends StatelessWidget {
       onTap: onTap,
       child: Container(
         // alignment: Alignment.center,
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
             color: boxColor, borderRadius: BorderRadius.circular(13.r)),
         child: Image.asset(
