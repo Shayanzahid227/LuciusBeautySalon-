@@ -8,6 +8,7 @@ import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/navia
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
@@ -56,10 +57,10 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 const SizedBox(
                   height: 30,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -77,12 +78,18 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                       ],
                     ),
                     CircleAvatar(
-                      backgroundColor: Colors.grey,
-                      child: Icon(
-                        Icons.shopping_cart,
-                        color: Colors.white,
-                      ),
-                    ),
+                        backgroundColor: Colors.grey,
+                        child: IconButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => CartScreen_0()));
+                            },
+                            icon: Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.white,
+                            ))),
                   ],
                 ),
                 const SizedBox(height: 20),

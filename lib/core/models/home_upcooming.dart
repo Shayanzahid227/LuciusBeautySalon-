@@ -4,6 +4,11 @@ class UpcommingservicesModel {
   String? tittle;
   String? pageRoute;
   String? timePrice;
-  UpcommingservicesModel(
-      {this.imgUrl, this.pageRoute, this.timePrice, this.tittle});
+
+  UpcommingservicesModel({
+    this.imgUrl,
+    this.pageRoute,
+    this.timePrice,
+    this.tittle,
+  });
 }

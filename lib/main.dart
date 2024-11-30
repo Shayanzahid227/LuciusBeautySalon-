@@ -1,7 +1,9 @@
 import 'package:figma_creation_task/code_with_asiftaj/calander.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
