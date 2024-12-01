@@ -53,7 +53,7 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                       ),
                       SizedBox(height: screenHeight * 0.025),
                       SizedBox(
-                        height: screenHeight * 0.9,
+                        height: screenHeight * 0.3,
                         child: ListView.builder(
                           itemCount: model.listbookings.length,
                           itemBuilder: (BuildContext context, int index) {
@@ -73,10 +73,38 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                           },
                         ),
                       ),
-                      Text(
-                        "previous Bookings",
-                        style: TextStyle(color: Colors.black),
-                      ),
+                      // Padding(
+                      //   padding: const EdgeInsets.only(left: 16.0),
+                      //   child: Row(
+                      //     children: [
+                      //       Text("Previous Bokkings"),
+                      //       Column(
+                      //         children: [
+                      //           SizedBox(
+                      //             height: screenHeight * 0.45,
+                      //             child: ListView.builder(
+                      //               itemCount: model.listbookings.length,
+                      //               itemBuilder:
+                      //                   (BuildContext context, int index) {
+                      //                 return GestureDetector(
+                      //                   onTap: () {},
+                      //                   child: Padding(
+                      //                     padding: EdgeInsets.symmetric(
+                      //                         horizontal: 10),
+                      //                     child: CustomBookingContainer(
+                      //                         object_bookings:
+                      //                             model.listbookings[index]),
+                      //                   ),
+                      //                 );
+                      //               },
+                      //             ),
+                      //           )
+                      //         ],
+                      //       )
+                      //     ],
+                      //   ),
+                      // )
+
                       // wrong methods
                       // SizedBox(
                       //   height: screenHeight * 0.9,
