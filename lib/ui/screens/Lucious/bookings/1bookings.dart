@@ -54,24 +54,50 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                       SizedBox(height: screenHeight * 0.025),
                       SizedBox(
                         height: screenHeight * 0.9,
-                        child: Column(
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                // for (int x = 0;
-                                //     x <= model.listbookings.length;
-                                //     x++) {
-                                //   index == model.listbookings.length;
-                                // }
-                                index == model.listbookings.length;
-                                setState(() {});
-                              },
-                              child: CustomBookingContainer(
-                                  object_bookings: model.listbookings[index]),
-                            )
-                          ],
+                        child: ListView.builder(
+                          itemCount: model.listbookings.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 10.0),
+                                  child: CustomBookingContainer(
+                                      object_bookings:
+                                          model.listbookings[index]),
+                                ),
+                              ),
+                            );
+                          },
                         ),
-                      )
+                      ),
+                      Text(
+                        "previous Bookings",
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      // wrong methods
+                      // SizedBox(
+                      //   height: screenHeight * 0.9,
+                      //   child: Column(
+                      //     children: [
+                      //       GestureDetector(
+                      //         onTap: () {
+                      //           // for (int x = 0;
+                      //           //     x <= model.listbookings.length;
+                      //           //     x++) {
+                      //           //   index == model.listbookings.length;
+                      //           // }
+                      //           index == model.listbookings.length;
+                      //           setState(() {});
+                      //         },
+                      //         child: CustomBookingContainer(
+                      //             object_bookings: model.listbookings[index]),
+                      //       )
+                      //     ],
+                      //   ),
+                      // )
                       // SizedBox(
                       //   height: screenHeight * 0.9,
                       //   child: GridView.builder(
@@ -79,8 +105,8 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                       //         SliverGridDelegateWithFixedCrossAxisCount(
                       //             // crossAxisCount: model.listbookings.length,
                       //             crossAxisCount: 1,
-                      //             crossAxisSpacing: 30,
-                      //             mainAxisSpacing: 30),
+                      //             crossAxisSpacing: 0,
+                      //             mainAxisSpacing: 0),
                       //     itemBuilder: (BuildContext context, int index) {
                       //       return GestureDetector(
                       //         onTap: () {},
