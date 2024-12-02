@@ -1,22 +1,7 @@
-import 'package:figma_creation_task/code_with_asiftaj/calander.dart';
-import 'package:figma_creation_task/code_with_asiftaj/drawer.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/profileScreen/ProfileScreen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/profile_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/splash%20screen.dart';
-import 'package:figma_creation_task/ui/screens/Cancelbooking.dart';
-import 'package:figma_creation_task/ui/screens/figma02/home_screen.dart';
-import 'package:figma_creation_task/ui/screens/root/AgainRootScreen.dart';
-import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

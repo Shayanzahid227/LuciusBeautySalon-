@@ -1,10 +1,8 @@
-import 'package:figma_creation_task/main.dart';
 import 'package:figma_creation_task/ui/custom_widgets/cart_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/cartViewModel.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
-import 'package:figma_creation_task/ui/screens/root/root_view_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

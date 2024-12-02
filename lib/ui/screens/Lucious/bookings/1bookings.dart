@@ -1,4 +1,5 @@
 import 'package:figma_creation_task/ui/custom_widgets/bookings.dart';
+import 'package:figma_creation_task/ui/custom_widgets/previous_booking.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/BookingsViewModel.dart';
 
 import 'package:flutter/material.dart';
@@ -18,10 +19,10 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    //double screenWidth = MediaQuery.of(context).size.width;
     return ChangeNotifierProvider(
-      create: (context) => Bookingsviewmodel(),
-      child: Consumer<Bookingsviewmodel>(
+      create: (context) => BookingsViewModel(),
+      child: Consumer<BookingsViewModel>(
           builder: (context, model, child) => Scaffold(
                 body: SingleChildScrollView(
                   child: Column(
@@ -73,9 +74,36 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                           },
                         ),
                       ),
-                      Row(
+                      Column(
                         children: [
-                          Text("Previous Bookings"),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 16.0),
+                            child: Row(
+                              children: [
+                                Text("Previous Bookings"),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            height: screenHeight * 0.55,
+                            child: ListView.builder(
+                              itemCount: model.listPrevious.length,
+                              itemBuilder: (BuildContext context, int index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: GestureDetector(
+                                    onTap: () {},
+                                    child: Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            horizontal: 2.0),
+                                        child: PreviousBookingCustomContainer(
+                                            object_PreviousBooking:
+                                                model.listPrevious[index])),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
                         ],
                       )
                       // Padding(

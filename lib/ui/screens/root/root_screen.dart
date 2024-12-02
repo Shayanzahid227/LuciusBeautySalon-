@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/bottom_navigator_bar.dart';
+
 import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/naviagator_bar.dart';
 import 'package:figma_creation_task/ui/screens/root/root_view_model.dart';
 import 'package:flutter/material.dart';

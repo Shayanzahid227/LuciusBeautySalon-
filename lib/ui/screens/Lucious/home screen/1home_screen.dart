@@ -1,22 +1,18 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/2home_fetuerdServices.dart';
+
 import 'package:figma_creation_task/ui/custom_widgets/2featurservices.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/OurServices.dart';
 import 'package:figma_creation_task/ui/custom_widgets/UpComingBooking.dart';
-import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/naviagator_bar.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_servicess.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/bookings/booking.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/details.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 
-import 'package:figma_creation_task/ui/screens/Lucious/test.dart';
-import 'package:figma_creation_task/ui/screens/test/qqqq.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

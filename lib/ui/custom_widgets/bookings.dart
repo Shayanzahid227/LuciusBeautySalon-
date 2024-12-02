@@ -1,10 +1,10 @@
-import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/core/models/bookings.dart';
+import 'package:figma_creation_task/core/models/up_cooming_bookings.dart';
 
 import 'package:flutter/material.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class CustomBookingContainer extends StatelessWidget {
   BookingsModel object_bookings = BookingsModel();
 

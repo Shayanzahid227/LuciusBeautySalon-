@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:flutter/material.dart';
 
@@ -41,6 +39,8 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                     border: Border.all(color: const Color(0xfffe38577)),
                     color: Colors.transparent),
                 child: CircleAvatar(
+                  // why this image radius can not reduce
+                  radius: 10,
                   backgroundImage: AssetImage("$staticAssets/FB.png"),
                   //radius: 77,
                   // child: Image.asset(

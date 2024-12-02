@@ -1,7 +1,6 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CancelBookingScreen_0 extends StatefulWidget {
   const CancelBookingScreen_0({super.key});

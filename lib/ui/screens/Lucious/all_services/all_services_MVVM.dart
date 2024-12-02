@@ -15,12 +15,12 @@ class AllServicesViewModel extends BaseViewModel {
     AllServiceModel(
         imgUrl: '$staticAssets/threading6.png', tittle: 'Threading'),
     AllServiceModel(
-        imgUrl: '$staticAssets/nails.png', tittle: 'UltraLucious\n    7D hfu'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
-    AllServiceModel(imgUrl: '$staticAssets/nails.png', tittle: 'Nails'),
+        imgUrl: '$staticAssets/nails1.png', tittle: 'UltraLucious\n    7D hfu'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
+    AllServiceModel(imgUrl: '$staticAssets/nails1.png', tittle: 'Nails'),
   ];
 }
