@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: BookingScreen_ok()),
+            home: splash_screen_0()),
       ),
     );
   }

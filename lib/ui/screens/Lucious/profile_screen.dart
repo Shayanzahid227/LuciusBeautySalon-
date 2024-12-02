@@ -41,12 +41,13 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                     border: Border.all(color: const Color(0xfffe38577)),
                     color: Colors.transparent),
                 child: CircleAvatar(
+                  backgroundImage: AssetImage("$staticAssets/FB.png"),
                   //radius: 77,
-                  child: Image.asset(
-                    color: Colors.transparent,
-                    "$staticAssets/FB.png",
-                    fit: BoxFit.cover,
-                  ),
+                  // child: Image.asset(
+                  //   color: Colors.transparent,
+                  //   "$staticAssets/FB.png",
+                  //   fit: BoxFit.cover,
+                  // ),
                 )),
             const SizedBox(
               height: 25,
