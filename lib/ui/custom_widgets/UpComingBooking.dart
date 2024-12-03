@@ -1,5 +1,5 @@
 import 'package:figma_creation_task/core/models/home_upcooming.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

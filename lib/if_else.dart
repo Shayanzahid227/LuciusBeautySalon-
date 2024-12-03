@@ -1,9 +1,13 @@
-void main() {
-  int x = 10;
-  int y = 12;
-  if (x > y) {
-    print("x $x is grater than y ");
-  } else {
-    print("y $y is greater than x ");
+void main(dynamic candidates) {
+  //
+  for (int x = 0; x <= 10; x++) {
+    print("hey");
+  }
+  for (int i = 0; i < candidates.length; i++) {
+    var candidate = candidates[i];
+    if (candidate.yearsExperience < 5) {
+      continue;
+    }
+    candidate.interview();
   }
 }

@@ -16,5 +16,11 @@ class CartViewModel extends BaseViewModel {
         pageRoute: "home",
         dateYear: "sun 22 aug 2024",
         timePrice: "34 min 45 AED"),
+    CartModel(
+        imgUrl: "$staticAssets/details2.png",
+        tittle: "Calssic Manicure",
+        pageRoute: "home",
+        dateYear: "sun 22 aug 2024",
+        timePrice: "34 min 45 AED"),
   ];
 }

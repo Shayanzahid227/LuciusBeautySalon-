@@ -1,7 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/custom_widgets/bottom_navigator_bar/bottom_navigator_bar.dart';
+
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/details/AgainDetails.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

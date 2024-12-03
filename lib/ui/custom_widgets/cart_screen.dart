@@ -1,6 +1,5 @@
 import 'package:figma_creation_task/core/models/CartMoel.dart';
-import 'package:figma_creation_task/core/models/home_upcooming.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +28,7 @@ class CartSCreenCustomSCOntainer extends StatelessWidget {
         Container(
           margin: const EdgeInsets.only(left: 4),
           height: 100.h,
-          width: 325.w,
+          width: 355.w,
           padding: const EdgeInsets.all(8.0),
           decoration: BoxDecoration(
             boxShadow: [
@@ -43,7 +42,7 @@ class CartSCreenCustomSCOntainer extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -53,38 +52,41 @@ class CartSCreenCustomSCOntainer extends StatelessWidget {
                   ),
                 ],
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "${object_CartMoel.tittle}",
-                    style: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xfff000000)),
-                  ),
-                  Text(
-                    "${object_CartMoel.pageRoute}",
-                    style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xfffe78477)),
-                  ),
-                  Text(
-                    "${object_CartMoel.dateYear}",
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xfff888888)),
-                  ),
-                  Text(
-                    "${object_CartMoel.timePrice}",
-                    style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        color: Color(0xfff888888)),
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "${object_CartMoel.tittle}",
+                      style: const TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w500,
+                          color: Color(0xfff000000)),
+                    ),
+                    Text(
+                      "${object_CartMoel.pageRoute}",
+                      style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xfffe78477)),
+                    ),
+                    Text(
+                      "${object_CartMoel.dateYear}",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xfff888888)),
+                    ),
+                    Text(
+                      "${object_CartMoel.timePrice}",
+                      style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          color: Color(0xfff888888)),
+                    )
+                  ],
+                ),
               ),
             ],
           ),

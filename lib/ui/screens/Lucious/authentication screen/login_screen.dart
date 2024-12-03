@@ -1,7 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
+
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 
 import 'package:flutter/material.dart';
@@ -17,8 +17,8 @@ class login_screen_0 extends StatefulWidget {
 class _login_screen_0State extends State<login_screen_0> {
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
+    // double screenHeight = MediaQuery.of(context).size.height;
+    // double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       backgroundColor: Colors.white,

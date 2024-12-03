@@ -26,7 +26,7 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
           builder: (context, model, child) => Scaffold(
                 body: SingleChildScrollView(
                   child: Column(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -74,37 +74,33 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                           },
                         ),
                       ),
-                      Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Row(
-                              children: [
-                                Text("Previous Bookings"),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: screenHeight * 0.55,
-                            child: ListView.builder(
-                              itemCount: model.listPrevious.length,
-                              itemBuilder: (BuildContext context, int index) {
-                                return Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: GestureDetector(
-                                    onTap: () {},
-                                    child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 2.0),
-                                        child: PreviousBookingCustomContainer(
-                                            object_PreviousBooking:
-                                                model.listPrevious[index])),
-                                  ),
-                                );
-                              },
-                            ),
-                          ),
-                        ],
+                      Padding(
+                        padding: const EdgeInsets.only(left: 16.0),
+                        child: Row(
+                          children: [
+                            Text("Previous Bookings"),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: screenHeight * 0.55,
+                        child: ListView.builder(
+                          itemCount: model.listPrevious.length,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 2.0),
+                                    child: PreviousBookingCustomContainer(
+                                        object_PreviousBooking:
+                                            model.listPrevious[index])),
+                              ),
+                            );
+                          },
+                        ),
                       )
                       // Padding(
                       //   padding: const EdgeInsets.only(left: 16.0),

@@ -1,4 +1,3 @@
-import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/root/root_view_model.dart';
 import 'package:flutter/material.dart';
