@@ -1,6 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/core/models/book_timeSlot.dart';
 import 'package:figma_creation_task/ui/custom_widgets/book_timeSlot.dart';
+import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
 import 'package:figma_creation_task/ui/custom_widgets/simple_textfeild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home_booking/home_bookingVM.dart';
@@ -41,6 +42,16 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                   children: [
                     Stack(
                       children: [
+                        Row(
+                          children: [
+                            CircularButton(
+                                onPressed: () {}, icon: Icons.arrow_back),
+                            SizedBox(
+                              width: screenwidth * 0.02,
+                            ),
+                            Text("Book Appointment")
+                          ],
+                        ),
                         Container(
                           height: 282,
                           width: double.infinity,
@@ -51,14 +62,27 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                       AssetImage("$staticAssets/Ellipse9.png"),
                                   fit: BoxFit.cover)),
                         ),
-                        Container(
-                          height: screenHeight * 0.3,
-                          width: double.infinity,
-                          child: CalendarDatePicker(
-                            initialDate: DateTime.now(),
-                            firstDate: DateTime.utc(2010, 1, 1),
-                            lastDate: DateTime.utc(2030, 12, 30),
-                            onDateChanged: (DateTime newDate) {},
+                        Padding(
+                          padding: const EdgeInsets.only(top: 60.0),
+                          child: Container(
+                            height: screenHeight * 0.3,
+                            width: double.infinity,
+                            child: TableCalendar(
+                              calendarFormat: CalendarFormat.week,
+                              focusedDay: DateTime.now(),
+                              firstDay: DateTime.utc(2024, 1, 1),
+                              lastDay: DateTime.utc(2030, 12, 31),
+                              headerStyle: HeaderStyle(
+                                  formatButtonVisible: false,
+                                  titleCentered: true),
+                            ),
+                            // child: CalendarDatePicker(
+
+                            //   initialDate: DateTime.now(),
+                            //   firstDate: DateTime.utc(2010, 1, 1),
+                            //   lastDate: DateTime.utc(2030, 12, 30),
+                            //   onDateChanged: (DateTime newDate) {},
+                            // ),
                           ),
                         ),
                       ],
