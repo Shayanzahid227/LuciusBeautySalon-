@@ -3,6 +3,7 @@
 import 'package:figma_creation_task/ui/screens/Lucious/all_services/all_services_MVVM.dart';
 import 'package:figma_creation_task/ui/custom_widgets/AllServices.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/1home_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -55,67 +56,76 @@ class All_Servicess_0 extends StatelessWidget {
                   SafeArea(
                     child: SizedBox(
                       height: MediaQuery.of(context).size.height * 0.9,
-                      child: GridView.builder(
-                        shrinkWrap: true,
-                        itemCount: model.listallServices.length,
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2),
-                        itemBuilder: (BuildContext context, int index) {
-                          return AllServicesscontainer(
-                              object_allServiceModel:
-                                  model.listallServices[index]);
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      SpecificServicesScreen_0()));
                         },
+                        child: GridView.builder(
+                          shrinkWrap: true,
+                          itemCount: model.listallServices.length,
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2),
+                          itemBuilder: (BuildContext context, int index) {
+                            return AllServicesscontainer(
+                                object_allServiceModel:
+                                    model.listallServices[index]);
+                          },
 
-                        // children: const [
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Hairs",
-                        //       imagePath: "$staticAssets/hairs2.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Facials",
-                        //       imagePath: "$staticAssets/facial3.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Massage",
-                        //       imagePath: "$staticAssets/massage4.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Waxing",
-                        //       imagePath: "$staticAssets/waxing5.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Threading",
-                        //       imagePath: "$staticAssets/threading6.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Ultralucious\n7D hifu",
-                        //       imagePath: "$staticAssets/face7.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Lucios slim\nRF Cavitations",
-                        //       imagePath: "$staticAssets/dry8.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails",
-                        //       imagePath: "$staticAssets/nails1.png"),
-                        //   AllServicesscontainer(
-                        //       title: "Nails", imagePath: "$staticAssets/nails1.png")
-                        // ],
+                          // children: const [
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Hairs",
+                          //       imagePath: "$staticAssets/hairs2.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Facials",
+                          //       imagePath: "$staticAssets/facial3.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Massage",
+                          //       imagePath: "$staticAssets/massage4.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Waxing",
+                          //       imagePath: "$staticAssets/waxing5.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Threading",
+                          //       imagePath: "$staticAssets/threading6.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Ultralucious\n7D hifu",
+                          //       imagePath: "$staticAssets/face7.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Lucios slim\nRF Cavitations",
+                          //       imagePath: "$staticAssets/dry8.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails",
+                          //       imagePath: "$staticAssets/nails1.png"),
+                          //   AllServicesscontainer(
+                          //       title: "Nails", imagePath: "$staticAssets/nails1.png")
+                          // ],
+                        ),
                       ),
                     ),
                   )

@@ -1,4 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/chose_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/on_shoop_Book/book.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 
@@ -166,7 +169,7 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                const BookingScreen_ok(),
+                                                const ChoseScreen_0(),
                                           ));
                                     },
                                     child: Text(
@@ -199,7 +202,14 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                                     borderRadius: BorderRadius.circular(10)),
                                 child: Center(
                                     child: TextButton(
-                                        onPressed: () {},
+                                        onPressed: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) =>
+                                                    CartScreen_0(),
+                                              ));
+                                        },
                                         child: const Text(
                                           "Add to carts",
                                           style: TextStyle(

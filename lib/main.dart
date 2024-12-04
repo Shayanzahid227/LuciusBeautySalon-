@@ -1,4 +1,6 @@
-import 'package:figma_creation_task/ui/screens/Lucious/Book/book.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/chose_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home_booking/home_booking.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/on_shoop_Book/book.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
 
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: BookScreen_0()),
+            home: HomeBooking_0()),
       ),
     );
   }
