@@ -65,7 +65,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         Padding(
                           padding: const EdgeInsets.only(top: 60.0),
                           child: Container(
-                            height: screenHeight * 0.3,
+                            height: screenHeight * 0.31,
                             width: double.infinity,
                             child: TableCalendar(
                               calendarFormat: CalendarFormat.week,
