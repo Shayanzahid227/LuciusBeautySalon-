@@ -68,13 +68,19 @@ class PreviousBookingCustomContainer extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                               color: Color(0xfff000000)),
                         ),
-                        SizedBox(width: 75.w),
-                        TextButton(
-                            onPressed: () {},
-                            child: Icon(
-                              Icons.more_vert,
-                              size: 20,
-                            ))
+                        SizedBox(width: 91.w),
+                        PopupMenuButton(
+                          icon: Icon(Icons.more_vert_outlined),
+                          itemBuilder: (context) => const [
+                            PopupMenuItem(value: 1, child: Text("shayan zahid"))
+                          ],
+                        )
+                        // TextButton(
+                        //     onPressed: () {},
+                        //     child: Icon(
+                        //       Icons.more_vert,
+                        //       size: 20,
+                        //     ))
                       ],
                     ),
                     Row(

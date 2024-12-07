@@ -19,6 +19,7 @@ class SimpleTextField extends StatelessWidget {
         height: screenHeight * 0.06,
         width: screenWidth * 0.9,
         child: TextField(
+          // keyboardType: TextInputType.numberWithOptions(),
           decoration: InputDecoration(
             hintText: hintText,
             hintStyle:
