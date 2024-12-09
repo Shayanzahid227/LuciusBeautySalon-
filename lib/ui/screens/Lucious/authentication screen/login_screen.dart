@@ -1,4 +1,6 @@
+import 'package:figma_creation_task/core/constant/auth_text_field.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/constant/text_style.dart';
 import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
 
@@ -7,14 +9,9 @@ import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class login_screen_0 extends StatefulWidget {
+class login_screen_0 extends StatelessWidget {
   const login_screen_0({super.key});
 
-  @override
-  State<login_screen_0> createState() => _login_screen_0State();
-}
-
-class _login_screen_0State extends State<login_screen_0> {
   @override
   Widget build(BuildContext context) {
     // double screenHeight = MediaQuery.of(context).size.height;
@@ -22,6 +19,11 @@ class _login_screen_0State extends State<login_screen_0> {
 
     return Scaffold(
       backgroundColor: Colors.white,
+
+      ///
+      /// App Bar
+      ///
+
       appBar: AppBar(
         backgroundColor: Colors.white,
         actions: const [
@@ -30,6 +32,11 @@ class _login_screen_0State extends State<login_screen_0> {
           // Icon(Icons.battery_4_bar_rounded),
         ],
       ),
+
+      ///
+      /// Start Body
+      ///
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -83,9 +90,18 @@ class _login_screen_0State extends State<login_screen_0> {
                   hintText: "Email",
                   showVisibilityToggle: false,
                 ),
+
+                TextFormField(
+                  decoration: authFieldDecoration.copyWith(
+                    suffixIcon: GestureDetector(
+                        onTap: () {}, child: Icon(Icons.visibility)),
+                  ),
+                ),
                 SizedBox(height: 30.h),
 
-                // Paasword
+                ///
+                /// Paasword
+                ///
 
                 const CustomTextField(
                   hintText: "Password",

@@ -1,4 +1,6 @@
+import 'package:figma_creation_task/core/constant/colors.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/constant/text_style.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/2featurservices.dart';
 
@@ -10,7 +12,7 @@ import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/home_view_model.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/specificScreen.dart/SpecificServices.dart';
 
 import 'package:flutter/material.dart';
@@ -40,9 +42,13 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Homeviewmodel>(
+    return Consumer<HomeViewModel>(
       builder: (context, model, child) => Scaffold(
         backgroundColor: const Color(0xffff9f8f6),
+
+        ///
+        /// Start Body
+        ///
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 17.0),
@@ -53,111 +59,36 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 const SizedBox(
                   height: 30,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Good morning",
-                          style: TextStyle(
-                              fontSize: 12, fontWeight: FontWeight.w300),
-                        ),
-                        Text(
-                          "Rayna Carder ",
-                          style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.black),
-                        ),
-                      ],
-                    ),
-                    CircleAvatar(
-                        backgroundColor: Colors.grey,
-                        child: IconButton(
-                            onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => CartScreen_0()));
-                            },
-                            icon: Icon(
-                              Icons.shopping_cart_outlined,
-                              color: Colors.white,
-                            ))),
-                  ],
-                ),
+
+                ///
+                /// Header
+                ///
+
+                _header(context),
+
                 const SizedBox(height: 20),
-                const Column(
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          "Exclusive Offers",
-                          style: TextStyle(
-                              fontSize: 16, fontWeight: FontWeight.w500),
-                        ),
-                      ],
-                    ),
-                  ],
+
+                ///
+                /// Exclusive Offers
+                ///
+
+                const Text(
+                  "Exclusive Offers",
+                  style: style16,
                 ),
+
                 const SizedBox(height: 10),
-                Container(
-                  padding: const EdgeInsets.only(left: 20.0, top: 10),
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      color: const Color(0xfffd7b99f),
-                      borderRadius: BorderRadius.circular(14)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Upto 50%,',
-                            style: TextStyle(
-                                color: Color(0xfffe78477),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w300),
-                          ),
-                          const Text(
-                            "Look more beautiful and \n save more discount",
-                            style: TextStyle(fontSize: 14, color: Colors.white),
-                          ),
-                          TextButton(
-                              onPressed: () {},
-                              child: Container(
-                                height: 40,
-                                width: 140,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: const Color(0xfffe78477),
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    "Get offer now!",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 17),
-                                  ),
-                                ),
-                              ))
-                        ],
-                      ),
-                      Align(
-                        alignment: Alignment.bottomRight,
-                        child: Image.asset(
-                          "$staticAssets/offers.png",
-                          scale: 4,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+
+                ///
+                /// Banner Offer
+                ///
+
+                _banner(),
+
                 SizedBox(
                   height: 22.h,
                 ),
+
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceAround,
                 //   children: [
@@ -187,13 +118,24 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 //     ),
                 //   ],
                 // ),
-                const Text(
+
+                ///
+                /// Our services
+                ///
+
+                Text(
                   "Our services",
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  style: style16.copyWith(color: blackColor),
                 ),
-                const SizedBox(
-                  height: 10,
+
+                SizedBox(
+                  height: 10.h,
                 ),
+
+                ///
+                /// Our services List Data
+                ///
+
                 SizedBox(
                     height: 160,
                     child: ListView.builder(
@@ -252,6 +194,11 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 //     ],
                 //   ),
                 // ),
+
+                ///
+                /// fatured Services
+                ///
+
                 const Text(
                   "fatured Services",
                   style: TextStyle(
@@ -262,6 +209,10 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 const SizedBox(
                   height: 10,
                 ),
+
+                ///
+                /// fatured Services List Data
+                ///
                 SizedBox(
                   height: 103,
                   child: ListView.builder(
@@ -303,6 +254,10 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 const SizedBox(
                   height: 10,
                 ),
+
+                ///
+                /// Upcoming Bookings
+                ///
                 const Padding(
                   padding: EdgeInsets.only(left: 16.0, top: 10),
                   child: Row(
@@ -318,6 +273,11 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
                 const SizedBox(
                   height: 10,
                 ),
+
+                ///
+                /// Upcoming Bookings list data
+                ///
+
                 SizedBox(
                   height: 110,
                   child: ListView.builder(
@@ -375,8 +335,6 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
     );
   }
 }
-
-
 
 // // featured services category continer
 // //  CategoryContainer Widget to recall it and optimize our code
@@ -445,8 +403,89 @@ class _Home_Screen_0State extends State<Home_Screen_0> {
 //   }
 // }
 
-///
-//////
-//////
-/////
+_header(BuildContext context) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      const Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "Good morning",
+            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w300),
+          ),
+          Text(
+            "Rayna Carder ",
+            style: TextStyle(
+                fontSize: 22, fontWeight: FontWeight.w700, color: Colors.black),
+          ),
+        ],
+      ),
+      CircleAvatar(
+          backgroundColor: Colors.grey,
+          child: IconButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen_0()));
+              },
+              icon: Icon(
+                Icons.shopping_cart_outlined,
+                color: Colors.white,
+              ))),
+    ],
+  );
+}
 
+_banner() {
+  return Container(
+    padding: const EdgeInsets.only(left: 20.0, top: 10),
+    alignment: Alignment.center,
+    decoration: BoxDecoration(
+        color: const Color(0xfffd7b99f),
+        borderRadius: BorderRadius.circular(14)),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Upto 50%,',
+              style: TextStyle(
+                  color: Color(0xfffe78477),
+                  fontSize: 20,
+                  fontWeight: FontWeight.w300),
+            ),
+            const Text(
+              "Look more beautiful and \n save more discount",
+              style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
+            TextButton(
+                onPressed: () {},
+                child: Container(
+                  height: 40,
+                  width: 140,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: const Color(0xfffe78477),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Get offer now!",
+                      style: TextStyle(color: Colors.white, fontSize: 17),
+                    ),
+                  ),
+                ))
+          ],
+        ),
+        Align(
+          alignment: Alignment.bottomRight,
+          child: Image.asset(
+            "$staticAssets/offers.png",
+            scale: 4,
+          ),
+        ),
+      ],
+    ),
+  );
+}

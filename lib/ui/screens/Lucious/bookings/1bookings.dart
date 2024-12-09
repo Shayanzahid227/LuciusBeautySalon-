@@ -76,10 +76,9 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 16.0),
-                        child: Row(
-                          children: [
-                            Text("Previous Bookings"),
-                          ],
+                        child: Text(
+                          "Previous Bookings",
+                          textAlign: TextAlign.start,
                         ),
                       ),
                       SizedBox(

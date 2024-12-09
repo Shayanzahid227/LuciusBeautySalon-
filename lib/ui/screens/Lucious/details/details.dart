@@ -1,21 +1,19 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/chose_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/on_shoop_Book/book.dart';
-
-import 'package:figma_creation_task/ui/screens/Lucious/bookings/1bookings.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class detaailScreen_0 extends StatefulWidget {
-  const detaailScreen_0({super.key});
+// ignore: camel_case_types
+class DetailScreen_0 extends StatefulWidget {
+  const DetailScreen_0({super.key});
 
   @override
-  State<detaailScreen_0> createState() => _detaailScreen_0State();
+  State<DetailScreen_0> createState() => _DetailScreen_0State();
 }
 
-class _detaailScreen_0State extends State<detaailScreen_0> {
+class _DetailScreen_0State extends State<DetailScreen_0> {
   // int currentIndex = 0;
   // List<Widget> body = [
   //   const Icon(Icons.home),
@@ -109,16 +107,12 @@ class _detaailScreen_0State extends State<detaailScreen_0> {
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 33.0),
-                        child: Row(
-                          children: [
-                            Text(
-                              "45 min 56AED",
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.grey),
-                            ),
-                          ],
+                        child: Text(
+                          "45 min 56AED",
+                          style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.grey),
                         ),
                       ),
                       SizedBox(

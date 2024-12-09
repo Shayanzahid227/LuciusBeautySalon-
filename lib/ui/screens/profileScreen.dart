@@ -1,4 +1,4 @@
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/home_view_model.dart';
 import 'package:figma_creation_task/ui/screens/root/root_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +14,7 @@ class _ProfileScreen_0State extends State<ProfileScreen_0> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => Homeviewmodel(),
+      create: (context) => HomeViewModel(),
       child: Consumer<RootViewModel>(
           builder: (context, model, child) => const Scaffold(
                 body: Column(

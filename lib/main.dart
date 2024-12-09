@@ -3,7 +3,7 @@ import 'package:figma_creation_task/ui/screens/Lucious/chose_screen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home_booking/home_booking.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/on_shoop_Book/book.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/Home_MVVM.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/home_view_model.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/splash%20screen.dart';
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       // if multiple screen have common view model then we use veiw model in main .dart
       providers: [
         ChangeNotifierProvider(
-          create: (context) => Homeviewmodel(),
+          create: (context) => HomeViewModel(),
         ),
         //ChangeNotifierProvider(create: (context) => AllServiceModel()),
       ],
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: splash_screen_0()),
+            home: HomeBooking_0()),
       ),
     );
   }

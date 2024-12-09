@@ -6,7 +6,7 @@ import 'package:figma_creation_task/core/models/home_ourServices.dart';
 import 'package:figma_creation_task/core/models/home_upcooming.dart';
 import 'package:figma_creation_task/core/other/Base_view_model.dart';
 
-class Homeviewmodel extends BaseViewModel {
+class HomeViewModel extends BaseViewModel {
   // bool isSelect = false;
   // onClick() {
   //   isSelect = !isSelect;
@@ -14,15 +14,15 @@ class Homeviewmodel extends BaseViewModel {
   // }
 
 // *************  feature services *****************/
-  List<featurservicesmodel_2> listfeatur_2 = [
-    featurservicesmodel_2(
+  List<FeatureServicesModel_2> listfeatur_2 = [
+    FeatureServicesModel_2(
         imgUrl: "$staticAssets/details.png",
         tittle: "Classic Manicure",
         timeandprice: "56 min 73 AED"),
-    featurservicesmodel_2(
+    FeatureServicesModel_2(
         imgUrl: "$staticAssets/details.png",
         tittle: "ClassicManicure",
-        timeandprice: "56 min 67 AED")
+        timeandprice: "56 min 67 AED"),
     // FeatureServicesModel(
     //   tittle: "Classic Predicure",
     //   timePrice: "45 mnt 39 AED",
@@ -45,6 +45,7 @@ class Homeviewmodel extends BaseViewModel {
     // FeatureServices(
     //     tittle: "shfb", imgUrl: "$staticAssets/details.png", timePrice: "hbd"),
   ];
+
 //*****************    our services   *****************/
   List<OurServicesModel> listOurServices = [
     OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
@@ -61,34 +62,35 @@ class Homeviewmodel extends BaseViewModel {
     OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
     OurServicesModel(ImgUrl: "$staticAssets/nails1.png", tittle: "Nails"),
   ];
+
   //*****************  upcooming services  *****************/
-  List<UpcommingservicesModel> listupcoming = [
-    UpcommingservicesModel(
+  List<UpcommingServicesModel> listupcoming = [
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Clasic Manicure",
         pageRoute: "Home",
         timePrice: "sat 22 aug 2024"),
-    UpcommingservicesModel(
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Classic Padicure",
         pageRoute: "salon",
         timePrice: "sun 23 aug 2024"),
-    UpcommingservicesModel(
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Clasic Manicure",
         pageRoute: "Home",
         timePrice: "sat 22 aug 2024"),
-    UpcommingservicesModel(
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Classic Padicure",
         pageRoute: "salon",
         timePrice: "sun 23 aug 2024"),
-    UpcommingservicesModel(
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Clasic Manicure",
         pageRoute: "Home",
         timePrice: "sat 22 aug 2024"),
-    UpcommingservicesModel(
+    UpcommingServicesModel(
         imgUrl: "$staticAssets/details.png",
         tittle: "Classic Padicure",
         pageRoute: "salon",

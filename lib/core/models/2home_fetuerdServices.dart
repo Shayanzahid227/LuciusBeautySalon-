@@ -1,8 +1,8 @@
-class featurservicesmodel_2 {
+class FeatureServicesModel_2 {
   String? imgUrl;
   String? tittle;
   String? timeandprice;
-  featurservicesmodel_2({
+  FeatureServicesModel_2({
     this.imgUrl,
     this.timeandprice,
     this.tittle,

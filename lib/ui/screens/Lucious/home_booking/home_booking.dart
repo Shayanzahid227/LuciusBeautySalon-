@@ -1,4 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
+import 'package:figma_creation_task/core/constant/text_style.dart';
 import 'package:figma_creation_task/ui/custom_widgets/book_timeSlot.dart';
 
 import 'package:figma_creation_task/ui/custom_widgets/circularButton.dart';
@@ -20,7 +21,18 @@ class HomeBooking_0 extends StatefulWidget {
 }
 
 class _HomeBooking_0State extends State<HomeBooking_0> {
+  // for selecting new day in calendar
+  DateTime today = DateTime.now();
+  //void onDaySelected(DateTime currentDay, DateTime focusday) {
+  void _onDaySelected(DateTime currentDay, DateTime focusday) {
+    setState(() {
+      today = currentDay;
+    });
+  }
+
+  // for changing color
   bool isSelected = false;
+  bool timeSelected = false; // for time slot
   @override
   void initState() {
     super.initState();
@@ -28,6 +40,13 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
 
   void onClick() {
     isSelected = !isSelected;
+    setState(() {});
+  }
+
+// for time slot
+  void onTap() {
+    timeSelected = !timeSelected;
+    setState(() {});
   }
 
   @override
@@ -54,7 +73,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                             ],
                           ),
                           Container(
-                            height: 282,
+                            height: 250,
                             width: double.infinity,
                             decoration: BoxDecoration(
                                 //color: Colors.deepOrange
@@ -64,7 +83,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                     fit: BoxFit.cover)),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(top: 60.0),
+                            padding: const EdgeInsets.only(top: 30.0),
                             child: Container(
                               height: screenHeight * 0.31,
                               width: double.infinity,
@@ -73,44 +92,62 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                 focusedDay: DateTime.now(),
                                 firstDay: DateTime.utc(2024, 1, 1),
                                 lastDay: DateTime.utc(2030, 12, 31),
+
+                                // This will prevent the color change on click
+                                selectedDayPredicate: (currentDay) =>
+                                    isSameDay(currentDay, today),
+                                onDaySelected:
+                                    _onDaySelected, // Always returns false, so no day is selected
+
                                 headerStyle: HeaderStyle(
-                                    formatButtonVisible: false,
-                                    titleCentered: true),
+                                  formatButtonVisible: false,
+                                  titleCentered: true,
+                                ),
                               ),
-                              // child: CalendarDatePicker(
-                              //   initialDate: DateTime.now(),
-                              //   firstDate: DateTime.utc(2010, 1, 1),
-                              //   lastDate: DateTime.utc(2030, 12, 30),
-                              //   onDateChanged: (DateTime newDate) {},
-                              // ),
                             ),
-                          ),
+                          )
                         ],
                       ),
                       const Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 16.0, top: 15),
+                            padding: const EdgeInsets.only(
+                              left: 16.0,
+                            ),
                             child: Text("Available Time Slots"),
                           ),
                         ],
                       ),
-                      // Column(
-                      //   children: [
-                      //     Row(
-                      //       children: [
-                      //         ListView.builder(
-                      //           itemCount: 4,
-                      //           itemBuilder: (BuildContext context, int index) {
-                      //             return BookTimeslotCustomContainer(
-                      //                 object_BookTimeSlot:
-                      //                     model.listTimeSlot[index]);
-                      //           },
-                      //         ),
-                      //       ],
-                      //     )
-                      //   ],
-                      // ),
+                      GestureDetector(
+                        onTap: () {
+                          //onClick();
+                          onTap();
+                        },
+                        child: Container(
+                          height: 100,
+                          child: GridView.builder(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 4,
+                            ),
+                            itemCount: model.listTimeSlot.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return BookTimeslotCustomContainer(
+                                  object_BookTimeSlot:
+                                      model.listTimeSlot[index]);
+                            },
+                          ),
+                          // child: ListView.builder(
+                          //   scrollDirection: Axis.horizontal,
+                          //   shrinkWrap: true,
+                          //   itemCount: 4,
+                          //   itemBuilder: (BuildContext context, int index) {
+                          //     return BookTimeslotCustomContainer(
+                          //         object_BookTimeSlot: model.listTimeSlot[index]);
+                          //   },
+                          // ),
+                        ),
+                      ),
                       ////////////////////     start from here        //////////
                       const Padding(
                         padding: EdgeInsets.only(left: 16),
@@ -213,45 +250,78 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         padding: const EdgeInsets.symmetric(horizontal: 10.0),
                         child: Row(
                           children: [
-                            Container(
-                              decoration:
-                                  BoxDecoration(color: Colors.yellow[100]),
-                              height: screenHeight * 0.05,
-                              width: screenwidth * 0.45,
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.card_travel),
-                                    SizedBox(
-                                      width: screenwidth * 0.07,
-                                    ),
-                                    Text("Salon")
-                                  ],
+                            GestureDetector(
+                              onTap: () {
+                                onClick();
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  color: isSelected == false
+                                      ? Color(0xfffe38577)
+                                      : Color(0xfffffffff),
+                                ),
+                                height: screenHeight * 0.05,
+                                width: screenwidth * 0.45,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 40.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.card_travel,
+                                          color: isSelected == false
+                                              ? Colors.white
+                                              : Colors.black),
+                                      SizedBox(
+                                        width: screenwidth * 0.07,
+                                      ),
+                                      Text(
+                                        "Home",
+                                        style: style16.copyWith(
+                                            color: isSelected == false
+                                                ? Colors.white
+                                                : Colors.black),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
                             SizedBox(
                               width: screenwidth * 0.03,
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                color: isSelected
-                                    ? Color(0xfffe38577)
-                                    : Color(0xfffffffff),
-                              ),
-                              height: screenHeight * 0.05,
-                              width: screenwidth * 0.45,
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 40.0),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.card_travel),
-                                    SizedBox(
-                                      width: screenwidth * 0.07,
-                                    ),
-                                    Text("Salon")
-                                  ],
+                            GestureDetector(
+                              onTap: () {
+                                onClick();
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16),
+                                  color: isSelected == true
+                                      ? Color(0xfffe38577)
+                                      : Color(0xfffffffff),
+                                ),
+                                height: screenHeight * 0.05,
+                                width: screenwidth * 0.45,
+                                child: Padding(
+                                  padding: const EdgeInsets.only(left: 40.0),
+                                  child: Row(
+                                    children: [
+                                      Icon(Icons.card_travel,
+                                          color: isSelected == true
+                                              ? Colors.white
+                                              : Colors.black),
+                                      SizedBox(
+                                        width: screenwidth * 0.07,
+                                      ),
+                                      Text(
+                                        "Salon",
+                                        style: style16.copyWith(
+                                            color: isSelected == true
+                                                ? Colors.white
+                                                : Colors.black),
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -267,9 +337,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         width: screenwidth * 0.8,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            color: isSelected
-                                ? Color(0xfffe38577)
-                                : Color(0xfffffffff)),
+                            color: Color(0xfffe38577)),
                         child: TextButton(
                             onPressed: () {}, child: Text("Proceed")),
                       )

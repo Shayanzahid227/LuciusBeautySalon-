@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // The Custom Widget that can be reused with different data
 // ignore: must_be_immutable
 class FeatureServiceCustomWidget_2 extends StatelessWidget {
-  featurservicesmodel_2 object_feturservices_2 = featurservicesmodel_2();
+  FeatureServicesModel_2 object_feturservices_2 = FeatureServicesModel_2();
   // final String title;
   // final String durationAndPrice;
   // final String imageAsset;

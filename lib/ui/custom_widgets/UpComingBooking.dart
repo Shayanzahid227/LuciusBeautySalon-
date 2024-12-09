@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class UpComingBookingCustomContainer extends StatelessWidget {
-  UpcommingservicesModel object_upcomingservices = UpcommingservicesModel();
+  UpcommingServicesModel object_upcomingservices = UpcommingServicesModel();
 
   // final String title;
   // final String imagePath;

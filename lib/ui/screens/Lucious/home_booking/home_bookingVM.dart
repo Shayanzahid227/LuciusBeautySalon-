@@ -8,5 +8,8 @@ class HomeBookingVeiwModel extends BaseViewModel {
     BookTimeslotModel(time: "2:34"),
     BookTimeslotModel(time: "2:34"),
     BookTimeslotModel(time: "2:34"),
+    BookTimeslotModel(time: "2:34"),
+    BookTimeslotModel(time: "2:34"),
+    BookTimeslotModel(time: "2:34"),
   ];
 }

@@ -83,7 +83,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          const detaailScreen_0()));
+                                          const DetailScreen_0()));
                             },
                             child: SpecificServicesCustomWidget(
                                 object_specificServices:
