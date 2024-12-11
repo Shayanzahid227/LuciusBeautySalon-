@@ -1,5 +1,7 @@
 // ignore_for_file: must_be_immutable, prefer_typing_uninitialized_variables, use_super_parameters
-
+//
+//
+//********************     this one is not used  *******************/
 import 'package:figma_creation_task/core/constant/colors.dart';
 import 'package:figma_creation_task/core/constant/text_style.dart';
 import 'package:flutter/material.dart';

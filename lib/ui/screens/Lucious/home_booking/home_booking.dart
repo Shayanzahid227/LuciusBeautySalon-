@@ -124,7 +124,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                           onTap();
                         },
                         child: Container(
-                          height: 100,
+                          height: 110,
                           child: GridView.builder(
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
