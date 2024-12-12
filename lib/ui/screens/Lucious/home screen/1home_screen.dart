@@ -425,10 +425,12 @@ _header(BuildContext context) {
           backgroundColor: Colors.grey,
           child: IconButton(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => CartScreen_0()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CartScreen_0()));
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.shopping_cart_outlined,
                 color: Colors.white,
               ))),

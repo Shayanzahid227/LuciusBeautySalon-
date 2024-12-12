@@ -73,7 +73,7 @@ class CartSCreenCustomSCOntainer extends StatelessWidget {
                     ),
                     Text(
                       "${object_CartMoel.dateYear}",
-                      style: TextStyle(
+                      style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           color: Color(0xfff888888)),

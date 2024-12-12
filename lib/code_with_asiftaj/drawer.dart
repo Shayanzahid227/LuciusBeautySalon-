@@ -16,29 +16,29 @@ class _DrawerPracticeState extends State<DrawerPractice> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.purple[500],
-        title: Text("Drawer Practice"),
+        title: const Text("Drawer Practice"),
       ),
       drawer: Drawer(
         child: SingleChildScrollView(
           child: Column(
             children: [
               UserAccountsDrawerHeader(
-                  currentAccountPictureSize: Size(60, 60),
+                  currentAccountPictureSize: const Size(60, 60),
                   currentAccountPicture: CircleAvatar(
                     child: Image.asset("$staticAssets/FB.png"),
                   ),
                   decoration: BoxDecoration(color: Colors.purple[500]),
-                  accountName: Text(
+                  accountName: const Text(
                     "Shayan xahid",
                     style: TextStyle(color: Colors.black),
                   ),
-                  accountEmail: Text(
+                  accountEmail: const Text(
                     "shayanzahid227@gmail.com",
                     style: TextStyle(color: Colors.black),
                   )),
               ListTile(
-                leading: Icon(Icons.home),
-                title: Text("Home"),
+                leading: const Icon(Icons.home),
+                title: const Text("Home"),
                 onTap: () {
                   Navigator.push(
                       context,
@@ -48,45 +48,45 @@ class _DrawerPracticeState extends State<DrawerPractice> {
                 },
               ),
               ListTile(
-                leading: Icon(Icons.person),
-                title: Text("Profile"),
+                leading: const Icon(Icons.person),
+                title: const Text("Profile"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.calendar_month_rounded),
-                title: Text("Calendar"),
+                leading: const Icon(Icons.calendar_month_rounded),
+                title: const Text("Calendar"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.settings),
-                title: Text("setting"),
+                leading: const Icon(Icons.settings),
+                title: const Text("setting"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.history),
-                title: Text("History"),
+                leading: const Icon(Icons.history),
+                title: const Text("History"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.help),
-                title: Text("Help"),
+                leading: const Icon(Icons.help),
+                title: const Text("Help"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.feedback),
-                title: Text("Send feedBack"),
+                leading: const Icon(Icons.feedback),
+                title: const Text("Send feedBack"),
                 onTap: () {},
               ),
               ListTile(
-                leading: Icon(Icons.logout),
-                title: Text("Logout"),
+                leading: const Icon(Icons.logout),
+                title: const Text("Logout"),
                 onTap: () {},
               ),
             ],
           ),
         ),
       ),
-      body: Column(),
+      body: const Column(),
     );
   }
 }

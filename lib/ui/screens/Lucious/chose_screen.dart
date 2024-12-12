@@ -20,7 +20,7 @@ class _ChoseScreen_0State extends State<ChoseScreen_0> {
           children: [
             SizedBox(height: screenHeight * 0.4),
             Container(
-                decoration: BoxDecoration(color: Colors.red),
+                decoration: const BoxDecoration(color: Colors.red),
                 height: screenHeight * 0.09,
                 width: screenwidth * 0.7,
                 child: Center(
@@ -29,17 +29,17 @@ class _ChoseScreen_0State extends State<ChoseScreen_0> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => OnShopBookScreen_0(),
+                          builder: (context) => const OnShopBookScreen_0(),
                         ));
                   },
-                  child: Text(
+                  child: const Text(
                     "Shop services",
                     style: TextStyle(fontSize: 25, color: Colors.white),
                   ),
                 ))),
             SizedBox(height: screenHeight * 0.09),
             Container(
-                decoration: BoxDecoration(color: Colors.red),
+                decoration: const BoxDecoration(color: Colors.red),
                 height: screenHeight * 0.09,
                 width: screenwidth * 0.7,
                 child: Center(
@@ -48,10 +48,10 @@ class _ChoseScreen_0State extends State<ChoseScreen_0> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => HomeBooking_0(),
+                          builder: (context) => const HomeBooking_0(),
                         ));
                   },
-                  child: Text(
+                  child: const Text(
                     "Home services",
                     style: TextStyle(fontSize: 25, color: Colors.white),
                   ),

@@ -69,13 +69,13 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                               SizedBox(
                                 width: screenwidth * 0.02,
                               ),
-                              Text("Book Appointment")
+                              const Text("Book Appointment")
                             ],
                           ),
                           Container(
                             height: 250,
                             width: double.infinity,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 //color: Colors.deepOrange
                                 image: DecorationImage(
                                     image: AssetImage(
@@ -84,7 +84,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(top: 30.0),
-                            child: Container(
+                            child: SizedBox(
                               height: screenHeight * 0.31,
                               width: double.infinity,
                               child: TableCalendar(
@@ -99,7 +99,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                 onDaySelected:
                                     _onDaySelected, // Always returns false, so no day is selected
 
-                                headerStyle: HeaderStyle(
+                                headerStyle: const HeaderStyle(
                                   formatButtonVisible: false,
                                   titleCentered: true,
                                 ),
@@ -111,7 +111,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                       const Row(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(
+                            padding: EdgeInsets.only(
                               left: 16.0,
                             ),
                             child: Text("Available Time Slots"),
@@ -123,8 +123,8 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                           //onClick();
                           onTap();
                         },
-                        child: Container(
-                          height: 110,
+                        child: SizedBox(
+                          height: 111,
                           child: GridView.builder(
                             gridDelegate:
                                 const SliverGridDelegateWithFixedCrossAxisCount(
@@ -184,7 +184,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                       ),
                       const SizedBox(height: 30),
                       const Padding(
-                        padding: const EdgeInsets.only(left: 16.0),
+                        padding: EdgeInsets.only(left: 16.0),
                         child: Row(
                           children: [
                             Text("Fill Out Your Detaild"),
@@ -198,7 +198,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         padding: const EdgeInsets.only(left: 26.0),
                         child: Row(
                           children: [
-                            Container(
+                            SizedBox(
                               height: screenHeight * 0.06,
                               width: screenwidth * 0.4,
                               child: TextField(
@@ -217,7 +217,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                               ),
                             ),
                             SizedBox(width: screenwidth * 0.06),
-                            Container(
+                            SizedBox(
                               height: screenHeight * 0.06,
                               width: screenwidth * 0.4,
                               child: TextField(
@@ -238,11 +238,11 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         ),
                       ),
                       SizedBox(height: screenHeight * 0.02),
-                      SimpleTextField(hintText: "phone number"),
+                      const SimpleTextField(hintText: "phone number"),
                       SizedBox(height: screenHeight * 0.02),
-                      SimpleTextField(hintText: "Your Message"),
+                      const SimpleTextField(hintText: "Your Message"),
                       SizedBox(height: screenHeight * 0.02),
-                      SimpleTextField(hintText: "Additional Requrments"),
+                      const SimpleTextField(hintText: "Additional Requrments"),
                       SizedBox(
                         height: screenHeight * 0.03,
                       ),
@@ -258,8 +258,8 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
                                   color: isSelected == false
-                                      ? Color(0xfffe38577)
-                                      : Color(0xfffffffff),
+                                      ? const Color(0xfffe38577)
+                                      : const Color(0xfffffffff),
                                 ),
                                 height: screenHeight * 0.05,
                                 width: screenwidth * 0.45,
@@ -297,8 +297,8 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(16),
                                   color: isSelected == true
-                                      ? Color(0xfffe38577)
-                                      : Color(0xfffffffff),
+                                      ? const Color(0xfffe38577)
+                                      : const Color(0xfffffffff),
                                 ),
                                 height: screenHeight * 0.05,
                                 width: screenwidth * 0.45,
@@ -337,9 +337,9 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                         width: screenwidth * 0.8,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(9),
-                            color: Color(0xfffe38577)),
+                            color: const Color(0xfffe38577)),
                         child: TextButton(
-                            onPressed: () {}, child: Text("Proceed")),
+                            onPressed: () {}, child: const Text("Proceed")),
                       )
                     ],
                   ),

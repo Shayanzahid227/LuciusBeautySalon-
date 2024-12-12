@@ -38,7 +38,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                     shape: BoxShape.circle,
                     border: Border.all(color: const Color(0xfffe38577)),
                     color: Colors.transparent),
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   // why this image radius can not reduce
                   radius: 10,
                   backgroundImage: AssetImage("$staticAssets/FB.png"),
@@ -89,7 +89,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             const Padding(
               padding: EdgeInsets.only(right: 26.0),
               child: Divider(
@@ -97,22 +97,22 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 thickness: 0.8,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Column(
               children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "About Us",
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: Colors.black),
                     ),
-                    SizedBox(width: 220),
+                    const SizedBox(width: 220),
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward,
                           color: Colors.grey,
                         )),
@@ -134,17 +134,17 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 ),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Career",
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: Colors.black),
                     ),
-                    SizedBox(width: 240),
+                    const SizedBox(width: 240),
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward,
                           color: Colors.grey,
                         )),
@@ -166,17 +166,17 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                 ),
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       "Price and Plaining",
                       style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                           color: Colors.black),
                     ),
-                    SizedBox(width: 140),
+                    const SizedBox(width: 140),
                     IconButton(
                         onPressed: () {},
-                        icon: Icon(
+                        icon: const Icon(
                           Icons.arrow_forward,
                           color: Colors.grey,
                         )),
@@ -196,12 +196,12 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                     thickness: 0.4,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 40,
                 ),
                 TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "Logout",
                       style: TextStyle(
                           fontSize: 18,

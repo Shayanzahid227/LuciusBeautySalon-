@@ -13,26 +13,26 @@ class _LoginScreen_00000State extends State<LoginScreen_00000> {
     return Scaffold(
       body: Column(
         children: [
-          Text("login"),
-          SizedBox(
+          const Text("login"),
+          const SizedBox(
             height: 19,
           ),
           TextField(
             decoration: InputDecoration(
                 hintText: "emial",
-                hintStyle: TextStyle(fontSize: 20),
+                hintStyle: const TextStyle(fontSize: 20),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(color: Colors.black))),
           ),
-          SizedBox(height: 19),
+          const SizedBox(height: 19),
           Container(
             height: 100,
             width: 200,
             decoration: BoxDecoration(color: Colors.purple[200]),
             child: TextButton(
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "login",
                   style: TextStyle(),
                 )),

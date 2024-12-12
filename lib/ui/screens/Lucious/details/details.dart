@@ -201,7 +201,7 @@ class _DetailScreen_0State extends State<DetailScreen_0> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    CartScreen_0(),
+                                                    const CartScreen_0(),
                                               ));
                                         },
                                         child: const Text(

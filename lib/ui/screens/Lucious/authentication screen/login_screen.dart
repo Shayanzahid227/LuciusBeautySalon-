@@ -94,7 +94,7 @@ class login_screen_0 extends StatelessWidget {
                 TextFormField(
                   decoration: authFieldDecoration.copyWith(
                     suffixIcon: GestureDetector(
-                        onTap: () {}, child: Icon(Icons.visibility)),
+                        onTap: () {}, child: const Icon(Icons.visibility)),
                   ),
                 ),
                 SizedBox(height: 30.h),

@@ -74,8 +74,8 @@ class _BookingScreen_okState extends State<BookingScreen_ok> {
                           },
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 16.0),
+                      const Padding(
+                        padding: EdgeInsets.only(left: 16.0),
                         child: Text(
                           "Previous Bookings",
                           textAlign: TextAlign.start,

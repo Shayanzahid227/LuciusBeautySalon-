@@ -28,12 +28,12 @@ class _CartScreen_0State extends State<CartScreen_0> {
                         children: [
                           CircularButton(
                               onPressed: () {}, icon: Icons.arrow_back),
-                          SizedBox(width: 20),
-                          Text("Cart"),
+                          const SizedBox(width: 20),
+                          const Text("Cart"),
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Padding(

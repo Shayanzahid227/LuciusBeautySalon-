@@ -42,7 +42,7 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                   Container(
                     height: 282,
                     width: double.infinity,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         //color: Colors.deepOrange
                         image: DecorationImage(
                             image: AssetImage("$staticAssets/Ellipse9.png"),
@@ -50,17 +50,17 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                   ),
                 ],
               ),
-              Row(
+              const Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 16.0, top: 15),
+                    padding: EdgeInsets.only(left: 16.0, top: 15),
                     child: Text("Available Time Slots"),
                   ),
                 ],
               ),
-              SizedBox(height: 30),
-              Padding(
-                padding: const EdgeInsets.only(left: 16.0),
+              const SizedBox(height: 30),
+              const Padding(
+                padding: EdgeInsets.only(left: 16.0),
                 child: Row(
                   children: [
                     Text("Fill Out Your Detaild"),
@@ -74,7 +74,7 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       width: screenwidth * 0.4,
                       child: TextField(
                         decoration: InputDecoration(
@@ -90,7 +90,7 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                       ),
                     ),
                     SizedBox(width: screenwidth * 0.08),
-                    Container(
+                    SizedBox(
                       width: screenwidth * 0.4,
                       child: TextField(
                         decoration: InputDecoration(
@@ -109,13 +109,13 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                 ),
               ),
               SizedBox(height: screenHeight * 0.02),
-              CustomTextField(
+              const CustomTextField(
                   hintText: "Phone Number", showVisibilityToggle: true),
               SizedBox(height: screenHeight * 0.02),
-              CustomTextField(
+              const CustomTextField(
                   hintText: "Your Message", showVisibilityToggle: false),
               SizedBox(height: screenHeight * 0.02),
-              CustomTextField(
+              const CustomTextField(
                   hintText: "Additional Requirments",
                   showVisibilityToggle: false),
               SizedBox(
@@ -133,11 +133,11 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                         padding: const EdgeInsets.only(left: 40.0),
                         child: Row(
                           children: [
-                            Icon(Icons.card_travel),
+                            const Icon(Icons.card_travel),
                             SizedBox(
                               width: screenwidth * 0.07,
                             ),
-                            Text("Salon")
+                            const Text("Salon")
                           ],
                         ),
                       ),
@@ -148,8 +148,8 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                     Container(
                       decoration: BoxDecoration(
                         color: isSelected
-                            ? Color(0xfffe38577)
-                            : Color(0xfffffffff),
+                            ? const Color(0xfffe38577)
+                            : const Color(0xfffffffff),
                       ),
                       height: screenHeight * 0.05,
                       width: screenwidth * 0.45,
@@ -157,11 +157,11 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                         padding: const EdgeInsets.only(left: 40.0),
                         child: Row(
                           children: [
-                            Icon(Icons.card_travel),
+                            const Icon(Icons.card_travel),
                             SizedBox(
                               width: screenwidth * 0.07,
                             ),
-                            Text("Salon")
+                            const Text("Salon")
                           ],
                         ),
                       ),
@@ -177,9 +177,11 @@ class _OnShopBookScreen_0State extends State<OnShopBookScreen_0> {
                 width: screenwidth * 0.8,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(9),
-                    color:
-                        isSelected ? Color(0xfffe38577) : Color(0xfffffffff)),
-                child: TextButton(onPressed: () {}, child: Text("Proceed")),
+                    color: isSelected
+                        ? const Color(0xfffe38577)
+                        : const Color(0xfffffffff)),
+                child:
+                    TextButton(onPressed: () {}, child: const Text("Proceed")),
               )
             ],
           ),

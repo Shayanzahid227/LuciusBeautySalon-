@@ -15,7 +15,7 @@ class SimpleTextField extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 22.0),
-      child: Container(
+      child: SizedBox(
         height: screenHeight * 0.06,
         width: screenWidth * 0.9,
         child: TextField(

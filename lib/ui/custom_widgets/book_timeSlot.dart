@@ -36,11 +36,12 @@ class _BookTimeslotCustomContainerState
     setState(() {});
   }
 
+  @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Container(
-      margin: EdgeInsets.all(5),
+      margin: const EdgeInsets.all(5),
       alignment: Alignment.center,
       // height: 7.h,
       // width: 100.w,
