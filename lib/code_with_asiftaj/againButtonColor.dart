@@ -36,7 +36,7 @@ class _buttonColorChanging_2State extends State<buttonColorChanging_2> {
                     // onClick();
                   },
                   child: Container(
-                    height: 70,
+                    height: 71,
                     width: 120,
                     decoration: BoxDecoration(
                         color: isSelected ? Colors.red : Colors.blue),
@@ -53,7 +53,7 @@ class _buttonColorChanging_2State extends State<buttonColorChanging_2> {
                     // onClick();
                   },
                   child: Container(
-                    height: 70,
+                    height: 71,
                     width: 120,
                     decoration: BoxDecoration(
                         color: isSelected ? Colors.blue : Colors.red),
