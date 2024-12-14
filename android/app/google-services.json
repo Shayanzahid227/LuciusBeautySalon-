@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "366217616701",
+    "project_id": "lucious-5f934",
+    "storage_bucket": "lucious-5f934.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:366217616701:android:e4a6fe6ade1e8b2bb2f954",
+        "android_client_info": {
+          "package_name": "com.example.figma_creation_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5seosyW-ePEIoWKjExv7L_CIkDY72l_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

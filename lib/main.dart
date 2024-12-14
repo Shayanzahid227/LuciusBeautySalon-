@@ -1,18 +1,16 @@
-import 'package:figma_creation_task/okkkkkk/login_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/chose_screen.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/home_booking/home_booking.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/on_shoop_Book/book.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/cart_screem.dart/CartScreen.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/home%20screen/home_view_model.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/splash%20screen.dart';
-import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -37,7 +35,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: const HomeBooking_0()),
+            home: const splash_screen_0()),
       ),
     );
   }
