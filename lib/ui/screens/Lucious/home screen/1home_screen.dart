@@ -1,3 +1,4 @@
+import 'package:badges/badges.dart';
 import 'package:figma_creation_task/core/constant/colors.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/core/constant/text_style.dart';
@@ -421,6 +422,15 @@ _header(BuildContext context) {
           ),
         ],
       ),
+      // **********************   why it is not working      ************************
+      // GestureDetector(
+      //   onTap: () {
+      //     Navigator.push(
+      //         context, MaterialPageRoute(builder: (context) => CartScreen_0()));
+      //   },
+      //  child: Badge(),
+      // )
+
       CircleAvatar(
           backgroundColor: Colors.grey,
           child: IconButton(
