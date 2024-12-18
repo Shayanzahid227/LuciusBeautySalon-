@@ -1,4 +1,3 @@
-import 'package:badges/badges.dart';
 import 'package:figma_creation_task/core/constant/colors.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/core/constant/text_style.dart';

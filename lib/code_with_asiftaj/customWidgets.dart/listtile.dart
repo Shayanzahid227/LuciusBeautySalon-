@@ -2,14 +2,17 @@ import 'package:figma_creation_task/code_with_asiftaj/customWidgets.dart/listtil
 import 'package:flutter/material.dart';
 
 // Custom widget for ListTile with CircleAvatar
+// ignore: must_be_immutable
 class CustomListTile extends StatelessWidget {
-  Listtilemodel object_listtilemodel = Listtilemodel();
+  // ignore: non_constant_identifier_names
+  Listtilemodel Object_ListtileModel = Listtilemodel();
   // final String imagePath;
   // final String title;
   // final String subtitle;
   // final String trailingText;
 
-  CustomListTile({super.key, required this.object_listtilemodel
+  // ignore: non_constant_identifier_names
+  CustomListTile({super.key, required this.Object_ListtileModel
 
       // required this.imagePath,
       // required this.title,
@@ -24,10 +27,10 @@ class CustomListTile extends StatelessWidget {
       leading: CircleAvatar(
           radius: 20,
           backgroundColor: const Color.fromARGB(255, 9, 8, 5),
-          child: Image.asset("${object_listtilemodel.imgUrl}")),
-      title: Text("${object_listtilemodel.tittle}"),
-      subtitle: Text("${object_listtilemodel.subTittle}"),
-      trailing: Text("${object_listtilemodel.trailing}"),
+          child: Image.asset("${Object_ListtileModel.imgUrl}")),
+      title: Text("${Object_ListtileModel.tittle}"),
+      subtitle: Text("${Object_ListtileModel.subTittle}"),
+      trailing: Text("${Object_ListtileModel.trailing}"),
     );
   }
 }

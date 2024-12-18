@@ -1,7 +1,8 @@
-import 'package:figma_creation_task/ui/screens/test/qqqq.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
+// import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ImportantPackeges extends StatefulWidget {
   const ImportantPackeges({super.key});
@@ -14,7 +15,6 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
   bool isSelected = false;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -33,11 +33,40 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
           Center(
             child: Column(
               children: [
-                Text(
-                  "Email Verifictaion",
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
-                ),
-                Row(
+                // ////////////////////////////////////////////////////////
+                // DefaultTextStyle(
+                //   style: const TextStyle(fontSize: 20.0, color: Colors.amber),
+                //   child: AnimatedTextKit(
+                //     animatedTexts: [
+                //       WavyAnimatedText('Hello World'),
+                //       WavyAnimatedText('Look at the waves'),
+                //     ],
+                //     isRepeatingAnimation: true,
+                //     onTap: () {
+                //       print("Tap Event");
+                //     },
+                //   ),
+                // ),
+                //**************************   animated text     ***********************/
+
+                DefaultTextStyle(
+                    style: const TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.black),
+                    child: AnimatedTextKit(
+                      animatedTexts: [WavyAnimatedText("Email Verification")],
+                      isRepeatingAnimation: true,
+                      onTap: () {
+                        print("Tap Event");
+                      },
+                    )),
+                //******************************************************************* */
+                // Text(
+                //   "Email Verifictaion",
+                //   style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                // ),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -51,43 +80,43 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 80.0),
-                  child: PinCodeTextField(
-                    keyboardType: TextInputType.number,
-                    cursorColor: Colors.orange,
-                    showCursor: true,
-                    appContext: context,
-                    length: 5,
-                    obscureText: true,
-                    animationType: AnimationType.fade,
-                    pinTheme: PinTheme(
-                      shape: PinCodeFieldShape.box,
-                      fieldHeight: 50,
-                      fieldWidth: 40,
-                      activeColor: Colors.teal,
-                      activeFillColor: Colors.purple[300],
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    beforeTextPaste: (allow) {
-                      return true;
-                    },
-                    animationDuration: Duration(
-                      milliseconds: 500,
-                    ),
-                    onCompleted: (x) {
-                      print("Compleated");
-                    },
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(horizontal: 80.0),
+                //   child: PinCodeTextField(
+                //     keyboardType: TextInputType.number,
+                //     cursorColor: Colors.black,
+                //     showCursor: true,
+                //     appContext: context,
+                //     length: 5,
+                //     obscureText: true,
+                //     animationType: AnimationType.fade,
+                //     pinTheme: PinTheme(
+                //       shape: PinCodeFieldShape.box,
+                //       fieldHeight: 50,
+                //       fieldWidth: 40,
+                //       activeColor: Colors.teal,
+                //       activeFillColor: Colors.purple[300],
+                //       borderRadius: BorderRadius.circular(15),
+                //     ),
+                //     beforeTextPaste: (allow) {
+                //       return true;
+                //     },
+                //     animationDuration: const Duration(
+                //       milliseconds: 500,
+                //     ),
+                //     onCompleted: (x) {
+                //       print("Compleated");
+                //     },
+                //   ),
+                // ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("didn't recive code? "),
+                    const Text("didn't recive code? "),
                     GestureDetector(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         "RESEND",
                         style: TextStyle(
                             color: Colors.green,
@@ -109,7 +138,7 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
                     width: 300,
                     child: Center(
                       child: Text(
-                        "Verify",
+                        isSelected ? "Verify" : "done",
                         style: TextStyle(
                             fontSize: 20,
                             color: isSelected ? Colors.white : Colors.black),
@@ -121,10 +150,24 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
                             ? Colors.purple[200]
                             : Colors.green[300]),
                   ),
-                )
+                ),
               ],
             ),
           ),
+          // Container(
+          //   height: 240,
+          //   width: 200,
+          //   decoration: BoxDecoration(
+          //     color: Colors.purple[100],
+          //   ),
+          //   child: Column(
+          //     children: [
+          //       Image(image: AssetImage("$staticAssets/details2.png")),
+          //       Text("aaaaa"),
+          //       Text("hhhhh")
+          //     ],
+          //   ),
+          // )
         ],
       ),
     );

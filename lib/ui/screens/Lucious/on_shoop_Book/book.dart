@@ -1,6 +1,5 @@
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/custom_widgets/book_screen_button.dart';
-import 'package:figma_creation_task/ui/custom_widgets/login_button.dart';
+
 import 'package:figma_creation_task/ui/screens/shahab/sigin_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
