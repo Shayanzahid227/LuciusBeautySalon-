@@ -19,7 +19,6 @@ const style16N =
 const style14N =
     TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w300);
 
-///
 ///**********************************    Bold             ********************************************************************** */
 
 const style25B =

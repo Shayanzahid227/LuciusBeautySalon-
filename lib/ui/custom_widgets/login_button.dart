@@ -10,7 +10,7 @@ class CustomLoginButton extends StatelessWidget {
   const CustomLoginButton(
       {super.key,
       required this.onPressed,
-      this.text = "SIGN IN", //change it according to your use
+      this.text = "", //change it according to your use
       this.color = const Color(0xfffdd854)});
 
   @override

@@ -5,6 +5,7 @@ import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
 
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +16,19 @@ class LoginScreen_0 extends StatefulWidget {
 }
 
 class _LoginScreen_0State extends State<LoginScreen_0> {
+  final _auth = FirebaseAuth.instance;
+
+  Future<void> register() async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
+    } catch (e) {
+      print("SignIn failed: $e");
+    }
+  }
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
   final _fromKey = GlobalKey<FormState>();
 
   @override
@@ -95,26 +109,26 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                   //   style: TextStyle(color: Colors.purple),
                   // ),
 
-                  ///
-                  ///
-                  ///
-                  ///
-                  ///
-                  const Center(
-                    child: Badge(
-                      child: Icon(Icons.settings),
-                    ),
-                  ),
+                  // ///
+                  // ///
+                  // ///
+                  // ///
+                  // ///
+                  // const Center(
+                  //   child: Badge(
+                  //     child: Icon(Icons.settings),
+                  //   ),
+                  // ),
 
                   ///
                   ///
                   ///
 
-                  const CustomTextField(
-                    obscureText: false,
-                    hintText: "Email",
-                    showVisibilityToggle: false,
-                  ),
+                  // const CustomTextField(
+                  //   obscureText: false,
+                  //   hintText: "Email",
+                  //   showVisibilityToggle: false,
+                  // ),
                   // Padding(
                   //   padding: EdgeInsets.symmetric(horizontal: 20),
                   //   child: TextFormField(
@@ -128,51 +142,59 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                   //       }
                   //     },
                   //   ),
-                  // )
-                  //Icon(FontAwesomeIcons.home),
-
-                  ///     star from here ////
-
-                  // TextFormField(
-                  //   decoration: authFieldDecoration.copyWith(
-                  //       fillColor: Colors.purple[200],
-                  //       filled: true,
-                  //       suffixIcon: GestureDetector(
-                  //         onTap: () {},
-                  //         child: Icon(Icons.visibility),
-                  //       )),
-                  //   validator: (value) {
-                  //     if (value!.trim().isEmpty) {
-                  //       return "please enter your email";
-                  //     } else {
-                  //       return null;
-                  //     }
-                  //   },
                   // ),
+                  // //Icon(FontAwesomeIcons.home),
 
-                  // TextFormField(
-                  //   decoration: authFieldDecoration.copyWith(
-                  //     suffixIcon: GestureDetector(
-                  //         onTap: () {}, child: const Icon(Icons.visibility)),
-                  //   ),
-                  //   validator: (value) {
-                  //     if (value!.trim().isEmpty) {
-                  //       return "PLease Enter Your Email";
-                  //     } else {
-                  //       return null;
-                  //     }
-                  //   },
-                  // ),
+                  // ///     star from here ////
+
+                  TextFormField(
+                    controller: emailController,
+                    onChanged: (value) {
+                      emailController.text = value;
+                    },
+                    decoration: authFieldDecoration.copyWith(
+                        fillColor: Colors.purple[200],
+                        filled: true,
+                        suffixIcon: GestureDetector(
+                          child: Icon(Icons.visibility),
+                        )),
+                    validator: (value) {
+                      if (value!.trim().isEmpty) {
+                        return "please enter your email";
+                      } else {
+                        return null;
+                      }
+                    },
+                  ),
+
+                  TextFormField(
+                    controller: passwordController,
+                    onChanged: (value) {
+                      passwordController.text = value;
+                    },
+                    decoration: authFieldDecoration.copyWith(
+                      hintText: 'Password',
+                      suffixIcon: GestureDetector(
+                          onTap: () {}, child: const Icon(Icons.visibility)),
+                    ),
+                    validator: (value) {
+                      if (value!.trim().isEmpty) {
+                        return "PLease Enter Your Password";
+                      } else {
+                        return null;
+                      }
+                    },
+                  ),
                   SizedBox(height: 30.h),
 
                   ///
                   /// Paasword
                   ///
 
-                  const CustomTextField(
-                    hintText: "Password",
-                    showVisibilityToggle: true,
-                  ),
+                  // const CustomTextField(
+                  //   hintText: "Password",
+                  //   showVisibilityToggle: true,
+                  // ),
                   SizedBox(
                     height: 30.h,
                   ),
@@ -191,6 +213,10 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                                 if (_fromKey.currentState!.validate()) {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (context) => RootScreen()));
+
+                                  setState(() {
+                                    register();
+                                  });
                                 }
                               },
                               child: Center(

@@ -43,7 +43,8 @@ dependencies:
   readmore: ^3.0.0
   badges: ^3.1.2 # tages on cart etc
   animated_text_kit: ^4.2.2 # animeated text
-  # pin_code_fields: ^8.0.1 #pin code 
+  pin_code_fields: ^8.0.1 #pin code 
+  firebase_auth: ^5.3.4
   
  
   
