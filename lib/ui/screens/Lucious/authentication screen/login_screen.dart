@@ -223,7 +223,7 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                                   child: Text(
                                 "Login",
                                 style: TextStyle(
-                                    fontSize: 16.sp,
+                                    fontSize: 17.sp,
                                     fontWeight: FontWeight.w400,
                                     color: Colors.white),
                               ))),
