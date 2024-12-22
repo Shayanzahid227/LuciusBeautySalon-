@@ -3,6 +3,7 @@ import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -14,6 +15,34 @@ class Register_screen_0 extends StatefulWidget {
 class _Register_screen_0State extends State<Register_screen_0> {
   final _formKey = GlobalKey<FormState>();
 
+  bool _isPasswordVisiable = false;
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void onClick() {
+    _isPasswordVisiable = !_isPasswordVisiable;
+  }
+
+  final _auth = FirebaseAuth.instance;
+  final RegExp _emailRegex = RegExp(
+    r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+  );
+
+  Future<void> register() async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: emailController.text, password: passwordController.text);
+    } catch (e) {
+      print("SignIn failed: $e");
+    }
+  }
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
+  final _fromKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,6 +93,7 @@ class _Register_screen_0State extends State<Register_screen_0> {
                   ),
                   const SizedBox(height: 30),
                   const CustomTextField(
+                    prefixIcon: Icon(Icons.alternate_email_outlined),
                     obscureText: false,
                     hintText: "Email",
                     showVisibilityToggle: false,

@@ -16,7 +16,20 @@ class LoginScreen_0 extends StatefulWidget {
 }
 
 class _LoginScreen_0State extends State<LoginScreen_0> {
+  bool _isPasswordVisiable = false;
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  void onClicl() {
+    _isPasswordVisiable = !_isPasswordVisiable;
+  }
+
   final _auth = FirebaseAuth.instance;
+  final RegExp _emailRegex = RegExp(
+    r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
+  );
 
   Future<void> register() async {
     try {
@@ -29,6 +42,7 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  TextEditingController confirmPasswordController = TextEditingController();
   final _fromKey = GlobalKey<FormState>();
 
   @override
@@ -43,13 +57,8 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
       /// App Bar
       ///
 
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        actions: const [
-          // Icon(Icons.signal_cellular_alt),
-          // Icon(Icons.wifi),
-          // Icon(Icons.battery_4_bar_rounded),
-        ],
+      appBar: AppBar(backgroundColor: Colors.white, actions: const [
+        ]
       ),
 
       ///
@@ -59,148 +68,152 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
       body: SingleChildScrollView(
         child: Form(
           key: _fromKey,
-          child: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.only(top: 70.h),
-                child: Center(
-                  child: SizedBox(
-                      height: 200.h,
-                      width: 180.w,
-                      child: Image.asset(
-                        "$staticAssets/loginlogo.png",
-                        fit: BoxFit.cover,
-                      )),
-                ),
-              ),
-              SizedBox(height: 40.h),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 23.0.w),
-                    child: Text(
-                      "Login",
-                      style: TextStyle(
-                          fontSize: 22.sp, fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-
-                  /////////////////////////////////////     read more using packege     /////////////////////
-
-                  // const ReadMoreText(
-                  //   "4. Check for Any Path IssuesIf you've reinstalled the tools and the command is still not working, it may be due to a path issue:On Windows: Ensure that the firebase-tools and flutterfire_cli paths are included in your system’s PATH environment . Check for Any Path IssuesIf you've reinstalled the tools and the command is still not working, it may be due to a path issue:On Windows: Ensure that the firebase-tools.To do this:",
-                  //   trimLines: 1,
-                  //   trimMode: TrimMode.Line,
-                  //   trimCollapsedText: "show more",
-                  //   trimExpandedText: "show less",
-                  //   moreStyle: TextStyle(
-                  //       fontSize: 20,
-                  //       fontWeight: FontWeight.w700,
-                  //       color: Colors.red),
-                  //   lessStyle: TextStyle(
-                  //       fontSize: 20,
-                  //       fontWeight: FontWeight.w700,
-                  //       color: Colors.red),
-                  //   style: TextStyle(color: Colors.purple),
-                  // ),
-
-                  // ///
-                  // ///
-                  // ///
-                  // ///
-                  // ///
-                  // const Center(
-                  //   child: Badge(
-                  //     child: Icon(Icons.settings),
-                  //   ),
-                  // ),
-
-                  ///
-                  ///
-                  ///
-
-                  // const CustomTextField(
-                  //   obscureText: false,
-                  //   hintText: "Email",
-                  //   showVisibilityToggle: false,
-                  // ),
-                  // Padding(
-                  //   padding: EdgeInsets.symmetric(horizontal: 20),
-                  //   child: TextFormField(
-                  //     decoration: authFieldDecoration.copyWith(
-                  //         fillColor: Colors.purple[100]),
-                  //     validator: (value) {
-                  //       if (value!.trim().isEmpty) {
-                  //         return "please enter email ";
-                  //       } else {
-                  //         return null;
-                  //       }
-                  //     },
-                  //   ),
-                  // ),
-                  // //Icon(FontAwesomeIcons.home),
-
-                  // ///     star from here ////
-
-                  TextFormField(
-                    controller: emailController,
-                    onChanged: (value) {
-                      emailController.text = value;
-                    },
-                    decoration: authFieldDecoration.copyWith(
-                        fillColor: Colors.purple[200],
-                        filled: true,
-                        suffixIcon: GestureDetector(
-                          child: Icon(Icons.visibility),
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(top: 70.h),
+                  child: Center(
+                    child: SizedBox(
+                        height: 200.h,
+                        width: 180.w,
+                        child: Image.asset(
+                          "$staticAssets/loginlogo.png",
+                          fit: BoxFit.cover,
                         )),
-                    validator: (value) {
-                      if (value!.trim().isEmpty) {
-                        return "please enter your email";
-                      } else {
-                        return null;
-                      }
-                    },
                   ),
-
-                  TextFormField(
-                    controller: passwordController,
-                    onChanged: (value) {
-                      passwordController.text = value;
-                    },
-                    decoration: authFieldDecoration.copyWith(
-                      hintText: 'Password',
-                      suffixIcon: GestureDetector(
-                          onTap: () {}, child: const Icon(Icons.visibility)),
+                ),
+                SizedBox(height: 40.h),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(left: 23.0.w),
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            fontSize: 22.sp, fontWeight: FontWeight.w700),
+                      ),
                     ),
-                    validator: (value) {
-                      if (value!.trim().isEmpty) {
-                        return "PLease Enter Your Password";
-                      } else {
-                        return null;
-                      }
-                    },
-                  ),
-                  SizedBox(height: 30.h),
+                    SizedBox(
+                      height: 20.h,
+                    ),
+                    //
+                    //
+                    //  email text form feild
+                    //
+                    //
+                    TextFormField(
+                      controller: emailController,
+                      onChanged: (value) {
+                        emailController.text = value;
+                      },
+                      decoration: authFieldDecoration.copyWith(
+                          hintText: "Enter your emial",
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(color: Colors.black)),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(15),
+                              borderSide: BorderSide(color: Colors.black)),
+                          fillColor: Colors.white,
+                          filled: true,
+                          prefixIcon: GestureDetector(
+                            child: Icon(Icons.alternate_email),
+                          )),
+                      //
+                      //
+                      //     email validator
+                      //
+                      //
+                      validator: (value) {
+                        if (value!.trim().isEmpty) {
+                          return "please enter your email";
+                        } else if (!_emailRegex.hasMatch(value)) {
+                          // take correct form of email
+                          return "enter your emial e.g abc@gmail.com";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    //
+                    //
+                    //     Password text form fieild
+                    //
 
-                  ///
-                  /// Paasword
-                  ///
+                    TextFormField(
+                      obscureText: _isPasswordVisiable,
+                      controller: passwordController,
+                      onChanged: (value) {
+                        passwordController.text = value;
+                      },
+                      decoration: authFieldDecoration.copyWith(
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(color: Colors.black)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(color: Colors.black)),
+                        fillColor: Colors.white,
+                        filled: true,
+                        hintText: 'Password',
+                        //
+                        //
+                        //    password visibality olgic
+                        prefixIcon: GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              _isPasswordVisiable = !_isPasswordVisiable;
+                            });
+                          },
+                          child: Icon(_isPasswordVisiable
+                              ? Icons.lock
+                              : Icons.lock_open),
+                        ),
+                        suffixIcon: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                _isPasswordVisiable = !_isPasswordVisiable;
+                              });
+                            },
+                            child: Icon(_isPasswordVisiable
+                                ? Icons.visibility_off
+                                : Icons.visibility)),
+                      ),
+                      validator: (value) {
+                        if (value!.trim().isEmpty) {
+                          return "PLease Enter Your Password";
+                        } else {
+                          return null;
+                        }
+                      },
+                    ),
+                    SizedBox(height: 30.h),
 
-                  // const CustomTextField(
-                  //   hintText: "Password",
-                  //   showVisibilityToggle: true,
-                  // ),
-                  SizedBox(
-                    height: 30.h,
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 25.0.w),
-                    child: Row(
+                    ///
+                    /// Paasword
+                    ///
+
+                    // const CustomTextField(
+                    //   hintText: "Password",
+                    //   showVisibilityToggle: true,
+                    // ),
+                    SizedBox(
+                      height: 30.h,
+                    ),
+                    //
+                    //
+                    //     login button
+                    //
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Container(
                           height: 50.h,
@@ -209,6 +222,7 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                               color: const Color(0xfffe78377),
                               borderRadius: BorderRadius.circular(9.r)),
                           child: TextButton(
+                              //    if all condition satisfy then move RootSCreen
                               onPressed: () {
                                 if (_fromKey.currentState!.validate()) {
                                   Navigator.of(context).push(MaterialPageRoute(
@@ -230,34 +244,37 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                         )
                       ],
                     ),
-                  ),
-                  SizedBox(height: 40.h),
-                  Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "New user ?",
-                          style: TextStyle(
-                              fontSize: 20.sp, fontWeight: FontWeight.w300),
-                        ),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => Register_screen_0(),
-                              ));
-                            },
-                            child: Text(
-                              "Register",
-                              style: TextStyle(
-                                  fontSize: 22.sp,
-                                  fontWeight: FontWeight.w400,
-                                  color: const Color(0xfffef8377)),
-                            ))
-                      ]),
-                ],
-              )
-            ],
+                    SizedBox(height: 40.h),
+                    //
+                    //
+                    //    asking for signUp
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "New user ?",
+                            style: TextStyle(
+                                fontSize: 20.sp, fontWeight: FontWeight.w300),
+                          ),
+                          TextButton(
+                              onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => Register_screen_0(),
+                                ));
+                              },
+                              child: Text(
+                                "Register",
+                                style: TextStyle(
+                                    fontSize: 22.sp,
+                                    fontWeight: FontWeight.w400,
+                                    color: const Color(0xfffef8377)),
+                              ))
+                        ]),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ),
