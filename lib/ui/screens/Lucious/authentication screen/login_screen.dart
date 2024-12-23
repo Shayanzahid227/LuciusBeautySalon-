@@ -5,6 +5,7 @@ import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
 
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
+import 'package:figma_creation_task/utils/utils.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
@@ -26,6 +27,10 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
     _isPasswordVisiable = !_isPasswordVisiable;
   }
 
+  /////
+  ///
+  ///   for firebase
+  ///
   final _auth = FirebaseAuth.instance;
   final RegExp _emailRegex = RegExp(
     r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
@@ -44,6 +49,21 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController confirmPasswordController = TextEditingController();
   final _fromKey = GlobalKey<FormState>();
+  //
+  //
+  //    if user is akready login then find it indatabase and .....
+  //
+  void login() {
+    _auth
+        .signInWithEmailAndPassword(
+            email: emailController.text, password: passwordController.text)
+        .then((value) {
+      Utils().ToastMessage(value.user!.email.toString());
+    }).onError((error, stackTrace) {
+      Utils().toString();
+      //Utils().toString(error.toString());
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -111,18 +131,19 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                         emailController.text = value;
                       },
                       decoration: authFieldDecoration.copyWith(
-                          hintText: "Enter your emial",
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
-                              borderSide: BorderSide(color: Colors.black)),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(15),
-                              borderSide: BorderSide(color: Colors.black)),
-                          fillColor: Colors.white,
-                          filled: true,
-                          prefixIcon: GestureDetector(
-                            child: Icon(Icons.alternate_email),
-                          )),
+                        hintText: "Enter your emial",
+                        prefixIcon: GestureDetector(
+                          child: Icon(Icons.alternate_email),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(color: Colors.black)),
+                        focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15),
+                            borderSide: BorderSide(color: Colors.black)),
+                        fillColor: Colors.white,
+                        filled: true,
+                      ),
                       //
                       //
                       //     email validator
@@ -225,12 +246,13 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                               //    if all condition satisfy then move RootSCreen
                               onPressed: () {
                                 if (_fromKey.currentState!.validate()) {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                      builder: (context) => RootScreen()));
+                                  //   Navigator.of(context).push(MaterialPageRoute(
+                                  //       builder: (context) => RootScreen()));
 
-                                  setState(() {
-                                    register();
-                                  });
+                                  //   setState(() {
+                                  //     //  register();
+                                  //   });
+                                  login();
                                 }
                               },
                               child: Center(

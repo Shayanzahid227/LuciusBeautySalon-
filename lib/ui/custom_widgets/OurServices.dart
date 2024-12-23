@@ -21,7 +21,7 @@ class OurServicessContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(8),
-      height: 145,
+      height: 146,
       width: 115,
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(

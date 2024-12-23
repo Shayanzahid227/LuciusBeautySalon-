@@ -37,29 +37,26 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22.0),
-      child: TextField(
-        obscureText: _obscureText, // Use the toggle state
-        decoration: InputDecoration(
-          hintText: widget.hintText,
-          hintStyle:
-              GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w400),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12),
-            borderSide: const BorderSide(color: Color(0xff1e252d)),
-          ),
-          prefixIcon: widget.prefixIcon,
-          suffixIcon: widget.showVisibilityToggle && widget.obscureText
-              ? IconButton(
-                  icon: Icon(
-                    _obscureText ? Icons.visibility_off : Icons.visibility,
-                    color: const Color(0xff1e252d), // Optional: change color
-                  ),
-                  onPressed: _togglePasswordVisibility, // Toggle visibility
-                )
-              : null, // If not obscured, no suffix icon
+    return TextField(
+      obscureText: _obscureText, // Use the toggle state
+      decoration: InputDecoration(
+        hintText: widget.hintText,
+        hintStyle:
+            GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w400),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: Color(0xff1e252d)),
         ),
+        prefixIcon: widget.prefixIcon,
+        suffixIcon: widget.showVisibilityToggle && widget.obscureText
+            ? IconButton(
+                icon: Icon(
+                  _obscureText ? Icons.visibility_off : Icons.visibility,
+                  color: const Color(0xff1e252d), // Optional: change color
+                ),
+                onPressed: _togglePasswordVisibility, // Toggle visibility
+              )
+            : null, // If not obscured, no suffix icon
       ),
     );
   }
