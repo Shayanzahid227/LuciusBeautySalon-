@@ -50,7 +50,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                   // ),
                 )),
             const SizedBox(
-              height: 25,
+              height: 26,
             ),
             const Text(
               "Shayan zahid",
