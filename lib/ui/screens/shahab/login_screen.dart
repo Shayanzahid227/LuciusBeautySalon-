@@ -52,7 +52,7 @@ class _Login_ScreenState extends State<Login_Screen> {
                 Text(
                   "Login in ",
                   style: GoogleFonts.inter(
-                      fontSize: 26.sp,
+                      fontSize: 27.sp,
                       fontWeight: FontWeight.w700,
                       color: const Color(0xff20222C)),
                 ),
