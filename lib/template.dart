@@ -3,14 +3,14 @@ import 'package:figma_creation_task/ui/screens/root/root_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class hmmm extends StatefulWidget {
-  const hmmm({super.key});
+class template extends StatefulWidget {
+  const template({super.key});
 
   @override
-  State<hmmm> createState() => _hmmmState();
+  State<template> createState() => _templateState();
 }
 
-class _hmmmState extends State<hmmm> {
+class _templateState extends State<template> {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
