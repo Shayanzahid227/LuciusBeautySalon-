@@ -45,7 +45,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                     children: [
                       CircularButton(onPressed: () {}, icon: Icons.arrow_back),
                       const SizedBox(
-                        width: 20,
+                        width: 21,
                       ),
                       Text(
                         "Nails",
