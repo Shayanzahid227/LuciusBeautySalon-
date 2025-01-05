@@ -53,7 +53,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                             fontSize: 20, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(
-                        width: 230,
+                        width: 228,
                       ),
                       CircularButton(onPressed: () {}, icon: Icons.search)
                     ],
