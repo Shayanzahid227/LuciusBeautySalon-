@@ -53,13 +53,13 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                             fontSize: 20, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(
-                        width: 228,
+                        width: 229,
                       ),
                       CircularButton(onPressed: () {}, icon: Icons.search)
                     ],
                   ),
                   const SizedBox(
-                    height: 17,
+                    height: 20,
                   ),
                   SafeArea(
                     child: SizedBox(
