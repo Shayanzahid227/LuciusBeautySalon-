@@ -50,7 +50,7 @@ class _SpecificServicesScreen_0State extends State<SpecificServicesScreen_0> {
                       Text(
                         "Nails",
                         style: GoogleFonts.oldStandardTt(
-                            fontSize: 20, fontWeight: FontWeight.w700),
+                            fontSize: 21, fontWeight: FontWeight.w700),
                       ),
                       const SizedBox(
                         width: 229,
