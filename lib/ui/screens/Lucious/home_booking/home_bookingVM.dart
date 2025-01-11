@@ -5,7 +5,7 @@ class HomeBookingVeiwModel extends BaseViewModel {
   List<BookTimeslotModel> listTimeSlot = [
     BookTimeslotModel(time: "2:34"),
     BookTimeslotModel(time: "2:34"),
-    BookTimeslotModel(time: "2:34"),
+    BookTimeslotModel(time: "2:14"),
     BookTimeslotModel(time: "2:34"),
     BookTimeslotModel(time: "2:34"),
     BookTimeslotModel(time: "2:54"),
