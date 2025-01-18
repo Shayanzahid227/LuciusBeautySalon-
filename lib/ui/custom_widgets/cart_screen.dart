@@ -67,14 +67,14 @@ class CartSCreenCustomSCOntainer extends StatelessWidget {
                     Text(
                       "${object_CartMoel.pageRoute}",
                       style: const TextStyle(
-                          fontSize: 12,
+                          fontSize: 13s,
                           fontWeight: FontWeight.w400,
                           color: Color(0xfffe78477)),
                     ),
                     Text(
                       "${object_CartMoel.dateYear}",
                       style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w400,
                           color: Color(0xfff888888)),
                     ),
