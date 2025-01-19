@@ -19,7 +19,7 @@ class CustomBookingContainer extends StatelessWidget {
       width: 350.w,
       decoration: BoxDecoration(
         color: const Color(0xfffffffff),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(9),
       ),
       child: Row(
         children: [
