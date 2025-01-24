@@ -2,6 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pin_code_fields/pin_code_fields.dart';
 // import 'package:pin_code_fields/pin_code_fields.dart';
 
 class ImportantPackeges extends StatefulWidget {
@@ -80,35 +81,36 @@ class _ImportantPackegesState extends State<ImportantPackeges> {
                     )
                   ],
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(horizontal: 80.0),
-                //   child: PinCodeTextField(
-                //     keyboardType: TextInputType.number,
-                //     cursorColor: Colors.black,
-                //     showCursor: true,
-                //     appContext: context,
-                //     length: 5,
-                //     obscureText: true,
-                //     animationType: AnimationType.fade,
-                //     pinTheme: PinTheme(
-                //       shape: PinCodeFieldShape.box,
-                //       fieldHeight: 50,
-                //       fieldWidth: 40,
-                //       activeColor: Colors.teal,
-                //       activeFillColor: Colors.purple[300],
-                //       borderRadius: BorderRadius.circular(15),
-                //     ),
-                //     beforeTextPaste: (allow) {
-                //       return true;
-                //     },
-                //     animationDuration: const Duration(
-                //       milliseconds: 500,
-                //     ),
-                //     onCompleted: (x) {
-                //       print("Compleated");
-                //     },
-                //   ),
-                // ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 80.0),
+                  child: PinCodeTextField(
+                    keyboardType: TextInputType.number,
+                    cursorColor: Colors.black,
+                    showCursor: true,
+                    appContext: context,
+                    length: 5,
+                    obscureText: true,
+                    animationType: AnimationType.fade,
+                    pinTheme: PinTheme(
+                      shape: PinCodeFieldShape.circle,
+                      // shape: FieldShape.box,
+                      fieldHeight: 50,
+                      fieldWidth: 40,
+                      activeColor: Colors.teal,
+                      activeFillColor: Colors.purple[300],
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    beforeTextPaste: (allow) {
+                      return true;
+                    },
+                    animationDuration: const Duration(
+                      milliseconds: 500,
+                    ),
+                    onCompleted: (x) {
+                      print("Compleated");
+                    },
+                  ),
+                ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
