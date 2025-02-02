@@ -73,7 +73,7 @@ class _HomeBooking_0State extends State<HomeBooking_0> {
                             ],
                           ),
                           Container(
-                            height: 250,
+                            height: 249,
                             width: double.infinity,
                             decoration: const BoxDecoration(
                                 //color: Colors.deepOrange
