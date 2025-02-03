@@ -75,7 +75,7 @@ class SpecificServicesviewmodel extends BaseViewModel {
     SpecificServicesModel(
       imgUrl: "$staticAssets/details2.png",
       tittle: "Clasic Manicure",
-      time: "45 min",
+      time: "49 min",
       price: "59 AED",
     ),
   ];
