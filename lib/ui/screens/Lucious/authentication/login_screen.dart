@@ -1,8 +1,7 @@
 import 'package:figma_creation_task/core/constant/auth_text_field.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
 
-import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
-import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/Register_screen_0.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/authentication/Register_screen_0.dart';
 
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 import 'package:figma_creation_task/utils/utils.dart';
@@ -36,22 +35,22 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
     r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
   );
 
-  Future<void> register() async {
-    try {
-      await _auth.createUserWithEmailAndPassword(
-          email: emailController.text, password: passwordController.text);
-    } catch (e) {
-      print("SignIn failed: $e");
-    }
-  }
+  // Future<void> register() async {
+  //   try {
+  //     await _auth.createUserWithEmailAndPassword(
+  //         email: emailController.text, password: passwordController.text);
+  //   } catch (e) {
+  //     print("SignIn failed: $e");
+  //   }
+  // }
 
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmPasswordController = TextEditingController();
+  //TextEditingController confirmPasswordController = TextEditingController();
   final _fromKey = GlobalKey<FormState>();
   //
   //
-  //    if user is akready login then find it indatabase and .....
+  //    if user is already login then find it in database and .....
   //
   void login() {
     _auth
@@ -154,7 +153,7 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                           return "please enter your email";
                         } else if (!_emailRegex.hasMatch(value)) {
                           // take correct form of email
-                          return "enter your emial e.g abc@gmail.com";
+                          return "enter your valid email e.g abc@gmail.com";
                         } else {
                           return null;
                         }
@@ -246,12 +245,12 @@ class _LoginScreen_0State extends State<LoginScreen_0> {
                               //    if all condition satisfy then move RootSCreen
                               onPressed: () {
                                 if (_fromKey.currentState!.validate()) {
-                                  //   Navigator.of(context).push(MaterialPageRoute(
-                                  //       builder: (context) => RootScreen()));
+                                  Navigator.of(context).push(MaterialPageRoute(
+                                      builder: (context) => RootScreen()));
 
-                                  //   setState(() {
-                                  //     //  register();
-                                  //   });
+                                  setState(() {
+                                    login();
+                                  });
                                   login();
                                 }
                               },

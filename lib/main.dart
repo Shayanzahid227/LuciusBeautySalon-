@@ -33,9 +33,12 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: SplashScreen_0()),
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            scaffoldBackgroundColor: const Color(0xffFAF8F6),
+          ),
+          home: SplashScreen_0(),
+        ),
       ),
     );
   }

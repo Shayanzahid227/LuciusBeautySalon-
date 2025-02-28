@@ -1,8 +1,7 @@
 import 'package:figma_creation_task/core/constant/auth_text_field.dart';
 import 'package:figma_creation_task/core/constant/string.dart';
-import 'package:figma_creation_task/ui/custom_widgets/text_feild.dart';
 
-import 'package:figma_creation_task/ui/screens/Lucious/authentication%20screen/login_screen.dart';
+import 'package:figma_creation_task/ui/screens/Lucious/authentication/login_screen.dart';
 import 'package:figma_creation_task/ui/screens/root/root_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +16,7 @@ class _Register_screen_0State extends State<Register_screen_0> {
   final _formKey = GlobalKey<FormState>();
 
   bool _isPasswordVisiable = false;
-  bool _isPasswordConfirmVisiable = false;
+  bool _isConfirmPasswordVisiable = false;
   @override
   void initState() {
     super.initState();
@@ -90,9 +89,9 @@ class _Register_screen_0State extends State<Register_screen_0> {
                 const SizedBox(height: 30),
                 TextFormField(
                   controller: emailController,
-                  onChanged: (value) {
-                    emailController.text = value;
-                  },
+                  // onChanged: (value) {
+                  //   emailController.text = value;
+                  // },
                   decoration: authFieldDecoration.copyWith(
                       fillColor: Colors.white,
                       filled: true,
@@ -119,9 +118,9 @@ class _Register_screen_0State extends State<Register_screen_0> {
                 TextFormField(
                   obscureText: _isPasswordVisiable,
                   controller: passwordController,
-                  onChanged: (value) {
-                    passwordController.text = value;
-                  },
+                  // onChanged: (value) {
+                  //   passwordController.text = value;
+                  // },
                   decoration: authFieldDecoration.copyWith(
                     fillColor: Colors.white,
                     hintText: "Your Password",

@@ -33,7 +33,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
             ),
             Container(
                 height: 154,
-                width: 154,
+                width: 155,
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(color: const Color(0xfffe38577)),
@@ -74,7 +74,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
             ),
             Container(
               height: 45,
-              width: 133,
+              width: 135,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(9),
                 color: const Color(0xfffe38577),

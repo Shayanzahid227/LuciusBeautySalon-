@@ -12,9 +12,10 @@ class RootViewModel extends BaseViewModel {
 
   List<Widget> allScreen = [
     // call screen here according to index
+
     const Home_Screen_0(),
     const BookingScreen_ok(),
-    const ProfileSCreen_00()
+    const ProfileSCreen_00(),
   ];
 
   ///
