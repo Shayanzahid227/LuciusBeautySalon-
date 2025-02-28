@@ -190,7 +190,7 @@ class _ProfileSCreen_00State extends State<ProfileSCreen_00> {
                   ],
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(right: 26.0),
+                  padding: EdgeInsets.only(right: 25.0),
                   child: Divider(
                     color: Colors.grey,
                     thickness: 0.4,
