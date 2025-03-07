@@ -1,6 +1,7 @@
 import 'package:figma_creation_task/core/constant/string.dart';
 import 'package:figma_creation_task/ui/screens/Lucious/authentication/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashScreen_0 extends StatefulWidget {
   const SplashScreen_0({super.key});
@@ -44,7 +45,7 @@ class _SplashScreen_0State extends State<SplashScreen_0> {
                     fit: BoxFit.cover,
                   ),
                 )),
-            const SizedBox(height: 20),
+            20.verticalSpace,
             const Text("Lucious",
                 style: TextStyle(
                     fontSize: 40,
